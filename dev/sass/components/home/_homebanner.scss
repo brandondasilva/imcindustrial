@@ -1,0 +1,35 @@
+#header {
+  height: 500px;
+  background-position: center;
+  background-size: cover;
+
+  #header-image {
+    background-position: bottom;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 420px;
+
+    #header-text {
+      padding-top: 200px;
+      text-align: center;
+
+      h1.blog-title {
+        margin-top: 30px;
+        margin-bottom: 0;
+        font-size: 52px;
+        font-weight: 500;
+        & a {
+          color: black !important;
+          &:hover {
+            text-decoration: none;
+          }
+        }
+      }
+
+      p.blog-description {
+        padding-top: 20px;
+        color: black;
+      }
+    }
+  }
+}
