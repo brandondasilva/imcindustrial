@@ -3,6 +3,7 @@
   // Add scripts and stylesheets
   function startwordpress_scripts() {
     wp_enqueue_style('blog', get_template_directory_uri() . '/assets/css/blog.min.css');
+    wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/bower_components/jquery/dist/jquery.min.js');
   }
 
   // Add Google Fonts

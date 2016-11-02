@@ -14,7 +14,11 @@
 #header {
   height: 500px;
   background-position: center;
-  background-size: cover; }
+  background-size: cover;
+  z-index: 10;
+  -webkit-box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.75); }
   #header #header-image {
     background-position: bottom;
     background-size: contain;
@@ -38,14 +42,21 @@
 
 #services-cta {
   height: 500px;
-  background-color: #812822; }
-  #services-cta .section-content {
+  background-color: #812822;
+  -webkit-box-shadow: inset 0px -2px 2px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 0px -2px 2px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 0px -2px 2px 0px rgba(0, 0, 0, 0.75); }
+  #services-cta .service-section {
     padding-top: 20px;
     text-align: center; }
-    #services-cta .section-content h1 {
+    #services-cta .service-section h1.service-header {
       text-transform: uppercase;
       font-size: 52px;
       font-weight: 500;
       color: white; }
+    #services-cta .service-section div.service-content {
+      padding-top: 20px; }
+      #services-cta .service-section div.service-content h2 {
+        color: white; }
 
 /*# sourceMappingURL=styles.css.map */
