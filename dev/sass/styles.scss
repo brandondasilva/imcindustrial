@@ -2,6 +2,9 @@
 /* -- MAIN COMPONENTS -- */
 @import "components/navbar";
 
+/* -- TEMPLATES --*/
+@import "components/templates/home-featured-post";
+
 /* -- HOME PAGE -- */
 @import "components/home/homebanner";
 @import "components/home/services-cta";

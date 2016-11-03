@@ -12,6 +12,12 @@
   text-transform: uppercase;
   color: #812822; }
 
+/* -- TEMPLATES --*/
+#home-featured-template #post-thumbnail {
+  width: 400px;
+  height: 200px;
+  background-color: red; }
+
 /* -- HOME PAGE -- */
 #header {
   height: 500px;
