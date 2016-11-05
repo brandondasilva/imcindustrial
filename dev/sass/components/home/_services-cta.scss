@@ -1,6 +1,6 @@
 #services-cta {
   height: 500px;
-  background-color: #812822;
+  background-color: $main-maroon;
   // -webkit-box-shadow: inset -2px -2px 5px rgba(0,0,0,.1);
   //         box-shadow: inset -2px -2px 5px rgba(0,0,0,.1);
 
@@ -9,13 +9,10 @@
   box-shadow: inset 0px -2px 2px 0px rgba(0,0,0,0.75);
 
   .service-section {
-    padding-top: 20px;
+    padding-top: $section-padding-top;
     text-align: center;
 
-    h1.service-header {
-      text-transform: uppercase;
-      font-size: 52px;
-      font-weight: 500;
+    h1.section-header {
       color: white;
     }
 

@@ -1,3 +1,17 @@
+/*
+ * Override Bootstrap's default container.
+ */
+@media (min-width: 1200px) {
+  .container {
+    width: 1150px; } }
+/*
+ * Global custom classes
+ */
+h1.section-header {
+  text-transform: uppercase;
+  font-size: 52px;
+  font-weight: 500; }
+
 /* -- MAIN COMPONENTS -- */
 #navbar .blog-masthead {
   position: fixed;
@@ -13,11 +27,6 @@
   color: #812822; }
 
 /* -- TEMPLATES --*/
-#home-featured-template #post-thumbnail {
-  width: 400px;
-  height: 200px;
-  background-color: red; }
-
 /* -- HOME PAGE -- */
 #header {
   height: 500px;
@@ -54,12 +63,9 @@
   -moz-box-shadow: inset 0px -2px 2px 0px rgba(0, 0, 0, 0.75);
   box-shadow: inset 0px -2px 2px 0px rgba(0, 0, 0, 0.75); }
   #services-cta .service-section {
-    padding-top: 20px;
+    padding-top: 30px;
     text-align: center; }
-    #services-cta .service-section h1.service-header {
-      text-transform: uppercase;
-      font-size: 52px;
-      font-weight: 500;
+    #services-cta .service-section h1.section-header {
       color: white; }
     #services-cta .service-section div.service-content {
       padding-top: 20px; }
@@ -67,7 +73,45 @@
         color: white; }
 
 #home-featured {
-  height: 500px;
+  height: 450px;
   background-color: #dfdfdf; }
+  #home-featured #home-featured-template h1.section-header {
+    padding-top: 30px;
+    text-align: center;
+    color: black; }
+  #home-featured #home-featured-template .home-featured-content {
+    clear: left;
+    float: left;
+    position: relative;
+    left: 50%; }
+    #home-featured #home-featured-template .home-featured-content h1.section-header {
+      color: black; }
+    #home-featured #home-featured-template .home-featured-content #home-featured-post {
+      padding-top: 30px;
+      display: block;
+      float: left;
+      position: relative;
+      right: 50%; }
+      #home-featured #home-featured-template .home-featured-content #home-featured-post #post-thumbnail {
+        width: 440px;
+        height: 250px; }
+        #home-featured #home-featured-template .home-featured-content #home-featured-post #post-thumbnail img {
+          width: 100%;
+          height: 100%;
+          -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+          -moz-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+          border-radius: 6px; }
+      #home-featured #home-featured-template .home-featured-content #home-featured-post #post-exerpt1 {
+        background-color: #812822;
+        text-align: left;
+        width: 500px;
+        height: 250px;
+        margin-left: 30px;
+        padding: 20px;
+        border-radius: 6px;
+        -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
 
 /*# sourceMappingURL=styles.css.map */

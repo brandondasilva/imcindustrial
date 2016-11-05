@@ -1,9 +1,46 @@
 
+/*
+ * Override Bootstrap's default container.
+ */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1150px;
+  }
+}
+
+// *******
+// Global variables for project
+// *******
+
+// ** SPACING
+$section-padding-top: 30px;
+
+// ** RECTANGLES
+$border-radius-rect: 6px;
+
+// ** COLOUR SCHEME
+$main-maroon: #812822;
+
+
+// ** OTHER STYLING
+// box-shadow
+$box-shadow-post: 3px 3px 2px 0px rgba(0,0,0,0.75);
+
+/*
+ * Global custom classes
+ */
+ h1.section-header {
+   text-transform: uppercase;
+   font-size: 52px;
+   font-weight: 500;
+ }
+
 /* -- MAIN COMPONENTS -- */
 @import "components/navbar";
 
 /* -- TEMPLATES --*/
-@import "components/templates/home-featured-post";
+// @import "components/templates/home-featured-post";
 
 /* -- HOME PAGE -- */
 @import "components/home/homebanner";

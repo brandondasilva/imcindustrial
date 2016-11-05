@@ -9,10 +9,9 @@
     <meta name="author" content="">
 
     <!-- Bootstrap core CSS -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_directory'); ?>/assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom styles for this template -->
-    <link href="<?php bloginfo('template_directory'); ?>/assets/css/blog.min.css" rel="stylesheet">
     <link href="<?php bloginfo('template_directory'); ?>/assets/css/styles.min.css" rel="stylesheet">
 
 
