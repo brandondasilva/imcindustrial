@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto);
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
 body {
   font-family: Roboto, sans-serif; }
 
@@ -98,8 +98,8 @@ h1.section-header {
         color: black; }
 
 #services-cta {
-  height: 500px;
   background-color: #812822;
+  padding-bottom: 40px;
   -webkit-box-shadow: inset 0px -2px 2px 0px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: inset 0px -2px 2px 0px rgba(0, 0, 0, 0.5);
   box-shadow: inset 0px -2px 2px 0px rgba(0, 0, 0, 0.5); }
@@ -108,10 +108,25 @@ h1.section-header {
     text-align: center; }
     #services-cta .service-section h1.section-header {
       color: white; }
-    #services-cta .service-section div.service-content {
-      padding-top: 20px; }
-      #services-cta .service-section div.service-content h2 {
-        color: white; }
+    #services-cta .service-section div.service-content h2 {
+      color: white; }
+    #services-cta .service-section div.service-content .service-image-wrapper .service-image {
+      height: 245px;
+      width: 245px;
+      display: inline-block;
+      background-position: center;
+      background-size: cover;
+      border-radius: 50%;
+      border: 2px solid white;
+      -webkit-clip-path: circle(50% at 50% 50%);
+      clip-path: circle(50% at 50% 50%);
+      -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+      box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
+      #services-cta .service-section div.service-content .service-image-wrapper .service-image p {
+        padding: 40px;
+        padding-top: 60px;
+        font-weight: bold; }
 
 #home-featured {
   height: 450px;

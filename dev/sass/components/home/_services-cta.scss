@@ -1,8 +1,7 @@
 #services-cta {
-  height: 500px;
   background-color: $main-maroon;
-  // -webkit-box-shadow: inset -2px -2px 5px rgba(0,0,0,.1);
-  //         box-shadow: inset -2px -2px 5px rgba(0,0,0,.1);
+
+  padding-bottom: 40px;
 
   -webkit-box-shadow: inset 0px -2px 2px 0px rgba(0,0,0,0.5);
   -moz-box-shadow: inset 0px -2px 2px 0px rgba(0,0,0,0.5);
@@ -17,11 +16,39 @@
     }
 
     div.service-content {
-      padding-top: 20px;
-
       h2 {
         color: white;
       }
+
+
+      .service-image-wrapper {
+        .service-image {
+          height: 245px;
+          width: 245px;
+          display: inline-block;
+
+          background-position: center;
+          background-size: cover;
+
+          border-radius: 50%;
+          border: 2px solid white;
+
+          // Clipping the image
+          -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+
+          -webkit-box-shadow: $box-shadow-post;
+          -moz-box-shadow: $box-shadow-post;
+          box-shadow: $box-shadow-post;
+
+          p {
+            padding: 40px;
+            padding-top: 60px;
+            font-weight: bold;
+          }
+        }
+      }
+
     }
   }
 }
