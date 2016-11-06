@@ -15,7 +15,12 @@
         height: 80px !important;
     }
 
-    li a {
+    li {
+      padding: 0px;
+    }
+
+    a {
+      padding: 10px;
       text-transform: uppercase;
       color: rgb(129,40,34);
     }

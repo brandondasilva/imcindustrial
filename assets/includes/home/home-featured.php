@@ -2,6 +2,8 @@
 
 	<div class="container blog-main">
 
+		<h1 class="section-header">Featured Projects</h1>
+		
     <?php
       if (have_posts()) : while (have_posts() ) : the_post();
 		    get_template_part( 'assets/includes/post-templates/home-featured-template', get_post_format() );

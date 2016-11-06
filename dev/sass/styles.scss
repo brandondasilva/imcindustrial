@@ -1,4 +1,13 @@
 
+@import url(https://fonts.googleapis.com/css?family=Roboto);
+
+$font-stack: Roboto, sans-serif;
+
+body {
+  font-family: $font-stack;
+}
+
+
 /*
  * Override Bootstrap's default container.
  */
@@ -21,7 +30,8 @@ $border-radius-rect: 6px;
 
 // ** COLOUR SCHEME
 $main-maroon: #812822;
-
+$home-featured-color: #dfdfdf;
+$footer-color: #4f4f4f;
 
 // ** OTHER STYLING
 // box-shadow
@@ -38,6 +48,7 @@ $box-shadow-post: 3px 3px 2px 0px rgba(0,0,0,0.75);
 
 /* -- MAIN COMPONENTS -- */
 @import "components/navbar";
+@import "components/footer";
 
 /* -- TEMPLATES --*/
 // @import "components/templates/home-featured-post";
