@@ -23,7 +23,7 @@ body {
 // *******
 
 // ** SPACING
-$section-padding-top: 30px;
+$section-padding: 30px;
 
 // ** RECTANGLES
 $border-radius-rect: 6px;
@@ -57,3 +57,6 @@ $box-shadow-post: 3px 3px 2px 0px rgba(0,0,0,0.75);
 @import "components/home/homebanner";
 @import "components/home/services-cta";
 @import "components/home/home-featured";
+
+/* -- ABOUT PAGE -- */
+@import "components/about/about-page";

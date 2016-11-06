@@ -1,17 +1,19 @@
 <?php get_header(); ?>
 
-	<div class="row">
-		<div class="col-sm-12">
+<div id="about-page">
 
-			<?php
-				if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-					get_template_part( 'content', get_post_format() );
+				<?php
+					if ( have_posts() ) : while ( have_posts() ) : the_post();
 
-				endwhile; endif;
-			?>
+						get_template_part( 'assets/includes/post-templates/about-template', get_post_format() );
 
-		</div> <!-- /.col -->
-	</div> <!-- /.row -->
+					endwhile; endif;
+				?>
+
+			
+</div>
+
+
 
 <?php get_footer(); ?>

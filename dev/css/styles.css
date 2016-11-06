@@ -37,7 +37,7 @@ h1.section-header {
   background-color: #4f4f4f; }
   #footer #footer-content {
     padding-bottom: 20px; }
-    #footer #footer-content h2, #footer #footer-content h3, #footer #footer-content h4, #footer #footer-content p {
+    #footer #footer-content h2, #footer #footer-content h3, #footer #footer-content h4, #footer #footer-content p, #footer #footer-content a {
       color: white; }
     @media (max-width: 767px) {
       #footer #footer-content .footer-left {
@@ -46,8 +46,6 @@ h1.section-header {
       text-transform: uppercase; }
       #footer #footer-content .footer-left .footer-titles li {
         display: inline-block; }
-      #footer #footer-content .footer-left .footer-titles a {
-        color: white; }
     #footer #footer-content .footer-center {
       text-align: center; }
       #footer #footer-content .footer-center .footer-button {
@@ -57,8 +55,6 @@ h1.section-header {
         margin-top: 5px;
         padding: 6px;
         border-radius: 6px; }
-        #footer #footer-content .footer-center .footer-button a {
-          color: white; }
     #footer #footer-content .footer-right {
       margin-top: 20px;
       text-align: right; }
@@ -70,8 +66,6 @@ h1.section-header {
         margin-bottom: 8px; }
       #footer #footer-content .footer-right p {
         margin-bottom: 5px; }
-        #footer #footer-content .footer-right p a {
-          color: white; }
 
 /* -- TEMPLATES --*/
 /* -- HOME PAGE -- */
@@ -162,5 +156,29 @@ h1.section-header {
         box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
       #home-featured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 {
         margin-left: 0px; }
+
+/* -- ABOUT PAGE -- */
+#about-page #about-page-template #about-page-header {
+  height: 250px;
+  background-position: center;
+  background-size: cover; }
+  @media (max-width: 767px) {
+    #about-page #about-page-template #about-page-header {
+      height: 200px; } }
+  #about-page #about-page-template #about-page-header .header-content {
+    padding-top: 120px;
+    z-index: 10; }
+    @media (max-width: 767px) {
+      #about-page #about-page-template #about-page-header .header-content {
+        padding-top: 75px;
+        text-align: center; } }
+    #about-page #about-page-template #about-page-header .header-content h1 {
+      font-size: 60px;
+      text-transform: uppercase;
+      text-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
+#about-page #about-page-template #about-page-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #dfdfdf; }
 
 /*# sourceMappingURL=styles.css.map */

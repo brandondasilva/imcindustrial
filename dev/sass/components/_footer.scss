@@ -4,7 +4,7 @@
   #footer-content {
     padding-bottom: 20px;
 
-    h2, h3, h4, p {
+    h2, h3, h4, p, a {
       color: white;
     }
 
@@ -17,7 +17,7 @@
         text-transform: uppercase;
 
         li { display: inline-block; }
-        a { color: white; }
+
       }
     }
 
@@ -32,10 +32,6 @@
         padding: 6px;
 
         border-radius: $border-radius-rect;
-
-        a {
-          color: white;
-        }
       }
     }
 
@@ -52,13 +48,7 @@
         margin-bottom: 8px;
       }
 
-      p {
-        margin-bottom: 5px;
-
-        a {
-          color: white;
-        }
-      }
+      p { margin-bottom: 5px; }
     }
   }
 }

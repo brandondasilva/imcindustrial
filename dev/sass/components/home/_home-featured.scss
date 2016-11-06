@@ -4,7 +4,7 @@
   background-color: $home-featured-color;
 
   h1.section-header {
-    padding-top: $section-padding-top;
+    padding-top: $section-padding;
     text-align: center;
     color: black;
   }
@@ -25,7 +25,7 @@
 
       .home-featured-post {
 
-        padding-top: $section-padding-top;
+        padding-top: $section-padding;
 
         display: block; float: left; position: relative; right: 50%;
 
