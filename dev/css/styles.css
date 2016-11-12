@@ -126,7 +126,16 @@ h1.section-header {
       #services-cta .service-section div.service-content .service-image-wrapper .service-image p {
         padding: 40px;
         padding-top: 60px;
+        padding-bottom: 10px;
         font-weight: bold; }
+      #services-cta .service-section div.service-content .service-image-wrapper .service-image .service-button-wrapper .service-button {
+        width: 50%;
+        background-color: black;
+        display: inline-block;
+        padding: 6px;
+        border-radius: 6px;
+        color: white;
+        text-transform: uppercase; }
 
 #home-featured {
   height: 450px;

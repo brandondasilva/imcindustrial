@@ -44,7 +44,23 @@
           p {
             padding: 40px;
             padding-top: 60px;
+            padding-bottom: 10px;
             font-weight: bold;
+          }
+
+          .service-button-wrapper {
+            .service-button {
+              // height: 20px;
+              width: 50%;
+              background-color: black;
+              display: inline-block;
+
+              padding: 6px;
+              border-radius: $border-radius-rect;
+
+              color: white;
+              text-transform: uppercase;
+            }
           }
         }
       }
