@@ -1,6 +1,9 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+@import url(https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,500);
 body {
   font-family: Roboto, sans-serif; }
+
+h1, h2, h3 {
+  font-family: Oswald, sans-serif; }
 
 /*
  * Override Bootstrap's default container.
@@ -24,14 +27,17 @@ h1.section-header {
   box-shadow: inset 0 -2px 5px rgba(0, 0, 0, 0.1); }
 #navbar .navbar {
   background-color: rgba(255, 255, 255, 0.75); }
-#navbar .blog-nav img {
-  height: 80px !important; }
-#navbar .blog-nav li {
-  padding: 0px; }
-#navbar .blog-nav a {
-  padding: 10px;
-  text-transform: uppercase;
-  color: #812822; }
+#navbar .blog-nav {
+  font-family: Roboto, sans-serif;
+  font-weight: bold; }
+  #navbar .blog-nav img {
+    height: 80px !important; }
+  #navbar .blog-nav li {
+    padding: 0px; }
+  #navbar .blog-nav a {
+    padding: 10px;
+    text-transform: uppercase;
+    color: #812822; }
 
 #footer {
   background-color: #4f4f4f; }
@@ -76,14 +82,28 @@ h1.section-header {
   -webkit-box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.75); }
+  @media (max-width: 767px) {
+    #header {
+      height: 350px; } }
   #header #header-image {
+    height: 420px;
     background-position: bottom;
     background-size: contain;
-    background-repeat: no-repeat;
-    height: 420px; }
+    background-repeat: no-repeat; }
+    @media (max-width: 767px) {
+      #header #header-image {
+        height: 300px; } }
     #header #header-image #header-text {
       padding-top: 200px;
       text-align: center; }
+      @media (max-width: 767px) {
+        #header #header-image #header-text {
+          padding-top: 120px; }
+          #header #header-image #header-text h1.blog-title {
+            font-size: 32px !important; }
+          #header #header-image #header-text p.blog-description {
+            font-size: 16px;
+            width: 60%; } }
       #header #header-image #header-text h1.blog-title {
         margin-top: 30px;
         margin-bottom: 0;
@@ -109,7 +129,8 @@ h1.section-header {
     #services-cta .service-section h1.section-header {
       color: white; }
     #services-cta .service-section div.service-content h2 {
-      color: white; }
+      color: white;
+      margin-bottom: 25px; }
     #services-cta .service-section div.service-content .service-image-wrapper .service-image {
       height: 245px;
       width: 245px;
@@ -168,16 +189,22 @@ h1.section-header {
           box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
           border-radius: 6px; }
       #home-featured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1, #home-featured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 {
+        color: white;
         background-color: #812822;
         text-align: left;
         width: 500px;
         height: 250px;
         margin-left: 30px;
-        padding: 20px;
+        padding: 30px;
         border-radius: 6px;
         -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
         box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
+        #home-featured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1 h2, #home-featured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 h2 {
+          margin-top: 0px;
+          margin-bottom: 10px; }
+          #home-featured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1 h2 a, #home-featured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 h2 a {
+            color: white; }
       #home-featured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 {
         margin-left: 0px; }
 

@@ -49,13 +49,25 @@
 
         #post-exerpt1, #post-exerpt2 {
 
+          color: white;
+
+          h2 {
+
+            margin-top: 0px;
+            margin-bottom: 10px;
+
+            a {
+              color: white;
+            }
+          }
+
           background-color: $main-maroon;
           text-align: left;
 
           width: 500px;
           height: $postHeight;
           margin-left: 30px;
-          padding: 20px;
+          padding: $section-padding;
 
           border-radius: $border-radius-rect;
 
