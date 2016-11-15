@@ -3,6 +3,7 @@
   #about-page-template {
 
     #about-page-header {
+
       @media (max-width: 767px) {
         height: 200px;
       }
@@ -31,7 +32,6 @@
     #about-page-content {
       padding-top: $section-padding;
       padding-bottom: $section-padding;
-      // height: 500px;
       background-color: $home-featured-color;
     }
   }

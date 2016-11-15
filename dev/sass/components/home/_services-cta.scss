@@ -1,5 +1,5 @@
 #services-cta {
-  background-color: $main-maroon;
+  background-color: $main-color;
 
   padding-bottom: 40px;
 
@@ -11,13 +11,12 @@
     padding-top: $section-padding;
     text-align: center;
 
-    h1.section-header {
-      color: white;
+    h1, h2 {
+      color: $body-text-white;
     }
 
     div.service-content {
       h2 {
-        color: white;
         margin-bottom: 25px;
         margin-top: 25px;
       }
@@ -50,19 +49,9 @@
             font-weight: bold;
           }
 
-          .service-button-wrapper {
-            .service-button {
-
-              width: 50%;
-              background-color: black;
-              display: inline-block;
-
-              padding: 6px;
-              border-radius: $border-radius-rect;
-
-              color: white;
-              text-transform: uppercase;
-            }
+          .service-button {
+            background-color: black;
+            color: $body-text-white;
           }
         }
       }

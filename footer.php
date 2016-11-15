@@ -17,10 +17,10 @@
             <h4>Newmarket, ON</h4>
             <h4>L3Y 9C9</h4>
             <div class="footer-button-group">
-              <a href="#">
-                <div class="footer-button">
+              <a href="#" class="button-wrapper">
+                <span class="button footer-button">
                   Contact Us
-                </div>
+                </span>
               </a>
             </div>
           </div>

@@ -5,25 +5,43 @@ body {
 h1, h2, h3 {
   font-family: Oswald, sans-serif; }
 
+a:hover, a:active, a:focus {
+  text-decoration: none; }
 a:hover {
-  font-weight: bold;
-  text-decoration: none;
   text-shadow: 1px 1px 2px #969696; }
+a:active {
+  text-shadow: 1px 1px 2.05px rgba(75, 75, 75, 0.9); }
 
 /*
- * Override Bootstrap's default container.
+ Override Bootstrap's default container.
  */
 @media (min-width: 1200px) {
   .container {
     width: 1150px; } }
 /*
- * Global custom classes
+ Global custom classes
  */
 h1.section-header {
   text-transform: uppercase;
   font-size: 52px;
   font-weight: 500; }
 
+a.button-wrapper .button {
+  width: 50%;
+  display: inline-block;
+  padding: 6px;
+  border-radius: 6px;
+  text-transform: uppercase; }
+  a.button-wrapper .button:hover {
+    box-shadow: 2px 2px 2.25px #323232; }
+  a.button-wrapper .button:active {
+    box-shadow: 2px 2px 2.5px #191919; }
+
+/*
+ *******
+ File Imports
+ *******
+ */
 /* -- MAIN COMPONENTS -- */
 #navbar .navbar {
   background-color: rgba(255, 255, 255, 0.85); }
@@ -35,8 +53,6 @@ h1.section-header {
       height: 65px !important; } }
   #navbar nav.blog-nav img {
     height: 80px; }
-    #navbar nav.blog-nav img:hover {
-      box-shadow: 0px 1px 0px #969696; }
   #navbar nav.blog-nav div {
     display: table-cell;
     padding-right: 10px;
@@ -46,14 +62,15 @@ h1.section-header {
       padding: 0px; }
   #navbar nav.blog-nav a {
     text-transform: uppercase;
-    color: #812822; }
+    color: #812822;
+    font-weight: bold; }
 
 #footer {
   background-color: #4f4f4f; }
   #footer #footer-content {
     padding-bottom: 20px; }
     #footer #footer-content h2, #footer #footer-content h3, #footer #footer-content h4, #footer #footer-content p, #footer #footer-content a {
-      color: white; }
+      color: #f0f0f0; }
     @media (max-width: 767px) {
       #footer #footer-content .footer-left {
         text-align: center; } }
@@ -136,10 +153,9 @@ h1.section-header {
   #services-cta .service-section {
     padding-top: 30px;
     text-align: center; }
-    #services-cta .service-section h1.section-header {
-      color: white; }
+    #services-cta .service-section h1, #services-cta .service-section h2 {
+      color: #f0f0f0; }
     #services-cta .service-section div.service-content h2 {
-      color: white;
       margin-bottom: 25px;
       margin-top: 25px; }
     #services-cta .service-section div.service-content .service-image-wrapper .service-image {
@@ -160,14 +176,9 @@ h1.section-header {
         padding-top: 60px;
         padding-bottom: 10px;
         font-weight: bold; }
-      #services-cta .service-section div.service-content .service-image-wrapper .service-image .service-button-wrapper .service-button {
-        width: 50%;
+      #services-cta .service-section div.service-content .service-image-wrapper .service-image .service-button {
         background-color: black;
-        display: inline-block;
-        padding: 6px;
-        border-radius: 6px;
-        color: white;
-        text-transform: uppercase; }
+        color: #f0f0f0; }
 
 #home-featured {
   height: 450px;

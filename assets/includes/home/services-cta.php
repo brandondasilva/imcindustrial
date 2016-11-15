@@ -9,11 +9,12 @@
           <div class="service-image" style="background-image: url(<?php bloginfo("template_directory"); ?>{{service.image}}); ">
             <p>{{service.desc}}</p>
 
-            <div class="service-button-wrapper">
-              <div class="service-button">
+            <a href="{{service.link}}" class="button-wrapper">
+              <span class="button service-button">
                 More Info
-              </div>
-            </div>
+              </span>
+            </a>
+            <!-- <button class="service-button">More Info</button> -->
           </div>
 
         </div>

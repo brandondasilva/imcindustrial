@@ -5,7 +5,7 @@
     padding-bottom: 20px;
 
     h2, h3, h4, p, a {
-      color: white;
+      color: $body-text-white;
     }
 
     .footer-left {
@@ -27,7 +27,7 @@
       .footer-button {
         width: 120px;
         display: inline-block;
-        background-color: $main-maroon;
+        background-color: $main-color;
         margin-top: 5px;
         padding: 6px;
 

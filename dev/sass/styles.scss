@@ -1,8 +1,33 @@
 
 @import url(https://fonts.googleapis.com/css?family=Oswald:400,700|Roboto:400,500);
 
+
+// *******
+// Global variables for project
+// *******
+
+// ** FONTS
 $font-body: Roboto, sans-serif;
 $font-headers: Oswald, sans-serif;
+
+// ** COLOUR SCHEME
+$main-color: #812822;
+$home-featured-color: #dfdfdf;
+$body-text-white: #f0f0f0;
+$footer-color: #4f4f4f;
+
+// ** SPACING
+$section-padding: 30px;
+
+// ** SHAPES
+// Rectangles
+$border-radius-rect: 6px;
+
+// ** OTHER STYLING
+// box-shadow
+$box-shadow-post: 3px 3px 2px 0px rgba(0,0,0,0.75);
+
+// *******
 
 body {
   font-family: $font-body;
@@ -14,52 +39,63 @@ h1, h2, h3 {
 
 a {
 
-  &:hover {
-    font-weight: bold;
+  &:hover, &:active, &:focus {
     text-decoration: none;
+  }
+
+  &:hover {
     text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
+  }
+
+  &:active {
+    text-shadow: 1px 1px 2.05px rgba(75, 75, 75, 0.9);
   }
 }
 
-
 /*
- * Override Bootstrap's default container.
+ Override Bootstrap's default container.
  */
-
 @media (min-width: 1200px) {
   .container {
     width: 1150px;
   }
 }
 
-// *******
-// Global variables for project
-// *******
+/*
+ Global custom classes
+ */
+// Section headers
+h1.section-header {
+ text-transform: uppercase;
+ font-size: 52px;
+ font-weight: 500;
+}
 
-// ** SPACING
-$section-padding: 30px;
+// Buttons
+a.button-wrapper {
 
-// ** RECTANGLES
-$border-radius-rect: 6px;
+  .button {
+    width: 50%;
+    display: inline-block;
+    padding: 6px;
+    border-radius: $border-radius-rect;
+    text-transform: uppercase;
 
-// ** COLOUR SCHEME
-$main-maroon: #812822;
-$home-featured-color: #dfdfdf;
-$footer-color: #4f4f4f;
+    &:hover {
+      box-shadow: 2px 2px 2.25px rgba(50, 50, 50, 1)
+    }
 
-// ** OTHER STYLING
-// box-shadow
-$box-shadow-post: 3px 3px 2px 0px rgba(0,0,0,0.75);
+    &:active {
+      box-shadow: 2px 2px 2.5px rgba(25, 25, 25, 1)
+    }
+  }
+}
 
 /*
- * Global custom classes
+ *******
+ File Imports
+ *******
  */
- h1.section-header {
-   text-transform: uppercase;
-   font-size: 52px;
-   font-weight: 500;
- }
-
 /* -- MAIN COMPONENTS -- */
 @import "components/navbar";
 @import "components/footer";
