@@ -5,6 +5,11 @@ body {
 h1, h2, h3 {
   font-family: Oswald, sans-serif; }
 
+a:hover {
+  font-weight: bold;
+  text-decoration: none;
+  text-shadow: 1px 1px 2px #969696; }
+
 /*
  * Override Bootstrap's default container.
  */
@@ -21,15 +26,25 @@ h1.section-header {
 
 /* -- MAIN COMPONENTS -- */
 #navbar .navbar {
-  background-color: rgba(255, 255, 255, 0.75); }
-#navbar .blog-nav {
+  background-color: rgba(255, 255, 255, 0.85); }
+#navbar nav.blog-nav {
+  display: table-row;
   font-family: Oswald, sans-serif; }
-  #navbar .blog-nav img {
-    height: 65px !important; }
-  #navbar .blog-nav li {
-    padding: 0px; }
-  #navbar .blog-nav a {
-    padding: 10px;
+  @media (max-width: 767px) {
+    #navbar nav.blog-nav img {
+      height: 65px !important; } }
+  #navbar nav.blog-nav img {
+    height: 80px; }
+    #navbar nav.blog-nav img:hover {
+      box-shadow: 0px 1px 0px #969696; }
+  #navbar nav.blog-nav div {
+    display: table-cell;
+    padding-right: 10px;
+    width: 80px;
+    text-align: center; }
+    #navbar nav.blog-nav div li {
+      padding: 0px; }
+  #navbar nav.blog-nav a {
     text-transform: uppercase;
     color: #812822; }
 
@@ -125,7 +140,8 @@ h1.section-header {
       color: white; }
     #services-cta .service-section div.service-content h2 {
       color: white;
-      margin-bottom: 25px; }
+      margin-bottom: 25px;
+      margin-top: 25px; }
     #services-cta .service-section div.service-content .service-image-wrapper .service-image {
       height: 245px;
       width: 245px;

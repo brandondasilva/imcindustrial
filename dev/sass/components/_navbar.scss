@@ -1,24 +1,46 @@
 #navbar {
 
   .navbar {
-    background-color: rgba(255,255,255,0.75);
+    background-color: rgba(255,255,255,0.85);
   }
 
-  .blog-nav {
+  // Local variables
+  $nav-items-padding: 10px;
 
-    font-family: $font-headers;
-    // font-weight: bold;
+  nav.blog-nav {
 
-    img {
+    @media (max-width: 767px) {
+
+      img {
         height: 65px !important;
+      }
     }
 
-    li {
-      padding: 0px;
+    display: table-row;
+    font-family: $font-headers;
+
+    img {
+      height: 80px;
+
+      &:hover {
+        box-shadow: 0px 1px 0px rgba(150, 150, 150, 1);
+      }
+    }
+
+
+
+    div {
+      display: table-cell;
+      padding-right: $nav-items-padding;
+      width: 80px;
+      text-align: center;
+
+      li {
+        padding: 0px;
+      }
     }
 
     a {
-      padding: 10px;
       text-transform: uppercase;
       color: rgb(129,40,34);
     }
