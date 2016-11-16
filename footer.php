@@ -4,6 +4,7 @@
         <div class="col-md-4 col-sm-4 footer-left">
           <h2>IMC Industrial</h2>
 
+          <h4 class="footer-titles"><a href="<?php bloginfo('wpurl');?>">Home</a></h4>
           <h4 class="footer-titles"><?php wp_list_pages('&title_li='); ?></h4>
           <h4 class="footer-titles"><a href="#">Portfolio</a></h4>
           <h4 class="footer-titles"><a href="#">Contact</a></h4>

@@ -1,0 +1,1 @@
+"use strict";define([],function(){function a(a,b){a.state("main",{url:"/",templateUrl:myLocalized.includes+"/main.html"}).state("portfolio",{url:"/portfolio",templateUrl:myLocalized.includes+"/portfolio/portfolio.php"}),b.otherwise("/")}return["$stateProvider","$urlRouterProvider",a]});

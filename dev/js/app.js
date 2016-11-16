@@ -1,15 +1,19 @@
+'use strict';
+
 define([
+  'app/routes',
   'app/controllers/ServicesCTACtrl',
   'angular',
+  'ui.router',
   'bootstrap'],
-  function(ServicesCTACtrl) {
-    // 'use strict';
+  function(routes, ServicesCTACtrl) {
 
     var appName = 'imcindustrial';
-    var depends = [];
+    var depends = ['ui.router'];
 
     var app = angular.module(appName, depends);
 
+    app.config(routes);
     app.controller("ServicesCTACtrl", ServicesCTACtrl);
 
     app.init = function() {

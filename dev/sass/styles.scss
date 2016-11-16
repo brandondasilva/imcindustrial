@@ -61,6 +61,12 @@ a {
   }
 }
 
+@media (min-width: 768px) {
+  .container {
+    width: auto;
+  }
+}
+
 /*
  Global custom classes
  */

@@ -13,7 +13,14 @@
 		wp_enqueue_style( 'OpenSans');
 	}
 
+  // My scripts
+  function my_scripts() {
+    wp_enqueue_script('my-scripts', get_template_directory_uri() . '/assets/js/app.js');
+    wp_localize_script('my-scripts', 'myLocalized', array( 'includes' => trailingslashit(get_template_directory_uri()) . 'assets/includes'));
+  }
+
   add_action('wp_enqueue_scripts', 'startwordpress_scripts');
+  add_action('wp_enqueue_scripts', 'my_scripts');
   add_action('wp_print_styles', 'startwordpress_google_fonts');
 
   // WordPress Titles

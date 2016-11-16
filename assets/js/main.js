@@ -1,1 +1,1 @@
-"use strict";"function"==typeof jQuery&&define("jquery",function(){return jQuery}),require(["config"],function(){require(["angular","bootstrap"],function(){require(["app"],function(a){a.init()})})});
+"use strict";"function"==typeof jQuery&&define("jquery",function(){return jQuery}),require(["config"],function(){require(["angular","ui.router","bootstrap"],function(){require(["app"],function(a){a.init()})})});

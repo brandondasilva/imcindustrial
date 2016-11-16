@@ -1,10 +1,9 @@
 #home-featured {
 
-  height: 450px;
   background-color: $home-featured-color;
+  padding: $section-padding;
 
   h1.section-header {
-    padding-top: $section-padding;
     text-align: center;
     color: black;
   }
@@ -13,7 +12,7 @@
 
     .home-featured-content {
 
-      clear: left; float: left; position: relative; left: 50%;
+      // clear: left; float: left; position: relative; left: 50%;
 
       // Local variables
       $postHeight: 250px;
@@ -27,11 +26,10 @@
 
         padding-top: $section-padding;
 
-        display: block; float: left; position: relative; right: 50%;
+        // display: block; float: left; position: relative; right: 50%;
 
         .post-thumbnail {
 
-          width: 440px;
           height: $postHeight;
 
           img {
@@ -49,7 +47,11 @@
 
         #post-exerpt1, #post-exerpt2 {
 
-          color: white;
+          @media (max-width: 991px) {
+            margin-top: 15px;
+          }
+
+          color: $body-text-white;
 
           h2 {
 
@@ -64,9 +66,7 @@
           background-color: $main-color;
           text-align: left;
 
-          width: 500px;
           height: $postHeight;
-          margin-left: 30px;
           padding: $section-padding;
 
           border-radius: $border-radius-rect;
@@ -74,10 +74,6 @@
           -webkit-box-shadow: $box-shadow-post;
           -moz-box-shadow: $box-shadow-post;
           box-shadow: $box-shadow-post;
-        }
-
-        #post-exerpt2 {
-          margin-left: 0px;
         }
       }
     }

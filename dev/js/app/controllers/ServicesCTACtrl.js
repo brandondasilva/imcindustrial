@@ -3,7 +3,7 @@
 
 define([], function() {
 
-  var ServicesCTACtrl = function($scope) {
+  function ServicesCTACtrl($scope) {
     $scope.services = [
       {
         heading: 'IMC',
