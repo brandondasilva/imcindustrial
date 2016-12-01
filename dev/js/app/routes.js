@@ -19,4 +19,4 @@ define([], function() {
   }
 
   return ["$stateProvider", "$urlRouterProvider", config];
-})
+});
