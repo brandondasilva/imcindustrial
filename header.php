@@ -27,5 +27,3 @@
   </head>
 
   <body>
-
-    <?php include( get_template_directory() . '/assets/includes/navbar.php' ); ?>

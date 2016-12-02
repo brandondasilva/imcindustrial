@@ -2,26 +2,22 @@
 
 define([
   'app/routes',
-  'app/controllers/ServicesCTACtrl',
-  'angular',
-  'ui.router',
-  'bootstrap'],
-  function(routes, ServicesCTACtrl) {
+  'app/directives/navbar',
+  'app/HomeModule'
+], function(routes, navbar, HomeModule) {
 
-    var appName = 'imcindustrial';
-    var depends = ['ui.router'];
+  var appName = 'imcindustrial';
+  var depends = ['ui.router', HomeModule];
 
-    var app = angular.module(appName, depends);
+  var app = angular.module(appName, depends).config(routes);
 
-    app.config(routes);
-    app.controller("ServicesCTACtrl", ServicesCTACtrl);
+  app.directive('navbar', navbar);
 
-    app.init = function() {
-      angular.element(document).ready(function() {
-        angular.bootstrap(document, [appName]);
-      });
-    };
+  app.init = function() {
+    angular.element(document).ready(function() {
+      angular.bootstrap(document, [appName]);
+    });
+  };
 
-    return app;
-  }
-);
+  return app;
+});

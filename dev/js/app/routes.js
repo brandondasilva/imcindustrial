@@ -5,14 +5,16 @@ define([], function() {
   function config($stateProvider, $urlRouterProvider) {
     // $locationProvider.html5Mode(true);
 
+    var includes = 'wp-content/themes/imcindustrial/assets/includes';
+
     $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: myLocalized.includes + '/main.html'
+        templateUrl: includes + '/main.html'
       })
       .state('portfolio', {
         url: '/portfolio',
-        templateUrl: myLocalized.includes + '/portfolio/portfolio.php'
+        templateUrl: includes + '/portfolio/portfolio.html'
       });
 
     $urlRouterProvider.otherwise('/');
