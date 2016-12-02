@@ -3,7 +3,6 @@
 define([], function() {
 
   function config($stateProvider, $urlRouterProvider) {
-    // $locationProvider.html5Mode(true);
 
     var includes = 'wp-content/themes/imcindustrial/assets/includes';
 
