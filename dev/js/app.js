@@ -4,11 +4,12 @@ define([
   'app/routes',
   'app/directives/navbar',
   'app/directives/bottom',
-  'app/HomeModule'
-], function(routes, navbar, bottom, HomeModule) {
+  'app/modules/HomeModule',
+  'app/modules/PortfolioModule'
+], function(routes, navbar, bottom, HomeModule, PortfolioModule) {
 
   var appName = 'imcindustrial';
-  var depends = ['ui.router', HomeModule];
+  var depends = ['ui.router', HomeModule, PortfolioModule];
 
   var app = angular.module(appName, depends).config(routes);
 

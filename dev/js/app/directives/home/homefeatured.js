@@ -8,7 +8,7 @@ define([], function() {
       scope: {
         info: '='
       },
-      templateUrl: 'wp-content/themes/imcindustrial/assets/includes/home/homefeatured.html'
+      templateUrl: 'wp-content/themes/imcindustrial/assets/includes/home/featured.html'
     }
   }
 

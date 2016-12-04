@@ -18,17 +18,17 @@
   define([
     'app/directives/home/homebanner',
     'app/directives/home/homefeatured',
-    'app/directives/home/servicescta',
-    'app/controllers/home/ServicesCTACtrl'
-  ], function(homebanner, homefeatured, servicescta, ServicesCTACtrl) {
+    'app/directives/home/homeservices',
+    'app/controllers/home/HomeServicesCtrl'
+  ], function(homebanner, homefeatured, homeservices, HomeServicesCtrl) {
 
     var moduleName = 'imcindustrial.home';
 
     angular.module(moduleName, ['ui.router'])
            .directive('homebanner', homebanner)
            .directive('homefeatured', homefeatured)
-           .directive('servicescta', servicescta)
-           .controller('ServicesCTACtrl', ServicesCTACtrl);
+           .directive('homeservices', homeservices)
+           .controller('HomeServicesCtrl', HomeServicesCtrl);
 
     return moduleName;
 

@@ -9,11 +9,15 @@ define([], function() {
     $stateProvider
       .state('main', {
         url: '/',
-        templateUrl: includes + '/main.html'
+        templateUrl: includes + '/home/home.html'
       })
       .state('portfolio', {
         url: '/portfolio',
         templateUrl: includes + '/portfolio/portfolio.html'
+      })
+      .state('contact', {
+        url: '/contact',
+        templateUrl: includes + '/contact/contact.html'
       });
 
     $urlRouterProvider.otherwise('/');

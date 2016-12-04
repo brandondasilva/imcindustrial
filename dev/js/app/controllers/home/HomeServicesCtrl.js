@@ -3,7 +3,7 @@
 
 define([], function() {
 
-  function ServicesCTACtrl($scope) {
+  function HomeServicesCtrl($scope) {
     $scope.services = [
       {
         heading: 'IMC',
@@ -24,9 +24,6 @@ define([], function() {
     ];
   }
 
-  // NavCtrl.$inject = ['$scope'];
+  return ["$scope", HomeServicesCtrl];
 
-  return ["$scope", ServicesCTACtrl];
-
-  // return ServicesCTACtrl;
 });
