@@ -113,10 +113,6 @@ a.button-wrapper {
 /* -- TEMPLATES --*/
 // @import "components/templates/home-featured-post";
 
-/* -- HOME PAGE -- */
-@import "components/home/homebanner";
-@import "components/home/homeservices";
-@import "components/home/homefeatured";
-
-/* -- ABOUT PAGE -- */
-@import "components/about/about-page";
+/* -- PAGES -- */
+@import "components/home/home";
+@import "components/about/about";
