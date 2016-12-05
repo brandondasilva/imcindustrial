@@ -2,9 +2,9 @@
 /**
  * ******************************************************************************************************
  *
- *   PortfolioModule
+ *   ContactModule
  *
- *   Defines controllers, directives and services for the portfolio page
+ *   Defines controllers, directives and services for the contact page
  *
  *  @author     Brandon Da Silva
  *  @date       December 2016
@@ -19,7 +19,7 @@
 
   ], function() {
 
-    var moduleName = 'imcindustrial.portfolio';
+    var moduleName = 'imcindustrial.contact';
 
     angular.module(moduleName, ['ui.router']);
 

@@ -1,21 +1,17 @@
-<div id="navbar">
+<div id="navbar" ng-controller="NavCtrl" ng-cloak>
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <nav class="blog-nav">
         <div>
-          <a class="blog-nav-item" ui-sref="main">
-            HOME
-            <!-- <img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png" /> -->
+          <a class="blog-nav-item" ui-sref="{{home.link}}">
+            <img src="{{home.path}}" alt="{{home.name}}" />
           </a>
         </div>
-        <div>
-          <!-- <?php wp_list_pages('&title_li='); ?> -->
-        </div>
-        <div>
-          <a ui-sref="portfolio">Portfolio</a>
-        </div>
-        <div>
-          <a ui-sref="contact">Contact</a>
+        <!-- <div ng-repeat="page in pages">
+          <a href="{{page.slug}}">{{page.title}}</a>
+        </div> -->
+        <div ng-repeat="item in items">
+          <a ui-sref="{{item.link}}">{{item.name}}</a>
         </div>
       </nav>
     </div>

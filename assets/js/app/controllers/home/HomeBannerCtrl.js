@@ -1,0 +1,1 @@
+"use strict";define([],function(){function a(a,b){b.get("wp-json").success(function(b){a.name=b.name,a.description=b.description}).error(function(){a.name="IMC Industrial",a.description="Industrial Solutions for SME's"})}return["$scope","$http",a]});

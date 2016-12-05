@@ -1,13 +1,13 @@
-<footer id="footer">
+<footer id="footer" ng-controller="NavCtrl">
   <div id="footer-content" class="container">
     <div class="row">
       <div class="col-md-4 col-sm-4 footer-left">
         <h2>IMC Industrial</h2>
 
-        <h4 class="footer-titles"><a ui-sref="main">Home</a></h4>
+        <h4 class="footer-titles"><a ui-sref="{{home.link}}">{{home.name}}</a></h4>
         <!-- <h4 class="footer-titles"><?php wp_list_pages('&title_li='); ?></h4> -->
-        <h4 class="footer-titles"><a href="#">Portfolio</a></h4>
-        <h4 class="footer-titles"><a href="#">Contact</a></h4>
+        <h4 class="footer-titles" ng-repeat="page in pages"><a ui-sref="{{page.link}}">{{page.name}}</a></h4>
+        <h4 class="footer-titles" ng-repeat="item in items"><a ui-sref="{{item.link}}">{{item.name}}</a></h4>
       </div>
 
       <div class="col-md-4 col-sm-4 footer-center">
@@ -18,10 +18,8 @@
           <h4>Newmarket, ON</h4>
           <h4>L3Y 9C9</h4>
           <div class="footer-button-group">
-            <a href="#" class="button-wrapper">
-              <span class="button footer-button">
-                Contact Us
-              </span>
+            <a ui-sref="contact" class="button-wrapper">
+              <span class="button footer-button">Contact Us</span>
             </a>
           </div>
         </div>
@@ -29,6 +27,7 @@
 
       <div class="col-md-4 col-sm-4 footer-right">
         <!-- <a href="<?php bloginfo('wpurl');?>"><img src="<?php bloginfo('template_directory'); ?>/assets/images/logo.png" /></a> -->
+        <a ui-sref="{{home.link}}"><img src="{{home.path}}" /></a>
 
         <p>Copyright &copy; IMC Industrial 2016</p>
         <p>Designed by <a href="http://premus.ca" target="_blank">Premus</a></p>

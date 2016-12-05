@@ -4,6 +4,9 @@
     height: 350px;
   }
   height: 500px;
+
+  // BANNER BACKGROUND
+  background-image: url($imagePath + "banner.png");
   background-position: center;
   background-size: cover;
 
@@ -18,10 +21,11 @@
     }
     height: 420px;
 
+    // GEAR BACKGROUND
+    background-image: url($imagePath + "gear.png");
     background-position: bottom;
     background-size: contain;
     background-repeat: no-repeat;
-
 
     #header-text {
 
