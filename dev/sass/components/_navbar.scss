@@ -4,8 +4,14 @@
     background-color: rgba(255,255,255,0.85);
   }
 
+  a {
+    text-transform: uppercase;
+    color: $main-color;
+    font-weight: bold;
+  }
+
   // Local variables
-  $nav-items-padding: 10px;
+  $nav-items-padding: 12px;
 
   nav.blog-nav {
 
@@ -13,6 +19,16 @@
 
       img {
         height: 65px !important;
+      }
+
+      #navigation {
+        display: none;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .menu {
+        display: none;
       }
     }
 
@@ -34,10 +50,29 @@
       }
     }
 
-    a {
-      text-transform: uppercase;
-      color: $main-color;
-      font-weight: bold;
+    .menu {
+      width: 100%;
+
+      background-image: url($imagePath + "icons/menu.svg");
+      background-repeat: no-repeat;
+      background-size: 60px;
+      background-position-x: 100%;
+      background-position-y: 50%;
+    }
+  }
+
+  #mobileNav {
+
+    border-top: 1px $main-color solid;
+
+    text-align: right;
+
+    div {
+      padding-top: $nav-items-padding;
+
+      &#navbar-Contact {
+        padding-bottom: $nav-items-padding;
+      }
     }
   }
 }

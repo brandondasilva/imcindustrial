@@ -1,19 +1,27 @@
 <div id="navbar" ng-controller="NavCtrl" ng-cloak>
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
+
       <nav class="blog-nav">
-        <div>
+        <div id="home">
           <a class="blog-nav-item" ui-sref="{{home.link}}">
             <img src="{{home.path}}" alt="{{home.name}}" />
           </a>
         </div>
-        <!-- <div ng-repeat="page in pages">
-          <a href="{{page.slug}}">{{page.title}}</a>
-        </div> -->
-        <div ng-repeat="item in items">
+
+        <div id="navigation" ng-repeat="item in items">
           <a ui-sref="{{item.link}}">{{item.name}}</a>
         </div>
+
+        <div class="menu" data-toggle="collapse" data-target="#mobileNav" aria-expanded="false" aria-controls="mobileNav" aria-hidden="true"></div>
       </nav>
+
+      <div id="mobileNav" class="collapse">
+        <div id="navbar-{{item.name}}" ng-repeat="item in items">
+          <a data-toggle="collapse" data-target="#mobileNav" ui-sref="{{item.link}}">{{item.name}}</a>
+        </div>
+      </div>
     </div>
   </div>
+
 </div>

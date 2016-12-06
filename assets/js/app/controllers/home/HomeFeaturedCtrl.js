@@ -1,0 +1,1 @@
+"use strict";define([],function(){function a(a,b){}return["$scope","$http",a]});

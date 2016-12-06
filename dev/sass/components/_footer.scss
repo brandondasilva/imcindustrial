@@ -24,6 +24,13 @@
     .footer-center {
       text-align: center;
 
+      // This keeps the address on the same line to avoid wrapping
+      @media (max-width: 799px) {
+        h4 {
+          font-size: 14px;
+        }
+      }
+
       .footer-button {
         width: 120px;
         display: inline-block;

@@ -20,13 +20,15 @@
     'app/directives/home/homefeatured',
     'app/directives/home/homeservices',
     'app/controllers/home/HomeBannerCtrl',
-    'app/controllers/home/HomeServicesCtrl'
+    'app/controllers/home/HomeServicesCtrl',
+    'app/controllers/home/HomeFeaturedCtrl'
   ], function(
     homebanner,
     homefeatured,
     homeservices,
     HomeBannerCtrl,
-    HomeServicesCtrl
+    HomeServicesCtrl,
+    HomeFeaturedCtrl
   ) {
 
     var moduleName = 'imcindustrial.home';
@@ -36,7 +38,8 @@
            .directive('homefeatured', homefeatured)
            .directive('homeservices', homeservices)
            .controller('HomeBannerCtrl', HomeBannerCtrl)
-           .controller('HomeServicesCtrl', HomeServicesCtrl);
+           .controller('HomeServicesCtrl', HomeServicesCtrl)
+           .controller('HomeFeaturedCtrl', HomeFeaturedCtrl);
 
     return moduleName;
 
