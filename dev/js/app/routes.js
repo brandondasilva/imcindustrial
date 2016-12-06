@@ -11,6 +11,10 @@ define([], function() {
         url: '/',
         templateUrl: includes + '/home/home.html'
       })
+      .state('about', {
+        url: '/about',
+        templateUrl: includes + '/about/about.html'
+      })
       .state('portfolio', {
         url: '/portfolio',
         templateUrl: includes + '/portfolio/portfolio.html'
