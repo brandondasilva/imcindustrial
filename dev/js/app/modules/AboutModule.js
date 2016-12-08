@@ -16,12 +16,18 @@
   "use strict";
 
   define([
-
-  ], function() {
+    'app/controllers/about/AboutCtrl',
+    'app/services/getPages'
+  ], function(
+    AboutCtrl,
+    getPages
+  ) {
 
     var moduleName = 'imcindustrial.about';
 
-    angular.module(moduleName, ['ui.router']);
+    angular.module(moduleName, ['ui.router'])
+           .controller('AboutCtrl', AboutCtrl)
+           .factory('getPages', getPages);
 
     return moduleName;
 

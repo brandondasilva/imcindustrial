@@ -23,6 +23,7 @@ define([
   var appName = 'imcindustrial';
   var depends = [
     'ui.router',
+    'ngSanitize',
     HomeModule,
     AboutModule,
     PortfolioModule,

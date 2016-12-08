@@ -1,1 +1,1 @@
-!function(a,b){"use strict";a([],function(){var a="imcindustrial.about";return b.module(a,["ui.router"]),a})}(define,angular);
+!function(a,b){"use strict";a(["app/controllers/about/AboutCtrl","app/services/getPages"],function(a,c){var d="imcindustrial.about";return b.module(d,["ui.router"]).controller("AboutCtrl",a).factory("getPages",c),d})}(define,angular);

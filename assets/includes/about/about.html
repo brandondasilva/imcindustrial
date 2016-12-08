@@ -1,1 +1,19 @@
-<br /><br><br><br><br><br><br>ABOUT PAGE
+<div id="about" ng-controller="AboutCtrl">
+  <div id="about-header">
+    <div class="container">
+  		<div class="row">
+  			<div class="col-md-12 header-content">
+          <h1>{{title}}</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="about-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-10 col-md-offset-1 col-sm-12" ng-bind-html="content"></div>
+      </div>
+    </div>
+  </div>
+</div>

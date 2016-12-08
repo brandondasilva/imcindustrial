@@ -6,7 +6,7 @@ if (typeof jQuery === 'function') {
 }
 
 require(['config'], function() {
-  require(['angular', 'ui.router', 'bootstrap'], function() {
+  require(['angular', 'ngSanitize', 'ui.router', 'bootstrap'], function() {
     require(['app'], function(app) {
       app.init();
     });

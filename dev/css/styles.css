@@ -9,9 +9,6 @@ a:hover, a:active, a:focus {
   text-decoration: none; }
 a:hover {
   text-shadow: 1px 1px 2px #969696; }
-@media (max-width: 768px) {
-  a a:hover {
-    text-shadow: none !important; } }
 a:active {
   text-shadow: 1px 1px 2.05px rgba(75, 75, 75, 0.9); }
 
@@ -60,14 +57,17 @@ a.button-wrapper .button {
   font-family: Oswald, sans-serif; }
   @media (max-width: 767px) {
     #navbar nav.blog-nav img {
-      height: 65px !important; }
-    #navbar nav.blog-nav #navigation {
+      height: 80px !important; }
+    #navbar nav.blog-nav #navigation, #navbar nav.blog-nav #mobileNav {
       display: none; } }
   @media (min-width: 768px) {
     #navbar nav.blog-nav .menu {
       display: none; } }
   #navbar nav.blog-nav img {
-    height: 80px; }
+    height: 90px;
+    position: relative;
+    display: inline-block;
+    padding: 10px; }
   #navbar nav.blog-nav div {
     display: table-cell;
     padding-right: 12px;
@@ -252,25 +252,26 @@ a.button-wrapper .button {
         #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1 h2 a, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 h2 a {
           color: white; }
 
-#about-page #about-page-template #about-page-header {
+#about #about-header {
   height: 250px;
+  background-image: url("../images//welder.png");
   background-position: center;
   background-size: cover; }
   @media (max-width: 767px) {
-    #about-page #about-page-template #about-page-header {
+    #about #about-header {
       height: 200px; } }
-  #about-page #about-page-template #about-page-header .header-content {
+  #about #about-header .header-content {
     padding-top: 120px;
     z-index: 10; }
     @media (max-width: 767px) {
-      #about-page #about-page-template #about-page-header .header-content {
+      #about #about-header .header-content {
         padding-top: 75px;
         text-align: center; } }
-    #about-page #about-page-template #about-page-header .header-content h1 {
+    #about #about-header .header-content h1 {
       font-size: 60px;
       text-transform: uppercase;
       text-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
-#about-page #about-page-template #about-page-content {
+#about #about-content {
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: #dfdfdf; }

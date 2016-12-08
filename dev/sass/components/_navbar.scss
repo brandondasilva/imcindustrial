@@ -18,10 +18,10 @@
     @media (max-width: 767px) {
 
       img {
-        height: 65px !important;
+        height: 80px !important;
       }
 
-      #navigation {
+      #navigation, #mobileNav {
         display: none;
       }
     }
@@ -36,7 +36,10 @@
     font-family: $font-headers;
 
     img {
-      height: 80px;
+      height: 90px;
+      position: relative;
+      display: inline-block;
+      padding: 10px;
     }
 
     div {
