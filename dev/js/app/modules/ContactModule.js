@@ -16,12 +16,21 @@
   "use strict";
 
   define([
-
-  ], function() {
+    'app/directives/contact/contactcontent',
+    'app/controllers/contact/ContactContentCtrl',
+    'app/services/getPages'
+  ], function(
+    contactcontent,
+    ContactContentCtrl,
+    getPages
+  ) {
 
     var moduleName = 'imcindustrial.contact';
 
-    angular.module(moduleName, ['ui.router']);
+    angular.module(moduleName, ['ui.router'])
+           .directive('contactcontent', contactcontent)
+           .controller('ContactContentCtrl', ContactContentCtrl)
+           .factory('getPages', getPages);
 
     return moduleName;
 

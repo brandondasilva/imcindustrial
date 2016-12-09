@@ -1,39 +1,36 @@
 #about {
 
-  // #about-template {
+  #about-header {
 
-    #about-header {
+    // @media (max-width: 767px) {
+    //   height: 200px;
+    // }
+    //
+    // height: 250px;
+    background-image: url($imagePath + "welder.png");
+    // background-position: center;
+    // background-size: cover;
+    //
+    // .header-content {
+    //   @media (max-width: 767px) {
+    //     padding-top: 75px;
+    //     text-align: center;
+    //   }
+    //
+    //   padding-top: 120px;
+    //   z-index: 10;
+    //
+    //   h1 {
+    //     font-size: 60px;
+    //     text-transform: uppercase;
+    //     text-shadow: $box-shadow-post;
+    //   }
+    // }
+  }
 
-      @media (max-width: 767px) {
-        height: 200px;
-      }
-
-      height: 250px;
-      background-image: url($imagePath + "/welder.png");
-      background-position: center;
-      background-size: cover;
-
-      .header-content {
-        @media (max-width: 767px) {
-          padding-top: 75px;
-          text-align: center;
-        }
-
-        padding-top: 120px;
-        z-index: 10;
-
-        h1 {
-          font-size: 60px;
-          text-transform: uppercase;
-          text-shadow: $box-shadow-post;
-        }
-      }
-    }
-
-    #about-content {
-      padding-top: $section-padding;
-      padding-bottom: $section-padding;
-      background-color: $home-featured-color;
-    }
+  // #about-content {
+  //   padding-top: $section-padding;
+  //   padding-bottom: $section-padding;
+  //   background-color: $home-featured-color;
   // }
 }

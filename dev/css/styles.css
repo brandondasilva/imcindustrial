@@ -15,12 +15,6 @@ a:active {
 /*
  Override Bootstrap's default container.
  */
-@media (min-width: 1200px) {
-  .container {
-    width: 1150px; } }
-@media (min-width: 768px) {
-  .container {
-    width: auto; } }
 /*
  Global custom classes
  */
@@ -40,6 +34,30 @@ a.button-wrapper .button {
   a.button-wrapper .button:active {
     box-shadow: 2px 2px 2.5px #191919; }
 
+.page-heading {
+  height: 250px;
+  background-position: center;
+  background-size: cover; }
+  @media (max-width: 767px) {
+    .page-heading {
+      height: 200px; } }
+  .page-heading .header-content {
+    padding-top: 120px;
+    z-index: 10; }
+    @media (max-width: 767px) {
+      .page-heading .header-content {
+        padding-top: 90px;
+        text-align: center; } }
+    .page-heading .header-content h1 {
+      font-size: 60px;
+      text-transform: uppercase;
+      text-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
+
+.page-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: #dfdfdf; }
+
 /*
  *******
  File Imports
@@ -52,30 +70,30 @@ a.button-wrapper .button {
   text-transform: uppercase;
   color: #812822;
   font-weight: bold; }
-#navbar nav.blog-nav {
+#navbar nav {
   display: table-row;
   font-family: Oswald, sans-serif; }
   @media (max-width: 767px) {
-    #navbar nav.blog-nav img {
+    #navbar nav img {
       height: 80px !important; }
-    #navbar nav.blog-nav #navigation, #navbar nav.blog-nav #mobileNav {
+    #navbar nav #navigation, #navbar nav #mobileNav {
       display: none; } }
   @media (min-width: 768px) {
-    #navbar nav.blog-nav .menu {
+    #navbar nav .menu {
       display: none; } }
-  #navbar nav.blog-nav img {
+  #navbar nav img {
     height: 90px;
     position: relative;
     display: inline-block;
     padding: 10px; }
-  #navbar nav.blog-nav div {
+  #navbar nav div {
     display: table-cell;
     padding-right: 12px;
     width: 80px;
     text-align: center; }
-    #navbar nav.blog-nav div li {
+    #navbar nav div li {
       padding: 0px; }
-  #navbar nav.blog-nav .menu {
+  #navbar nav .menu {
     width: 100%;
     background-image: url("../images/icons/menu.svg");
     background-repeat: no-repeat;
@@ -253,27 +271,9 @@ a.button-wrapper .button {
           color: white; }
 
 #about #about-header {
-  height: 250px;
-  background-image: url("../images//welder.png");
-  background-position: center;
-  background-size: cover; }
-  @media (max-width: 767px) {
-    #about #about-header {
-      height: 200px; } }
-  #about #about-header .header-content {
-    padding-top: 120px;
-    z-index: 10; }
-    @media (max-width: 767px) {
-      #about #about-header .header-content {
-        padding-top: 75px;
-        text-align: center; } }
-    #about #about-header .header-content h1 {
-      font-size: 60px;
-      text-transform: uppercase;
-      text-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
-#about #about-content {
-  padding-top: 30px;
-  padding-bottom: 30px;
-  background-color: #dfdfdf; }
+  background-image: url("../images/welder.png"); }
+
+#contact-content #contact-content-header {
+  background-image: url("../images/pipes.png"); }
 
 /*# sourceMappingURL=styles.css.map */

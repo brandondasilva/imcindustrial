@@ -19,6 +19,7 @@ $main-color: #812822;
 $home-featured-color: #dfdfdf;
 $body-text-white: #f0f0f0;
 $footer-color: #4f4f4f;
+$main-black: #1E1E1E;
 
 // ** SPACING
 $section-padding: 30px;
@@ -62,13 +63,13 @@ a {
  */
 @media (min-width: 1200px) {
   .container {
-    width: 1150px;
+    // width: 1150px;
   }
 }
 
 @media (min-width: 768px) {
   .container {
-    width: auto;
+    // width: auto;
   }
 }
 
@@ -102,6 +103,40 @@ a.button-wrapper {
   }
 }
 
+// For individual pages
+.page-heading {
+  @media (max-width: 767px) {
+    height: 200px;
+  }
+
+  height: 250px;
+
+  background-position: center;
+  background-size: cover;
+
+  .header-content {
+    @media (max-width: 767px) {
+      padding-top: 90px;
+      text-align: center;
+    }
+
+    padding-top: 120px;
+    z-index: 10;
+
+    h1 {
+      font-size: 60px;
+      text-transform: uppercase;
+      text-shadow: $box-shadow-post;
+    }
+  }
+}
+
+.page-content {
+  padding-top: $section-padding;
+  padding-bottom: $section-padding;
+  background-color: $home-featured-color;
+}
+
 /*
  *******
  File Imports
@@ -117,3 +152,4 @@ a.button-wrapper {
 /* -- PAGES -- */
 @import "components/home/home";
 @import "components/about/about";
+@import "components/contact/contact";
