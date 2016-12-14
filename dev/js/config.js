@@ -4,6 +4,7 @@ require.config({
     'jquery'  : '../bower_components/jquery/dist/jquery.min',
     'angular' : '../bower_components/angular/angular.min',
     'ngSanitize': '../bower_components/angular-sanitize/angular-sanitize.min',
+    'ngMaps' : '../bower_components/ng-maps/dist/ng-maps.min',
     'ui.router' : '../bower_components/angular-ui-router/release/angular-ui-router.min',
     'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap.min'
   },
@@ -18,6 +19,9 @@ require.config({
     'ngSanitize': {
       exports: 'ngSanitize'
     },
+    'ngMaps': {
+      exports: 'ngMaps'
+    },
     'ui.router': {
       deps: ["angular"]
     },
@@ -29,6 +33,7 @@ require.config({
   deps: [
     'angular',
     'ngSanitize',
+    'ngMaps',
     'ui.router',
     'bootstrap'
   ]

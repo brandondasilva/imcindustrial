@@ -1,1 +1,1 @@
-!function(a,b){"use strict";a([],function(){var a="imcindustrial.portfolio";return b.module(a,["ui.router"]),a})}(define,angular);
+!function(a,b){"use strict";a(["app/directives/portfolio/portfoliocontent","app/controllers/portfolio/PortfolioContentCtrl","app/services/getPages"],function(a,c,d){var e="imcindustrial.portfolio";return b.module(e,["ui.router"]).directive("portfoliocontent",a).controller("PortfolioContentCtrl",c).factory("getPages",d),e})}(define,angular);

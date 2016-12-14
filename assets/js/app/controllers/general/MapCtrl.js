@@ -1,0 +1,1 @@
+"use strict";define([],function(){function a(a){a.map={center:[44.0645355,-79.4286819],options:function(){return{zoom:15,streetViewControl:!1,scrollwheel:!1,draggable:!1}}},a.marker={position:[44.0645355,-79.4286819],options:function(){return{visible:!0}}}}return["$scope",a]});

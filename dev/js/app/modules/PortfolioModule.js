@@ -16,12 +16,21 @@
   "use strict";
 
   define([
-
-  ], function() {
+    'app/directives/portfolio/portfoliocontent',
+    'app/controllers/portfolio/PortfolioContentCtrl',
+    'app/services/getPages'
+  ], function(
+    portfoliocontent,
+    PortfolioContentCtrl,
+    getPages
+  ) {
 
     var moduleName = 'imcindustrial.portfolio';
 
-    angular.module(moduleName, ['ui.router']);
+    angular.module(moduleName, ['ui.router'])
+           .directive('portfoliocontent', portfoliocontent)
+           .controller('PortfolioContentCtrl', PortfolioContentCtrl)
+           .factory('getPages', getPages);
 
     return moduleName;
 

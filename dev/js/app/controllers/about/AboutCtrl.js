@@ -22,6 +22,7 @@ define([], function() {
       for (var i = 0; i < res.length; i++) {
         if (res[i].title === "About") {
           $scope.title = res[i].title;
+          $scope.featuredImage = res[i].featured_image.attachment_meta.sizes.large.url;
           $scope.content = res[i].content;
         }
       }

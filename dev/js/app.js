@@ -2,9 +2,10 @@
 
 define([
   'app/routes',
-  'app/directives/navbar',
-  'app/directives/bottom',
-  'app/controllers/NavCtrl',
+  'app/directives/general/navbar',
+  'app/directives/general/bottom',
+  'app/directives/general/mapsection',
+  'app/controllers/general/NavCtrl',
   'app/modules/HomeModule',
   'app/modules/AboutModule',
   'app/modules/PortfolioModule',
@@ -13,6 +14,7 @@ define([
   routes,
   navbar,
   bottom,
+  mapsection,
   NavCtrl,
   HomeModule,
   AboutModule,
@@ -24,6 +26,7 @@ define([
   var depends = [
     'ui.router',
     'ngSanitize',
+    'ngMaps',
     HomeModule,
     AboutModule,
     PortfolioModule,
@@ -34,6 +37,7 @@ define([
 
   app.directive('navbar', navbar)
      .directive('bottom', bottom)
+     .directive('mapsection', mapsection)
      .controller('NavCtrl', NavCtrl);
 
   app.constant('path', 'wp-content/themes/imcindustrial/assets');
