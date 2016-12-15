@@ -3,7 +3,8 @@ body {
   font-family: Roboto, sans-serif; }
 
 h1, h2, h3 {
-  font-family: Oswald, sans-serif; }
+  font-family: Oswald, sans-serif;
+  text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.5); }
 
 a:hover, a:active, a:focus {
   text-decoration: none; }
@@ -13,8 +14,12 @@ a:active {
   text-shadow: 1px 1px 2.05px rgba(75, 75, 75, 0.9); }
 
 /*
- Override Bootstrap's default container.
+ Override Bootstrap's default classes.
  */
+.row {
+  margin-left: 0px;
+  margin-right: 0px; }
+
 /*
  Global custom classes
  */
@@ -120,7 +125,9 @@ a.button-wrapper .button {
       padding-bottom: 12px; }
 
 #footer {
-  background-color: #4f4f4f; }
+  background-color: #4f4f4f;
+  position: relative;
+  clear: both; }
   #footer #footer-content {
     padding-bottom: 20px; }
     #footer #footer-content h2, #footer #footer-content h3, #footer #footer-content h4, #footer #footer-content p, #footer #footer-content a {
@@ -141,9 +148,7 @@ a.button-wrapper .button {
         width: 120px;
         display: inline-block;
         background-color: #812822;
-        margin-top: 5px;
-        padding: 6px;
-        border-radius: 6px; }
+        margin-top: 5px; }
     #footer #footer-content .footer-right {
       margin-top: 20px;
       text-align: right; }
@@ -159,11 +164,43 @@ a.button-wrapper .button {
 #map {
   background-color: #812822;
   padding: 30px; }
-  #map .googleMap {
-    width: 100%;
-    height: 400px;
-    border-radius: 6px;
-    box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
+  @media (max-width: 767px) {
+    #map {
+      padding-left: 10px !important;
+      padding-right: 10px !important; } }
+  @media (min-width: 768px) and (max-width: 991px) {
+    #map {
+      padding-left: 10px !important;
+      padding-right: 10px !important; } }
+  #map .map-wrapper {
+    padding-left: 10px !important;
+    padding-right: 10px !important; }
+    #map .map-wrapper .googleMap {
+      width: 100%;
+      height: 300px;
+      box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
+  #map #map-content h1, #map #map-content h3 {
+    text-align: center;
+    color: #f0f0f0; }
+  #map #map-content div {
+    padding-top: 10px; }
+    #map #map-content div h3 {
+      font-family: Roboto, sans-serif;
+      line-height: 0.8; }
+  @media (max-width: 767px) {
+    #map #map-content #contact-buttons div {
+      text-align: center !important; } }
+  #map #map-content #contact-buttons div:first-child {
+    text-align: right; }
+  #map #map-content #contact-buttons .button-wrapper img {
+    padding-right: 5px; }
+  #map #map-content #contact-buttons .button-wrapper .button.map-button {
+    width: auto !important;
+    color: #f0f0f0;
+    background-color: #1E1E1E;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px; }
 
 /* -- TEMPLATES --*/
 /* -- PAGES -- */

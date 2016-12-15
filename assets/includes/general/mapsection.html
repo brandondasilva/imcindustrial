@@ -2,17 +2,34 @@
   <div class="container">
     <div class="row">
       <div class="col-md-6">
-        <!-- <div id="googleMap"></div> -->
-        <!-- <div map-lazy-load="https://maps.google.com/maps/api/js" map-lazy-load-params="{{googleMapsUrl}}"> -->
-        <map class="googleMap" ng-transclude center="map.center" options="map.options">
-          <marker position="marker.position" options="marker.options"></marker>
-        </map>
-        <!-- </div> -->
-
+        <div class="map-wrapper">
+          <map class="googleMap" ng-transclude center="map.center" options="map.options">
+            <marker position="marker.position" options="marker.options"></marker>
+          </map>
+        </div>
       </div>
 
-      <div class="col-md-6">
-        CONTENT
+      <div id="map-content" class="col-md-6">
+        <h1>Head Office</h1>
+        <div>
+          <h3>1205 Twinney Drive, Unit #10</h3>
+          <h3>Newmarket, ON</h3>
+          <h3>L3Y 9C9</h3>
+        </div>
+
+        <div id="contact-buttons" class="row">
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <a href="https://goo.gl/Ah0hsL" target="_blank" class="button-wrapper">
+              <span class="button map-button"><img src="{{icons.pin}}" /> Directions</span>
+            </a>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-6">
+            <a href="tel:8445778222" class="button-wrapper">
+              <span class="button map-button"><img src="{{icons.phone}}" /> (844) 577-8222</span>
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
