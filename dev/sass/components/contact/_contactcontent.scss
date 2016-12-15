@@ -1,5 +1,50 @@
 #contact-content {
-  #contact-content-header {
+  #contact-content {
 
+    #contact-form {
+      // text-align: left;
+
+      @media (max-width: 767px) {
+
+        h1, .button-wrapper {
+
+        }
+
+        h1 {
+          text-align: center !important;
+          padding-right: 0px !important;
+        }
+
+        .button-wrapper {
+          float: center;
+        }
+      }
+
+      h1 {
+        margin-top: 0px;
+        text-align: right;
+        padding-right: 15px;
+      }
+
+      .input {
+        padding-top: 15px;
+      }
+
+      .button-wrapper {
+        float: right;
+        padding-right: 15px;
+        padding-top: 15px;
+
+        .button.email-button {
+          width: auto !important;
+          color: $body-text-white;
+          background-color: $main-black;
+          margin-top: 5px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+
+    }
   }
 }

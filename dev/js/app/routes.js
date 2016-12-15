@@ -22,6 +22,10 @@ define([], function() {
       .state('contact', {
         url: '/contact',
         templateUrl: includes + '/contact/contact.html'
+      })
+      .state('careers', {
+        url: '/careers',
+        templateUrl: includes + '/careers/careers.html'
       });
 
     $urlRouterProvider.otherwise('/');

@@ -2,19 +2,23 @@
   <div class="navbar navbar-default navbar-fixed-top">
     <div class="container">
 
-      <nav>
+      <div class="nav">
         <div id="home">
           <a ui-sref="{{home.link}}">
             <img src="{{home.path}}" alt="{{home.name}}" />
           </a>
         </div>
 
-        <div id="navigation" ng-repeat="item in items">
+        <div class="navigation" ng-repeat="item in items">
           <a ui-sref="{{item.link}}">{{item.name}}</a>
         </div>
 
         <div class="menu" data-toggle="collapse" data-target="#mobileNav" aria-expanded="false" aria-controls="mobileNav" aria-hidden="true"></div>
-      </nav>
+      </div>
+
+      <div class="navigation right">
+        <a ui-sref="{{careers.link}}">{{careers.name}}</a>
+      </div>
 
       <div id="mobileNav" class="collapse">
         <div id="navbar-{{item.name}}" ng-repeat="item in items">

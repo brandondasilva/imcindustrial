@@ -13,7 +13,7 @@
   // Local variables
   $nav-items-padding: 12px;
 
-  nav {
+  .nav {
 
     @media (max-width: 767px) {
 
@@ -21,7 +21,7 @@
         height: 80px !important;
       }
 
-      #navigation, #mobileNav {
+      .navigation, #mobileNav {
         display: none;
       }
     }

@@ -36,6 +36,11 @@ define([], function() {
         link: "contact"
       },
     ];
+
+    $scope.careers = {
+      name: "Careers",
+      link: "careers"
+    }
   }
 
   return ["$scope", "$http", "path", NavCtrl];
