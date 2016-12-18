@@ -3,21 +3,24 @@
     <div class="container">
 
       <div class="nav">
-        <div id="home">
-          <a ui-sref="{{home.link}}">
-            <img src="{{home.path}}" alt="{{home.name}}" />
-          </a>
+        <div class="nav-left">
+          <div id="home">
+            <a ui-sref="{{home.link}}">
+              <img src="{{home.path}}" alt="{{home.name}}" />
+            </a>
+          </div>
+
+          <div class="navi" ng-repeat="item in items">
+            <a ui-sref="{{item.link}}">{{item.name}}</a>
+          </div>
         </div>
 
-        <div class="navigation" ng-repeat="item in items">
-          <a ui-sref="{{item.link}}">{{item.name}}</a>
+
+        <div class="nav-right">
+          <a ui-sref="{{careers.link}}">{{careers.name}}</a>
         </div>
 
         <div class="menu" data-toggle="collapse" data-target="#mobileNav" aria-expanded="false" aria-controls="mobileNav" aria-hidden="true"></div>
-      </div>
-
-      <div class="navigation right">
-        <a ui-sref="{{careers.link}}">{{careers.name}}</a>
       </div>
 
       <div id="mobileNav" class="collapse">
@@ -25,6 +28,8 @@
           <a data-toggle="collapse" data-target="#mobileNav" ui-sref="{{item.link}}">{{item.name}}</a>
         </div>
       </div>
+
+
     </div>
   </div>
 

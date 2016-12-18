@@ -13,7 +13,25 @@
   // Local variables
   $nav-items-padding: 12px;
 
+  font-family: $font-headers;
+
+  .nav-left {
+    display: table-cell;
+    position: relative;
+    float: left;
+  }
+
+  .nav-right {
+    display: table-cell;
+    position: relative;
+    float: right;
+    line-height: 90px;
+  }
+  // @media (max-width: 767px) { .nav-right { display: none; } }
+
   .nav {
+
+
 
     @media (max-width: 767px) {
 
@@ -21,7 +39,7 @@
         height: 80px !important;
       }
 
-      .navigation, #mobileNav {
+      .navi, .nav-right, #mobileNav {
         display: none;
       }
     }
@@ -33,7 +51,6 @@
     }
 
     display: table-row;
-    font-family: $font-headers;
 
     img {
       height: 90px;

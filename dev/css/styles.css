@@ -94,49 +94,59 @@ a.button-wrapper .button {
  *******
  */
 /* -- MAIN COMPONENTS -- */
-#navbar .navbar {
-  background-color: rgba(255, 255, 255, 0.85); }
-#navbar a {
-  text-transform: uppercase;
-  color: #812822;
-  font-weight: bold; }
-#navbar .nav {
-  display: table-row;
+#navbar {
   font-family: Oswald, sans-serif; }
-  @media (max-width: 767px) {
-    #navbar .nav img {
-      height: 80px !important; }
-    #navbar .nav .navigation, #navbar .nav #mobileNav {
-      display: none; } }
-  @media (min-width: 768px) {
-    #navbar .nav .menu {
-      display: none; } }
-  #navbar .nav img {
-    height: 90px;
-    position: relative;
-    display: inline-block;
-    padding: 10px; }
-  #navbar .nav div {
+  #navbar .navbar {
+    background-color: rgba(255, 255, 255, 0.85); }
+  #navbar a {
+    text-transform: uppercase;
+    color: #812822;
+    font-weight: bold; }
+  #navbar .nav-left {
     display: table-cell;
-    padding-right: 12px;
-    width: 80px;
-    text-align: center; }
-    #navbar .nav div li {
-      padding: 0px; }
-  #navbar .nav .menu {
-    width: 100%;
-    background-image: url("../images/icons/menu.svg");
-    background-repeat: no-repeat;
-    background-size: 60px;
-    background-position-x: 100%;
-    background-position-y: 50%; }
-#navbar #mobileNav {
-  border-top: 1px #812822 solid;
-  text-align: right; }
-  #navbar #mobileNav div {
-    padding-top: 12px; }
-    #navbar #mobileNav div#navbar-Contact {
-      padding-bottom: 12px; }
+    position: relative;
+    float: left; }
+  #navbar .nav-right {
+    display: table-cell;
+    position: relative;
+    float: right;
+    line-height: 90px; }
+  #navbar .nav {
+    display: table-row; }
+    @media (max-width: 767px) {
+      #navbar .nav img {
+        height: 80px !important; }
+      #navbar .nav .navi, #navbar .nav .nav-right, #navbar .nav #mobileNav {
+        display: none; } }
+    @media (min-width: 768px) {
+      #navbar .nav .menu {
+        display: none; } }
+    #navbar .nav img {
+      height: 90px;
+      position: relative;
+      display: inline-block;
+      padding: 10px; }
+    #navbar .nav div {
+      display: table-cell;
+      padding-right: 12px;
+      width: 80px;
+      text-align: center; }
+      #navbar .nav div li {
+        padding: 0px; }
+    #navbar .nav .menu {
+      width: 100%;
+      background-image: url("../images/icons/menu.svg");
+      background-repeat: no-repeat;
+      background-size: 60px;
+      background-position-x: 100%;
+      background-position-y: 50%; }
+  #navbar #mobileNav {
+    border-top: 1px #812822 solid;
+    text-align: right; }
+    #navbar #mobileNav div {
+      padding-top: 12px; }
+      #navbar #mobileNav div#navbar-Contact {
+        padding-bottom: 12px; }
 
 #footer {
   background-color: #4f4f4f;
