@@ -19,6 +19,7 @@
     display: table-cell;
     position: relative;
     float: left;
+    width: 100%;
   }
 
   .nav-right {
@@ -93,6 +94,11 @@
       &#navbar-Contact {
         padding-bottom: $nav-items-padding;
       }
+    }
+
+    #navbar-Careers {
+      padding-top: 0px !important;
+      padding-bottom: $nav-items-padding;
     }
   }
 }
