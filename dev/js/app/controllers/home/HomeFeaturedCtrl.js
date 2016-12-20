@@ -16,29 +16,40 @@
 
 define([], function() {
 
-  function HomeFeaturedCtrl($scope, $http, path) {
+  function HomeFeaturedCtrl($scope, $http) {
 
-    $http.get('wp-json/posts/?filter[category_name]=featured').success(function(res) {
+    $scope.slides = [];
+
+    $http.get('wp-json/posts/?filter[category_name]=featured&filter[posts_per_page]=5').success(function(res) {
 
       $scope.result = res;
-      $scope.featured = [];
 
       console.log($scope.result)
 
       for (var i = 0; i < $scope.result.length; i++) {
-        $scope.featured.push({
-          heading: $scope.result[i].title,
-          desc: $scope.result[i].excerpt,
-          image: $scope.result[i].featured_image.attachment_meta.sizes.medium.url,
-          link: $scope.result[i].guid
-        });
+
+        if ($scope.result[i].featured_image === null) {
+          $scope.slides.push({
+            heading: $scope.result[i].title,
+            desc: $scope.result[i].excerpt,
+            image: null,
+            link: $scope.result[i].guid
+          });
+        } else {
+          $scope.slides.push({
+            heading: $scope.result[i].title,
+            desc: $scope.result[i].excerpt,
+            image: $scope.result[i].featured_image.attachment_meta.sizes.medium_large.url,
+            link: $scope.result[i].guid
+          });
+        }
       }
 
-      console.log($scope.featured);
+      console.log($scope.slides);
     });
 
   }
 
-  return ["$scope", "$http", "path", HomeFeaturedCtrl];
+  return ["$scope", "$http", HomeFeaturedCtrl];
 
 });

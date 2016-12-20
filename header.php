@@ -10,6 +10,8 @@
 
     <!-- Bootstrap core CSS -->
     <link href="<?php bloginfo('template_directory'); ?>/assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Angular Carousel CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-carousel/1.0.1/angular-carousel.min.css" />
 
     <!-- Custom styles for this template -->
     <!-- <link href="<?php bloginfo('template_directory'); ?>/assets/css/styles.min.css" rel="stylesheet"> -->

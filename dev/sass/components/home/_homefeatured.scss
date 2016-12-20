@@ -20,25 +20,30 @@
         color: black;
       }
 
+      #info-indicators {
+        text-align: center;
+      }
+
       .home-featured-post {
 
         padding-top: $section-padding;
+        margin-left: 15px;
+        margin-right: 15px;
 
         .post-thumbnail {
 
           height: $postHeight;
+          padding-right: 20px;
 
-          img {
+          background-repeat: no-repeat;
+          background-size: cover;
 
-            width: 100%;
-            height: 100%;
+          -webkit-box-shadow: $box-shadow-post;
+          -moz-box-shadow: $box-shadow-post;
+          box-shadow: $box-shadow-post;
 
-            -webkit-box-shadow: $box-shadow-post;
-            -moz-box-shadow: $box-shadow-post;
-            box-shadow: $box-shadow-post;
+          border-radius: $border-radius-rect;
 
-            border-radius: $border-radius-rect;
-          }
         }
 
         #post-exerpt1, #post-exerpt2 {
@@ -70,6 +75,151 @@
           -webkit-box-shadow: $box-shadow-post;
           -moz-box-shadow: $box-shadow-post;
           box-shadow: $box-shadow-post;
+        }
+      }
+
+      /*
+        Font and height settings for the content in the info section
+      */
+
+      // Smallest screen sizes
+      @media screen and (max-width: 375px) {
+        ul {
+          height: 400px;
+          left: 5%;
+          width: 90%;
+
+          li {
+            vertical-align: middle;
+
+            h4 {
+              color: white;
+              line-height: 200%;
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+        .rn-carousel-control-prev {
+          position: relative;
+          bottom: 150px;
+          margin-left: -20px;
+          padding: 0px;
+          float: left;
+          box-sizing: border-box;
+
+          &::before {
+            content: "❮" !important;
+            color: white;
+          }
+        }
+
+        .rn-carousel-control-next {
+          position: relative;
+          bottom: 150px;
+          margin-left: 100%;
+          padding: 0px;
+          float: left;
+          box-sizing: border-box;
+
+          &::before {
+            content: "❯" !important;
+            color: white;
+          }
+        }
+      }
+
+      // Smaller screen sizes
+      @media screen and (min-width: 375px) and (max-width: 500px) {
+        ul {
+          height: 350px;
+          left: 5%;
+          width: 90%;
+
+          li {
+            vertical-align: middle;
+
+            h4 {
+              color: white;
+              line-height: 200%;
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+        .rn-carousel-control-prev {
+          position: relative;
+          bottom: 150px;
+          margin-left: -20px;
+          padding: 0px;
+          float: left;
+          box-sizing: border-box;
+
+          &::before {
+            content: "❮" !important;
+            color: white;
+          }
+        }
+
+        .rn-carousel-control-next {
+          position: relative;
+          bottom: 150px;
+          margin-left: 100%;
+          padding: 0px;
+          float: left;
+          box-sizing: border-box;
+
+          &::before {
+            content: "❯" !important;
+            color: white;
+          }
+        }
+      }
+
+      // Larger screen sizes
+      @media screen and (min-width: 501px) {
+        ul {
+          height: 310px;
+          left: 5%;
+          width: 90%;
+
+          li {
+            vertical-align: middle;
+
+            h4 {
+              color: white;
+              line-height: 200%;
+              font-size: 1.8rem;
+            }
+          }
+        }
+
+        .rn-carousel-control-prev {
+          position: relative;
+          bottom: 150px;
+          margin-left: -20px;
+          padding: 0px;
+          float: left;
+          box-sizing: border-box;
+
+          &::before {
+            content: "❮" !important;
+            color: white;
+          }
+        }
+
+        .rn-carousel-control-next {
+          position: relative;
+          bottom: 150px;
+          margin-left: 100%;
+          padding: 0px;
+          float: left;
+          box-sizing: border-box;
+
+          &::before {
+            content: "❯" !important;
+            color: white;
+          }
         }
       }
     }
