@@ -6,6 +6,8 @@ require.config({
     'ngSanitize': '../bower_components/angular-sanitize/angular-sanitize.min',
     'ngMaps' : '../bower_components/ng-maps/dist/ng-maps.min',
     'ui.router' : '../bower_components/angular-ui-router/release/angular-ui-router.min',
+    'angular-touch' : '../bower_components/angular-touch/angular-touch.min',
+    'angular-carousel' : '../bower_components/angular-carousel/dist/angular-carousel.min',
     'bootstrap': '../bower_components/bootstrap/dist/js/bootstrap.min'
   },
 
@@ -25,6 +27,12 @@ require.config({
     'ui.router': {
       deps: ["angular"]
     },
+    'angular-touch': {
+      exports: 'angular-touch'
+    },
+    'angular-carousel': {
+      exports: 'angular-carousel'
+    },
     'bootstrap': {
       exports: 'bootstrap'
     }
@@ -35,6 +43,8 @@ require.config({
     'ngSanitize',
     'ngMaps',
     'ui.router',
+    'angular-touch',
+    'angular-carousel',
     'bootstrap'
   ]
 

@@ -1,1 +1,1 @@
-"use strict";define([],function(){function a(a,b){}return["$scope","$http",a]});
+"use strict";define([],function(){function a(a,b,c){b.get("wp-json/posts/?filter[category_name]=featured").success(function(b){a.result=b,a.featured=[],console.log(a.result);for(var c=0;c<a.result.length;c++)a.featured.push({heading:a.result[c].title,desc:a.result[c].excerpt,image:a.result[c].featured_image.attachment_meta.sizes.medium.url,link:a.result[c].guid});console.log(a.featured)})}return["$scope","$http","path",a]});

@@ -2,6 +2,7 @@
 
   @media (max-width: 767px) {
     height: 350px;
+    background-image: url($imagePath + "banner@0,5x.jpg");
   }
   height: 500px;
 
@@ -9,7 +10,7 @@
   padding-bottom: 20px;
 
   // BANNER BACKGROUND
-  background-image: url($imagePath + "banner.png");
+  background-image: url($imagePath + "banner.jpg");
   background-position: center;
   background-size: cover;
 
@@ -21,6 +22,7 @@
 
     @media (max-width: 767px) {
       height: 300px;
+      background-image: url($imagePath + "gear@0,5x.png");
     }
     height: 420px;
 

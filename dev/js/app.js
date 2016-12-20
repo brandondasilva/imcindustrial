@@ -27,6 +27,7 @@ define([
     'ui.router',
     'ngSanitize',
     'ngMaps',
+    'angular-carousel',
     HomeModule,
     AboutModule,
     PortfolioModule,

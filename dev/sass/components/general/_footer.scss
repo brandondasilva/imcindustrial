@@ -55,6 +55,36 @@
       }
 
       p { margin-bottom: 5px; }
+
+      #footer-buttons {
+        @media (max-width: 767px) {
+          div {
+            text-align: center !important;
+          }
+        }
+
+        & div:first-child {
+          text-align: right;
+        }
+
+        .button-wrapper {
+
+          width: auto;
+
+          img {
+            padding-right: 5px;
+          }
+
+          .button.map-button {
+            width: auto !important;
+            color: $body-text-white;
+            background-color: $main-black;
+            margin-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+      }
     }
   }
 }
