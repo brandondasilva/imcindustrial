@@ -24,8 +24,6 @@ define([], function() {
 
       $scope.result = res;
 
-      console.log($scope.result)
-
       for (var i = 0; i < $scope.result.length; i++) {
 
         if ($scope.result[i].featured_image === null) {
@@ -44,8 +42,6 @@ define([], function() {
           });
         }
       }
-
-      console.log($scope.slides);
     });
 
   }

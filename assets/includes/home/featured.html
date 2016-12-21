@@ -8,27 +8,23 @@
 
 		  <div class="home-featured-content">
 
-				<ul id="home-carousel" rn-carousel rn-carousel-controls >
+				<ul id="home-carousel" rn-carousel rn-carousel-controls rn-carousel-controls-allow-loop rn-carousel-auto-slide="5" >
 					<li ng-repeat="slide in slides">
-						<div ng-show="slide.image" class="row layer home-featured-post">
-				  		<div class="col-md-5 col-sm-10 post-thumbnail" style="background-image: url({{slide.image}})"></div>
+						<div ng-if="slide.image" class="row layer home-featured-post">
+				  		<div class="col-md-5 col-sm-5 post-thumbnail" style="background-image: url({{slide.image}})"></div>
 
-				  		<div id="post-exerpt1" class="col-md-6 col-sm-10 col-md-offset-1">
+				  		<div id="post-exerpt1" class="col-md-6 col-sm-6 col-md-offset-1 col-sm-offset-1">
 
-				        <h2 class="blog-post-title">
-				          <a href="">{{slide.title}}</a>
-				        </h2>
-								<p>{{slide.desc}}</p>
+				        <a href=""><h2 ng-bind-html="slide.heading"></h2></a>
+								<div class="" ng-bind-html="slide.desc"></div>
 				  		</div>
 				    </div>
 
 						<div ng-hide="slide.image" class="row home-featured-post">
 			        <div id="post-exerpt2" class="col-md-8 col-sm-10 col-sm-offset-1 col-md-offset-2">
 
-								<h2 class="blog-post-title">
-				          <a href="">{{slide.title}}</a>
-				        </h2>
-								<p>{{slide.desc}}</p>
+								<a href=""><h2 ng-bind-html="slide.heading"></h2></a>
+								<div class="" ng-bind-html="slide.desc"></div>
 				      </div>
 				    </div>
 					</li>

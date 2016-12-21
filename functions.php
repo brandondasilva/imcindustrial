@@ -21,3 +21,9 @@
   set_post_thumbnail_size( 150, 150, true );
   // Additional image sizes
   add_image_size( 'home-featured', 400, 200 );
+
+  // Change the excerpt length
+  function custom_excerpt_length( $length ) {
+  	return 30;
+  }
+  add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );

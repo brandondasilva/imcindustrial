@@ -26,6 +26,9 @@ input, textarea {
 /*
  Override Bootstrap's default classes.
  */
+@media (min-width: 768px) {
+  .container {
+    width: auto; } }
 .row {
   margin-left: 0px;
   margin-right: 0px; }
@@ -335,7 +338,8 @@ a.button-wrapper .button {
 
 #homefeatured {
   background-color: #dfdfdf;
-  padding: 30px; }
+  padding: 30px;
+  padding-bottom: 0px; }
   #homefeatured h1.section-header {
     text-align: center;
     color: black; }
@@ -353,13 +357,17 @@ a.button-wrapper .button {
       margin-right: 15px; }
       #homefeatured #home-featured-template .home-featured-content .home-featured-post .post-thumbnail {
         height: 250px;
-        padding-right: 20px;
+        padding: 30px;
         background-repeat: no-repeat;
         background-size: cover;
         -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
         -moz-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
         box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
         border-radius: 6px; }
+        @media (max-width: 767px) {
+          #homefeatured #home-featured-template .home-featured-content .home-featured-post .post-thumbnail {
+            height: 175px;
+            margin-bottom: 10px; } }
       #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 {
         color: #f0f0f0;
         background-color: #812822;
@@ -372,105 +380,58 @@ a.button-wrapper .button {
         box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
         @media (max-width: 991px) {
           #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 {
-            margin-top: 15px; } }
+            padding: 10px !important; }
+            #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1 h2, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 h2 {
+              font-size: 24px; } }
+        @media (max-width: 767px) {
+          #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 {
+            height: auto; } }
         #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1 h2, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 h2 {
-          margin-top: 0px;
-          margin-bottom: 10px; }
-          #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1 h2 a, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 h2 a {
-            color: white; }
-    @media screen and (max-width: 375px) {
+          margin-top: 5px;
+          margin-bottom: 10px;
+          color: #f0f0f0; }
+          #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1 h2:hover, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1 h2:active, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1 h2:focus, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 h2:hover, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 h2:active, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 h2:focus {
+            text-decoration: none; }
+          #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1 h2:hover, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 h2:hover {
+            text-shadow: 1px 1px 2px #969696; }
+          #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt1 h2:active, #homefeatured #home-featured-template .home-featured-content .home-featured-post #post-exerpt2 h2:active {
+            text-shadow: 1px 1px 2.05px rgba(75, 75, 75, 0.9); }
+    #homefeatured #home-featured-template .home-featured-content ul {
+      padding-left: 30px;
+      padding-right: 30px; }
+    #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev, #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next {
+      position: relative;
+      padding: 0px;
+      float: left; }
+    #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev {
+      margin-left: -22px; }
+      #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev::before {
+        content: "❮" !important;
+        font-size: 40px;
+        color: #1E1E1E; }
+    #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next {
+      margin-left: 100%; }
+      #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next::before {
+        content: "❯" !important;
+        font-size: 40px;
+        color: #1E1E1E; }
+    @media screen and (max-width: 767px) {
       #homefeatured #home-featured-template .home-featured-content ul {
-        height: 400px;
-        left: 5%;
-        width: 90%; }
-        #homefeatured #home-featured-template .home-featured-content ul li {
-          vertical-align: middle; }
-          #homefeatured #home-featured-template .home-featured-content ul li h4 {
-            color: white;
-            line-height: 200%;
-            font-size: 1.5rem; }
-      #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev {
-        position: relative;
-        bottom: 150px;
-        margin-left: -20px;
-        padding: 0px;
-        float: left;
-        box-sizing: border-box; }
-        #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev::before {
-          content: "❮" !important;
-          color: white; }
-      #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next {
-        position: relative;
-        bottom: 150px;
-        margin-left: 100%;
-        padding: 0px;
-        float: left;
-        box-sizing: border-box; }
-        #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next::before {
-          content: "❯" !important;
-          color: white; } }
-    @media screen and (min-width: 375px) and (max-width: 500px) {
+        height: 500px; }
+      #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev, #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next {
+        bottom: 250px; }
+      #homefeatured #home-featured-template .home-featured-content #post-exerpt2 {
+        margin-top: 92px; } }
+    @media screen and (min-width: 768px) and (max-width: 1029px) {
       #homefeatured #home-featured-template .home-featured-content ul {
-        height: 350px;
-        left: 5%;
-        width: 90%; }
-        #homefeatured #home-featured-template .home-featured-content ul li {
-          vertical-align: middle; }
-          #homefeatured #home-featured-template .home-featured-content ul li h4 {
-            color: white;
-            line-height: 200%;
-            font-size: 1.5rem; }
-      #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev {
-        position: relative;
-        bottom: 150px;
-        margin-left: -20px;
-        padding: 0px;
-        float: left;
-        box-sizing: border-box; }
-        #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev::before {
-          content: "❮" !important;
-          color: white; }
-      #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next {
-        position: relative;
-        bottom: 150px;
-        margin-left: 100%;
-        padding: 0px;
-        float: left;
-        box-sizing: border-box; }
-        #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next::before {
-          content: "❯" !important;
-          color: white; } }
-    @media screen and (min-width: 501px) {
+        height: 350px; }
+      #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev, #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next {
+        bottom: 175px; } }
+    @media screen and (min-width: 1030px) {
       #homefeatured #home-featured-template .home-featured-content ul {
-        height: 310px;
-        left: 5%;
-        width: 90%; }
-        #homefeatured #home-featured-template .home-featured-content ul li {
-          vertical-align: middle; }
-          #homefeatured #home-featured-template .home-featured-content ul li h4 {
-            color: white;
-            line-height: 200%;
-            font-size: 1.8rem; }
-      #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev {
-        position: relative;
-        bottom: 150px;
-        margin-left: -20px;
-        padding: 0px;
-        float: left;
-        box-sizing: border-box; }
-        #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev::before {
-          content: "❮" !important;
-          color: white; }
-      #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next {
-        position: relative;
-        bottom: 150px;
-        margin-left: 100%;
-        padding: 0px;
-        float: left;
-        box-sizing: border-box; }
-        #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next::before {
-          content: "❯" !important;
-          color: white; } }
+        height: 300px; }
+      #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev, #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next {
+        bottom: 150px; } }
 
 @media (max-width: 767px) {
   #contact-content #contact-content #contact-form h1 {
