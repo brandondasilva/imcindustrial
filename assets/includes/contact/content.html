@@ -20,26 +20,34 @@
           <h1>Message Us</h1>
 
           <div class="row">
-            <div class="col-xs-12 col-md-6 col-sm-6 input">
-              <input type="text" name="name" value="" placeholder="First Name">
-            </div>
 
-            <div class="col-xs-12 col-md-6 col-sm-6 input">
-              <input type="text" name="name" value="" placeholder="Last Name">
-            </div>
+            <form ng-submit="submit(contactform)" name="contactform" method="post" action="" role="form">
+              <div class="col-md-12 name input">
+                <label for="inputName">Name</label>
+                <input ng-model="formData.inputName" id="inputName" type="text" name="name" value="" placeholder="Enter Name">
+              </div>
+
+              <div class="col-md-12 email input">
+                <label for="inputEmail">Email</label>
+                <input ng-model="formData.inputEmail" id="inputEmail" type="email" name="name" value="" placeholder="Enter Email">
+              </div>
+
+              <div class="col-md-12 subject input">
+                <label for="inputSubject">Subject</label>
+                <input ng-model="formData.inputSubject" id="inputSubject" type="text" name="name" value="" placeholder="Enter Subject">
+              </div>
+
+              <div class="col-md-12 message input">
+                <label for="inputMessage">Message</label>
+                <textarea ng-model="formData.inputMessage" id="inputMessage" rows="4" placeholder="Compose message..."></textarea>
+              </div>
+
+              <button type="submit" class="button-wrapper" ng-disabled="submitButtonDisabled">
+                <span class="button email-button">Send Message</span>
+              </button>
+            </form>
+            <p ng-class="result">{{ resultMesage }}</p>
           </div>
-
-          <div class="col-md-12 email input">
-            <input type="email" name="name" value="" placeholder="Email">
-          </div>
-
-          <div class="col-md-12 message input">
-            <textarea rows="4" placeholder="Compose message..."></textarea>
-          </div>
-
-          <a href="" class="button-wrapper">
-            <span class="button email-button">Send Email</span>
-          </a>
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ input, textarea {
 /*
  Override Bootstrap's default classes.
  */
-@media (min-width: 768px) {
+@media (max-width: 767px) {
   .container {
     width: auto; } }
 .row {
@@ -417,7 +417,7 @@ a.button-wrapper .button {
         color: #1E1E1E; }
     @media screen and (max-width: 767px) {
       #homefeatured #home-featured-template .home-featured-content ul {
-        height: 500px; }
+        height: 480px; }
       #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-prev, #homefeatured #home-featured-template .home-featured-content .rn-carousel-control-next {
         bottom: 250px; }
       #homefeatured #home-featured-template .home-featured-content #post-exerpt2 {
