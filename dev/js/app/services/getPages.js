@@ -18,7 +18,7 @@ define([], function() {
 
   function getPages($http) {
 
-    return $http.get('wp-json/pages').success(function(res) {
+    return $http.get('index.php/wp-json/pages').success(function(res) {
       return res;
     })
     .error(function(err) {
