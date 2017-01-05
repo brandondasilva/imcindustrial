@@ -18,7 +18,7 @@ define([], function() {
 
   function HomeBannerCtrl($scope, $http) {
 
-    $http.get('wp-json').success(function(res) {
+    $http.get('index.php/wp-json').success(function(res) {
 
       $scope.name = res.name;
       $scope.description = res.description;

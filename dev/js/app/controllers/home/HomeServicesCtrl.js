@@ -18,7 +18,7 @@ define([], function() {
 
   function HomeServicesCtrl($scope, $http, path) {
 
-    $http.get('wp-json/posts/?filter[category_name]=services&filter[tag]=excerpt').success(function(res) {
+    $http.get('index.php/wp-json/posts/?filter[category_name]=services&filter[tag]=excerpt').success(function(res) {
 
       $scope.result = res;
       $scope.services = [];

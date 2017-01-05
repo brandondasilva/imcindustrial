@@ -20,7 +20,7 @@ define([], function() {
 
     $scope.slides = [];
 
-    $http.get('wp-json/posts/?filter[category_name]=featured&filter[posts_per_page]=5').success(function(res) {
+    $http.get('index.php/wp-json/posts/?filter[category_name]=featured&filter[posts_per_page]=5').success(function(res) {
 
       $scope.result = res;
 
