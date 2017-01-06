@@ -131,12 +131,12 @@ a.button-wrapper .button {
       position: relative;
       display: inline-block;
       padding: 10px; }
-    #navbar .nav div {
+    #navbar .nav a {
       display: table-cell;
       padding-right: 12px;
       width: 80px;
       text-align: center; }
-      #navbar .nav div li {
+      #navbar .nav a li {
         padding: 0px; }
     #navbar .nav .menu {
       width: 100%;
