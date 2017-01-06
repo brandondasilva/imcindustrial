@@ -28,43 +28,62 @@ define([], function() {
       }
     });
 
-    $scope.result = 'hidden';
-    $scope.resultMessage;
-    $scope.formData; // object holding the name, email, subject, and message
-    $scope.submitButtonDisabled = false;
-    $scope.submitted = false; // this is so errors are shown after the form is submitted
+    var mailgunUrl = "mail.premus.ca";
+    var mailgunApiKey = window.btoa("api:key-d022f361268288561c9e4e1d90b7fad0")
 
-    $scope.submit = function(contactform) {
-
-      $scope.submitted = true;
-      $scope.submitButtonDisabled = true;
-
-      if (contactform.$valid) {
-        $http({
-          url     : path + '/includes/contact/contact-form.php',
-          method  : 'POST',
-          data    : $httpParamSerializerJQLike($scope.formData),
-          headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
-        }).success(function(data) {
-
-          console.log(data);
-
-          if (data.success) { //success comes from the return json object
-              $scope.submitButtonDisabled = true;
-              $scope.resultMessage = data.message;
-              $scope.result='bg-success';
-          } else {
-              $scope.submitButtonDisabled = false;
-              $scope.resultMessage = data.message;
-              $scope.result='bg-danger';
-          }
-        });
-      } else {
-        $scope.submitButtonDisabled = false;
-        $scope.resultMessage = 'Failed :( Please fill out all the fields.';
-        $scope.result='bg-danger';
-      }
+    $scope.submit = function() {
+      $http({
+        "method": "POST",
+        "url": "https://api.mailgun.net/v3/" + mailgunUrl + "/messages",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Authorization": "Basic " + mailgunApiKey
+        },
+        "data": "from=" + "test@example.com" + "&to=" + "brandon@bdsdesign.co" + "&subject=" + "MailgunTest" + "&text=" + "EmailBody"
+      }).then(function(success) {
+        console.log("SUCCESS " + JSON.stringify(success));
+      }, function(error) {
+        console.log("ERROR " + JSON.stringify(error));
+      });
     }
+
+    // $scope.result = 'hidden';
+    // $scope.resultMessage;
+    // $scope.formData; // object holding the name, email, subject, and message
+    // $scope.submitButtonDisabled = false;
+    // $scope.submitted = false; // this is so errors are shown after the form is submitted
+    //
+    // $scope.submit = function(contactform) {
+    //
+    //   $scope.submitted = true;
+    //   $scope.submitButtonDisabled = true;
+    //
+    //   if (contactform.$valid) {
+    //     $http({
+    //       url     : path + '/includes/contact/contact-form.php',
+    //       method  : 'POST',
+    //       data    : $httpParamSerializerJQLike($scope.formData),
+    //       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
+    //     }).success(function(data) {
+    //
+    //       console.log(data);
+    //
+    //       if (data.success) { //success comes from the return json object
+    //           $scope.submitButtonDisabled = true;
+    //           $scope.resultMessage = data.message;
+    //           $scope.result='bg-success';
+    //       } else {
+    //           $scope.submitButtonDisabled = false;
+    //           $scope.resultMessage = data.message;
+    //           $scope.result='bg-danger';
+    //       }
+    //     });
+    //   } else {
+    //     $scope.submitButtonDisabled = false;
+    //     $scope.resultMessage = 'Failed :( Please fill out all the fields.';
+    //     $scope.result='bg-danger';
+    //   }
+    // }
   }
 
   return ["$scope", "$http", '$httpParamSerializerJQLike', 'path', 'getPages', ContactContentCtrl];

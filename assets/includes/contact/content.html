@@ -21,7 +21,7 @@
 
           <div class="row">
 
-            <form ng-submit="submit(contactform)" name="contactform" method="post" action="" role="form">
+            <form ng-submit="submit()" name="contactform" method="post" action="" role="form">
               <div class="col-md-12 name input">
                 <label for="inputName">Name</label>
                 <input ng-model="formData.inputName" id="inputName" type="text" name="name" value="" placeholder="Enter Name">
@@ -42,7 +42,7 @@
                 <textarea ng-model="formData.inputMessage" id="inputMessage" rows="4" placeholder="Compose message..."></textarea>
               </div>
 
-              <button type="submit" class="button-wrapper" ng-disabled="submitButtonDisabled">
+              <button type="submit" class="button-wrapper">
                 <span class="button email-button">Send Message</span>
               </button>
             </form>
