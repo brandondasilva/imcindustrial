@@ -16,7 +16,7 @@
 
 define([], function() {
 
-  function ContactContentCtrl($scope, $http, $httpParamSerializerJQLike, path, getPages) {
+  function ContactContentCtrl($scope, $http, path, getPages) {
 
     getPages.success(function(res) {
       for (var i = 0; i < res.length; i++) {
@@ -28,18 +28,18 @@ define([], function() {
       }
     });
 
-    var mailgunUrl = "mail.premus.ca";
-    var mailgunApiKey = window.btoa("api:key-d022f361268288561c9e4e1d90b7fad0")
+    var mailgunUrl = "https://api.mailgun.net/v3/sandboxdff860e368e044718d491374f196583d.mailgun.org/messages";
+    var mailgunApiKey = "api:key-d022f361268288561c9e4e1d90b7fad0";
 
     $scope.submit = function() {
       $http({
-        "method": "POST",
-        "url": "https://api.mailgun.net/v3/" + mailgunUrl + "/messages",
-        "headers": {
+        method: "POST",
+        url: mailgunUrl,
+        headers: {
           "Content-Type": "application/x-www-form-urlencoded",
           "Authorization": "Basic " + mailgunApiKey
         },
-        "data": "from=" + "test@example.com" + "&to=" + "brandon@bdsdesign.co" + "&subject=" + "MailgunTest" + "&text=" + "EmailBody"
+        data: "from=" + "test@example.com" + "&to=" + "brandon@bdsdesign.co" + "&subject=" + "MailgunTest" + "&text=" + "EmailBody"
       }).then(function(success) {
         console.log("SUCCESS " + JSON.stringify(success));
       }, function(error) {
@@ -86,6 +86,6 @@ define([], function() {
     // }
   }
 
-  return ["$scope", "$http", '$httpParamSerializerJQLike', 'path', 'getPages', ContactContentCtrl];
+  return ["$scope", "$http", 'path', 'getPages', ContactContentCtrl];
 
 });

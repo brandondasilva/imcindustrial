@@ -47,7 +47,7 @@
 
     @media (min-width: 768px) {
       .menu {
-        display: none;
+        display: none !important;
       }
     }
 
@@ -60,7 +60,7 @@
       padding: 10px;
     }
 
-    a {
+    div, a.menu {
       display: table-cell;
       padding-right: $nav-items-padding;
       width: 80px;
@@ -72,7 +72,7 @@
     }
 
     .menu {
-      width: 100%;
+      width: 100% !important;
 
       background-image: url($imagePath + "icons/menu.svg");
       background-repeat: no-repeat;
