@@ -25,6 +25,7 @@ define([
   var appName = 'imcindustrial';
   var depends = [
     'ui.router',
+    'base64',
     'ngSanitize',
     'ngMaps',
     'angular-carousel',

@@ -16,7 +16,7 @@
 
 define([], function() {
 
-  function ContactContentCtrl($scope, $http, path, getPages) {
+  function ContactContentCtrl($scope, $http, $base64, path, getPages) {
 
     getPages.success(function(res) {
       for (var i = 0; i < res.length; i++) {
@@ -28,64 +28,59 @@ define([], function() {
       }
     });
 
-    var mailgunUrl = "https://api.mailgun.net/v3/sandboxdff860e368e044718d491374f196583d.mailgun.org/messages";
+
     var mailgunApiKey = "api:key-d022f361268288561c9e4e1d90b7fad0";
 
     $scope.submit = function() {
-      $http({
-        method: "POST",
-        url: mailgunUrl,
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          "Authorization": "Basic " + mailgunApiKey
-        },
-        data: "from=" + "test@example.com" + "&to=" + "brandon@bdsdesign.co" + "&subject=" + "MailgunTest" + "&text=" + "EmailBody"
-      }).then(function(success) {
-        console.log("SUCCESS " + JSON.stringify(success));
-      }, function(error) {
-        console.log("ERROR " + JSON.stringify(error));
-      });
-    }
+      console.log('submit');
 
-    // $scope.result = 'hidden';
-    // $scope.resultMessage;
-    // $scope.formData; // object holding the name, email, subject, and message
-    // $scope.submitButtonDisabled = false;
-    // $scope.submitted = false; // this is so errors are shown after the form is submitted
-    //
-    // $scope.submit = function(contactform) {
-    //
-    //   $scope.submitted = true;
-    //   $scope.submitButtonDisabled = true;
-    //
-    //   if (contactform.$valid) {
-    //     $http({
-    //       url     : path + '/includes/contact/contact-form.php',
-    //       method  : 'POST',
-    //       data    : $httpParamSerializerJQLike($scope.formData),
-    //       headers : { 'Content-Type': 'application/x-www-form-urlencoded' }
-    //     }).success(function(data) {
-    //
-    //       console.log(data);
-    //
-    //       if (data.success) { //success comes from the return json object
-    //           $scope.submitButtonDisabled = true;
-    //           $scope.resultMessage = data.message;
-    //           $scope.result='bg-success';
-    //       } else {
-    //           $scope.submitButtonDisabled = false;
-    //           $scope.resultMessage = data.message;
-    //           $scope.result='bg-danger';
-    //       }
-    //     });
-    //   } else {
-    //     $scope.submitButtonDisabled = false;
-    //     $scope.resultMessage = 'Failed :( Please fill out all the fields.';
-    //     $scope.result='bg-danger';
-    //   }
-    // }
+      var url = "https://api.mailgun.net/v3/sandboxdff860e368e044718d491374f196583d.mailgun.org/messages";
+      var dataJSON = {
+        from: "postmaster@sandboxdff860e368e044718d491374f196583d.mailgun.org",
+        to: "brandon@bdsdesign.co",
+        subject: "Test subject",
+        text: "Body text"
+      };
+
+      var req = {
+        method: 'POST',
+        url: url,
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+          'Authorization': 'Basic ' + $base64.encode('api:key-d022f361268288561c9e4e1d90b7fad0')
+        },
+        transformRequest: function(obj) {
+          var str = [];
+          for(var p in obj)
+          str.push(encodeURIComponent(p) + "=" + encodeURIComponent(obj[p]));
+          return str.join("&");
+        },
+        data: dataJSON
+      };
+
+      $http(req).then(function(data) {
+        console.log("success = " + data);
+      }, function(error) {
+        console.log("error! = " + error);
+      });
+
+
+      // $http({
+      //   method: "POST",
+      //   url: mailgunUrl,
+      //   headers: {
+      //     "Content-Type": "application/x-www-form-urlencoded"/*,
+      //     "Authorization": "Basic " + mailgunApiKey*/
+      //   },
+      //   data: "from=" + "test@example.com" + "&to=" + "brandon@bdsdesign.co" + "&subject=" + "MailgunTest" + "&text=" + "EmailBody"
+      // }).then(function(success) {
+      //   console.log("SUCCESS " + JSON.stringify(success));
+      // }, function(error) {
+      //   console.log("ERROR " + JSON.stringify(error));
+      // });
+    }
   }
 
-  return ["$scope", "$http", 'path', 'getPages', ContactContentCtrl];
+  return ["$scope", "$http", "$base64", "path", "getPages", ContactContentCtrl];
 
 });

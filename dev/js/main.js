@@ -8,6 +8,7 @@ if (typeof jQuery === 'function') {
 require(['config'], function() {
   require([
     'angular',
+    'base64',
     'ngSanitize',
     'ngMaps',
     'ui.router',
