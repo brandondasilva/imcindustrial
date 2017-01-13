@@ -20,6 +20,7 @@ $home-featured-color: #dfdfdf;
 $body-text-white: #f0f0f0;
 $footer-color: #4f4f4f;
 $main-black: #1E1E1E;
+$separator-color: #979797;
 
 // ** SPACING
 $section-padding: 30px;
@@ -68,6 +69,11 @@ input, textarea {
   border: none;
   box-shadow: inset 0 0 3px 1px rgba(0,0,0,0.5);
   border-radius: 5px;
+}
+
+hr {
+  border-top: 1px solid $separator-color;
+  box-shadow: 1px 1px 2px 0px rgba(151,151,151,0.75);
 }
 
 /*
@@ -191,3 +197,4 @@ a.button-wrapper {
 @import "components/home/home";
 @import "components/about/about";
 @import "components/contact/contact";
+@import "components/portfolio/portfolio";

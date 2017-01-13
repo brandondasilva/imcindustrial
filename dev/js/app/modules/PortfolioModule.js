@@ -17,11 +17,15 @@
 
   define([
     'app/directives/portfolio/portfoliocontent',
+    'app/directives/portfolio/portfolioposts',
     'app/controllers/portfolio/PortfolioContentCtrl',
+    'app/controllers/portfolio/PortfolioPostsCtrl',
     'app/services/getPages'
   ], function(
     portfoliocontent,
+    portfolioposts,
     PortfolioContentCtrl,
+    PortfolioPostsCtrl,
     getPages
   ) {
 
@@ -29,7 +33,9 @@
 
     angular.module(moduleName, ['ui.router'])
            .directive('portfoliocontent', portfoliocontent)
+           .directive('portfolioposts', portfolioposts)
            .controller('PortfolioContentCtrl', PortfolioContentCtrl)
+           .controller('PortfolioPostsCtrl', PortfolioPostsCtrl)
            .factory('getPages', getPages);
 
     return moduleName;

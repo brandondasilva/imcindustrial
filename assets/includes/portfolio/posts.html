@@ -1,0 +1,25 @@
+<div id="portfolio-posts" class="container" ng-controller="PortfolioPostsCtrl">
+  <div id="portfolio-featured" class="row">
+    <div class="col-md-12 portfolio-content" ng-repeat="post in portfolioFeatured">
+      <div class="" ng-bind-html="post.heading"></div>
+    </div>
+  </div>
+
+  <hr>
+
+  <div id="portfolio-content" class="row">
+    <div class="col-md-8 portfolio-content">
+      <div class="col-md-6 portfolio-post" ng-repeat="post in portfolioPosts">
+        <div class="" ng-bind-html="post.heading"></div>
+
+        <div class="post-panel">
+          stuff
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 portfolio-content">
+      stuff
+    </div>
+  </div>
+</div>

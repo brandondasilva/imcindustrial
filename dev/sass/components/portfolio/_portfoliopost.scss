@@ -1,0 +1,36 @@
+
+#portfolio-posts {
+
+  hr {
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    margin-left: $section-padding;
+    margin-right: $section-padding;
+  }
+
+  .portfolio-content, .portfolio-post {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+
+
+  }
+
+  .portfolio-post {
+    padding-left: 0px !important;
+
+    .post-panel {
+      margin-right: 20px;
+      background-color: black;
+    }
+  }
+
+  #portfolio-featured {
+
+    padding: $section-padding;
+  }
+
+  #portfolio-content {
+
+    padding: $section-padding;
+  }
+}

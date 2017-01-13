@@ -22,23 +22,21 @@ define([], function() {
 
     $http.get('index.php/wp-json/posts/?filter[category_name]=featured&filter[posts_per_page]=5').success(function(res) {
 
-      $scope.result = res;
+      for (var i = 0; i < res.length; i++) {
 
-      for (var i = 0; i < $scope.result.length; i++) {
-
-        if ($scope.result[i].featured_image === null) {
+        if (res[i].featured_image === null) {
           $scope.slides.push({
-            heading: $scope.result[i].title,
-            desc: $scope.result[i].excerpt,
-            image: null,
-            link: $scope.result[i].guid
+            heading: res[i].title,
+            desc:    res[i].excerpt,
+            image:   null,
+            link:    res[i].guid
           });
         } else {
           $scope.slides.push({
-            heading: $scope.result[i].title,
-            desc: $scope.result[i].excerpt,
-            image: $scope.result[i].featured_image.attachment_meta.sizes.medium_large.url,
-            link: $scope.result[i].guid
+            heading: res[i].title,
+            desc:    res[i].excerpt,
+            image:   res[i].featured_image.attachment_meta.sizes.medium_large.url,
+            link:    res[i].guid
           });
         }
       }
