@@ -8,6 +8,10 @@
     margin-right: $section-padding;
   }
 
+  h3 {
+    margin-top: 0px !important;
+  }
+
   .portfolio-content, .portfolio-post {
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -17,20 +21,56 @@
 
   .portfolio-post {
     padding-left: 0px !important;
+    padding-bottom: 20px;
 
     .post-panel {
       margin-right: 20px;
-      background-color: black;
+      background-color: $main-color;
     }
   }
 
   #portfolio-featured {
 
     padding: $section-padding;
+
+    .featured-image {
+      background-color: $main-black;
+    }
+
+    .featured-information {
+      background-color: $main-color;
+    }
+
+    div:last-child {
+
+      h2 {
+        text-align: right;
+      }
+    }
+
+    h2 {
+      text-transform: uppercase;
+      font-size: 42px;
+    }
   }
 
   #portfolio-content {
 
     padding: $section-padding;
+  }
+
+  #portfolio-categories {
+
+    hr {
+      margin: 0px !important;
+    }
+
+    ul {
+      padding-left: 0px;
+
+      li {
+        display: block;
+      }
+    }
   }
 }

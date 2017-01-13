@@ -1,25 +1,49 @@
 <div id="portfolio-posts" class="container" ng-controller="PortfolioPostsCtrl">
   <div id="portfolio-featured" class="row">
     <div class="col-md-12 portfolio-content" ng-repeat="post in portfolioFeatured">
-      <div class="" ng-bind-html="post.heading"></div>
+      <h2 class="" ng-bind-html="post.heading"></h2>
+
+      <div class="row featured-panel">
+
+        <div class="col-md-8 featured-image" style="background-image: url({{post.image}}); "></div>
+
+        <div class="col-md-4 featured-information">
+          <p ng-bind-html="post.desc"></p>
+        </div>
+
+      </div>
+
+
     </div>
   </div>
 
-  <hr>
+  <hr />
 
   <div id="portfolio-content" class="row">
     <div class="col-md-8 portfolio-content">
       <div class="col-md-6 portfolio-post" ng-repeat="post in portfolioPosts">
-        <div class="" ng-bind-html="post.heading"></div>
+        <h3 class="" ng-bind-html="post.heading"></h3>
 
         <div class="post-panel">
-          stuff
+          <p ng-bind-html="post.desc"></p>
         </div>
+      </div>
+
+      <div class="">
+        pagination stuff
       </div>
     </div>
 
-    <div class="col-md-4 portfolio-content">
-      stuff
+    <div id="portfolio-categories" class="col-md-4 portfolio-content">
+      <h3>Categories</h3>
+
+      <ul>
+        <li><a href="">Category 1</a></li>
+        <li><a href="">Category 2</a></li>
+        <li><a href="">Category 3</a></li>
+      </ul>
+
+      <hr />
     </div>
   </div>
 </div>

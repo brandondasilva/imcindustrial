@@ -27,12 +27,12 @@ define([], function() {
         {
           heading: res[0].title,
           desc:    res[0].excerpt,
-          // image:   res[0].featured_image.attachment_meta.sizes.medium_large.url,
+          image:   res[0].featured_image.attachment_meta.sizes.medium_large.url,
           link:    res[0].guid
         }, {
           heading: res[1].title,
           desc:    res[1].excerpt,
-          // image:   res[1].featured_image.attachment_meta.sizes.medium_large.url,
+          image:   res[1].featured_image.attachment_meta.sizes.medium_large.url,
           link:    res[1].guid
         }
       );
