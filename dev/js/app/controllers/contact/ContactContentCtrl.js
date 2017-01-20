@@ -16,7 +16,7 @@
 
 define([], function() {
 
-  function ContactContentCtrl($scope, $http, $base64, path, getPages) {
+  function ContactContentCtrl($scope, $http, path, getPages) {
 
     getPages.success(function(res) {
       for (var i = 0; i < res.length; i++) {
@@ -28,26 +28,23 @@ define([], function() {
       }
     });
 
-
-    var mailgunApiKey = "api:key-d022f361268288561c9e4e1d90b7fad0";
-
     $scope.submit = function() {
-      console.log('submit');
 
-      var url = "https://api.mailgun.net/v3/sandboxdff860e368e044718d491374f196583d.mailgun.org/messages";
+      var url = 'https://hidden-inlet-49886.herokuapp.com/api/contact';
+      // var url = 'http://localhost:3000/api/v1';
+
       var dataJSON = {
-        from: "postmaster@sandboxdff860e368e044718d491374f196583d.mailgun.org",
-        to: "brandon@bdsdesign.co",
-        subject: "Test subject",
-        text: "Body text"
+        from: $scope.formData.inputEmail,
+        name: $scope.formData.inputName,
+        subject: $scope.formData.inputSubject,
+        message: $scope.formData.inputMessage
       };
 
       var req = {
         method: 'POST',
         url: url,
         headers: {
-          'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': 'Basic ' + $base64.encode('api:key-d022f361268288561c9e4e1d90b7fad0')
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
         transformRequest: function(obj) {
           var str = [];
@@ -56,31 +53,16 @@ define([], function() {
           return str.join("&");
         },
         data: dataJSON
-      };
+      }
 
       $http(req).then(function(data) {
         console.log("success = " + data);
       }, function(error) {
         console.log("error! = " + error);
       });
-
-
-      // $http({
-      //   method: "POST",
-      //   url: mailgunUrl,
-      //   headers: {
-      //     "Content-Type": "application/x-www-form-urlencoded"/*,
-      //     "Authorization": "Basic " + mailgunApiKey*/
-      //   },
-      //   data: "from=" + "test@example.com" + "&to=" + "brandon@bdsdesign.co" + "&subject=" + "MailgunTest" + "&text=" + "EmailBody"
-      // }).then(function(success) {
-      //   console.log("SUCCESS " + JSON.stringify(success));
-      // }, function(error) {
-      //   console.log("ERROR " + JSON.stringify(error));
-      // });
     }
   }
 
-  return ["$scope", "$http", "$base64", "path", "getPages", ContactContentCtrl];
+  return ["$scope", "$http", "path", "getPages", ContactContentCtrl];
 
 });

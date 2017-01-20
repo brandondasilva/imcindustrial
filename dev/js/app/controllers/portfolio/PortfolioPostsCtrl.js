@@ -21,12 +21,6 @@ define([], function() {
     $scope.portfolioFeatured = [];
     $scope.portfolioPosts    = [];
 
-    $http.get('https://hidden-inlet-49886.herokuapp.com').success(function(res) {
-      console.log(res);
-    }).error(function(res) {
-      console.log('fail');
-    });
-
     $http.get('index.php/wp-json/posts/?filter[category_name]=featured&filter[posts_per_page]=2').success(function(res) {
 
       $scope.portfolioFeatured.push(
