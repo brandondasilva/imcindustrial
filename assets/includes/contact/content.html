@@ -21,31 +21,76 @@
 
           <div class="row">
 
-            <!-- <form name="contactform" method="post" action="" role="form"> -->
-              <div class="col-md-12 name input">
+            <form name="contactform" novalidate>
+              <div class="col-md-12 name input" ng-class="{ 'has-error': contactform.name.$touched && contactform.name.$invalid }">
                 <label for="inputName">Name</label>
-                <input ng-model="formData.inputName" id="inputName" type="text" name="name" value="" placeholder="Enter Name">
+                <input
+                  ng-model="formData.inputName"
+                  id="inputName"
+                  type="text"
+                  name="name"
+                  value=""
+                  placeholder="Enter Name"
+                  required>
+
+                <div class="help-block" ng-messages="contactform.name.$error" ng-if="contactform.name.$touched">
+                  <p ng-message="required">Your name is required.</p>
+                </div>
               </div>
 
-              <div class="col-md-12 email input">
+              <div class="col-md-12 email input" ng-class="{ 'has-error': contactform.email.$touched && contactform.email.$invalid }">
                 <label for="inputEmail">Email</label>
-                <input ng-model="formData.inputEmail" id="inputEmail" type="email" name="name" value="" placeholder="Enter Email">
+                <input
+                  ng-model="formData.inputEmail"
+                  id="inputEmail"
+                  type="email"
+                  name="email"
+                  value=""
+                  placeholder="Enter Email"
+                  required>
+
+                <div class="help-block" ng-messages="contactform.email.$error" ng-if="contactform.email.$touched">
+                  <p ng-message="required">Your name is required.</p>
+                  <p ng-message="email">Your email must be valid.</p>
+                </div>
               </div>
 
-              <div class="col-md-12 subject input">
+              <div class="col-md-12 subject input" ng-class="{ 'has-error': contactform.subject.$touched && contactform.subject.$invalid }">
                 <label for="inputSubject">Subject</label>
-                <input ng-model="formData.inputSubject" id="inputSubject" type="text" name="name" value="" placeholder="Enter Subject">
+                <input
+                  ng-model="formData.inputSubject"
+                  id="inputSubject"
+                  type="text"
+                  name="subject"
+                  value=""
+                  placeholder="Enter Subject"
+                  required>
+
+                <div class="help-block" ng-messages="contactform.subject.$error" ng-if="contactform.subject.$touched">
+                  <p ng-message="required">A subject is required.</p>
+                </div>
               </div>
 
-              <div class="col-md-12 message input">
+              <div class="col-md-12 message input" ng-class="{ 'has-error': contactform.message.$touched && contactform.message.$invalid }">
                 <label for="inputMessage">Message</label>
-                <textarea ng-model="formData.inputMessage" id="inputMessage" rows="4" placeholder="Compose message..."></textarea>
+                <textarea
+                  ng-model="formData.inputMessage"
+                  id="inputMessage"
+                  name="message"
+                  rows="4"
+                  placeholder="Compose message..."
+                  required>
+                </textarea>
+
+                <div class="help-block" ng-messages="contactform.message.$error" ng-if="contactform.message.$touched">
+                  <p ng-message="required">A message is required.</p>
+                </div>
               </div>
 
               <a ng-click="submit()" class="button-wrapper">
                 <span class="button email-button">Send Message</span>
               </a>
-            <!-- </form> -->
+            </form>
             <p ng-class="result">{{ resultMesage }}</p>
           </div>
         </div>

@@ -34,8 +34,8 @@ define([], function() {
       // var url = 'http://localhost:3000/api/v1';
 
       var dataJSON = {
-        from: $scope.formData.inputEmail,
         name: $scope.formData.inputName,
+        from: $scope.formData.inputEmail,
         subject: $scope.formData.inputSubject,
         message: $scope.formData.inputMessage
       };

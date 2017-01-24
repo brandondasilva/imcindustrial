@@ -27,6 +27,7 @@ define([
     'ui.router',
     'base64',
     'ngSanitize',
+    'ngMessages',
     'ngMaps',
     'angular-carousel',
     HomeModule,

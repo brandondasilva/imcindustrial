@@ -5,6 +5,7 @@ require.config({
     'angular'          : '../bower_components/angular/angular.min',
     'base64'           : '../bower_components/angular-base64/angular-base64.min',
     'ngSanitize'       : '../bower_components/angular-sanitize/angular-sanitize.min',
+    'ngMessages'       : '../bower_components/angular-messages/angular-messages.min',
     'ngMaps'           : '../bower_components/ng-maps/dist/ng-maps.min',
     'ui.router'        : '../bower_components/angular-ui-router/release/angular-ui-router.min',
     'angular-touch'    : '../bower_components/angular-touch/angular-touch.min',
@@ -24,6 +25,9 @@ require.config({
     },
     'ngSanitize': {
       exports: 'ngSanitize'
+    },
+    'ngMessages': {
+      exports: 'ngMessages'
     },
     'ngMaps': {
       exports: 'ngMaps'
@@ -46,6 +50,7 @@ require.config({
     'angular',
     'base64',
     'ngSanitize',
+    'ngMessages',
     'ngMaps',
     'ui.router',
     'angular-touch',

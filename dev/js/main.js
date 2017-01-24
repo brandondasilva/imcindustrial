@@ -10,6 +10,7 @@ require(['config'], function() {
     'angular',
     'base64',
     'ngSanitize',
+    'ngMessages',
     'ngMaps',
     'ui.router',
     'angular-touch',
