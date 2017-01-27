@@ -31,7 +31,10 @@ define([], function() {
     $scope.submit = function() {
 
       var url = 'https://hidden-inlet-49886.herokuapp.com/api/contact';
-      // var url = 'http://localhost:3000/api/v1';
+
+      // Error handling
+      console.log($scope.formData);
+
 
       var dataJSON = {
         name: $scope.formData.inputName,

@@ -2,7 +2,6 @@
   #contact-content {
 
     #contact-form {
-      // text-align: left;
 
       @media (max-width: 767px) {
 
@@ -23,9 +22,15 @@
       h1 {
         margin-top: 0px;
         text-align: right;
-        padding-right: 15px;
       }
 
+      .input {
+        padding-top: 15px;
+        padding-left: 0px;
+        padding-right: 0px;
+      }
+
+      // Formatting input highlighting to a red-ish colour for errors
       .ng-touched {
         &.ng-invalid-required, &.ng-invalid-email {
           border: #a94442 1px solid;
@@ -33,13 +38,8 @@
         }
       }
 
-      .input {
-        padding-top: 15px;
-      }
-
       .button-wrapper {
         float: right;
-        padding-right: 15px;
         padding-top: 15px;
 
         .button.email-button {
