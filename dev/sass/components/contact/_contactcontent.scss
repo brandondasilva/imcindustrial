@@ -45,10 +45,14 @@
         .button.email-button {
           width: auto !important;
           color: $body-text-white;
-          background-color: $main-black;
+          background-color: $main-color;
           margin-top: 5px;
           padding-left: 10px;
           padding-right: 10px;
+        }
+
+        &.disabled-btn span {
+          background-color: $separator-color !important;
         }
       }
 

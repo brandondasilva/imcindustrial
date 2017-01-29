@@ -28,9 +28,19 @@ define([], function() {
       }
     });
 
+    var errorMessages = [
+      "Name is not defined. Please enter your name.",
+      "Email is not defined. Please enter your email.",
+      "Subject is not defined. Please enter a subject for your message.",
+      "Message is not defined. Please enter a message."
+    ];
+
     $scope.submit = function() {
 
       var url = 'https://hidden-inlet-49886.herokuapp.com/api/contact';
+
+
+      var errors = [];
 
       // Error handling
       console.log($scope.formData);

@@ -141,6 +141,11 @@ a.button-wrapper {
   }
 }
 
+// Disabled button
+.disabled-btn {
+  pointer-events: none;
+}
+
 // For individual pages
 .page-heading {
   @media (max-width: 767px) {

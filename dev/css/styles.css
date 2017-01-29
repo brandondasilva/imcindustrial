@@ -67,6 +67,9 @@ a.button-wrapper .button {
   a.button-wrapper .button:active {
     box-shadow: 2px 2px 2.5px #191919; }
 
+.disabled-btn {
+  pointer-events: none; }
+
 .page-heading {
   height: 250px;
   position: relative;
@@ -243,7 +246,7 @@ a.button-wrapper .button {
     padding-top: 10px; }
     #map #map-content div h3 {
       font-family: Roboto, sans-serif;
-      line-height: 0.8; }
+      line-height: 1; }
   @media (max-width: 767px) {
     #map #map-content #contact-buttons div {
       text-align: center !important; } }
@@ -464,10 +467,12 @@ a.button-wrapper .button {
   #contact-content #contact-content #contact-form .button-wrapper .button.email-button {
     width: auto !important;
     color: #f0f0f0;
-    background-color: #1E1E1E;
+    background-color: #812822;
     margin-top: 5px;
     padding-left: 10px;
     padding-right: 10px; }
+  #contact-content #contact-content #contact-form .button-wrapper.disabled-btn span {
+    background-color: #979797 !important; }
 
 #portfolio-posts hr {
   margin-top: 0px !important;

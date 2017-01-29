@@ -87,12 +87,9 @@
                 </div>
               </div>
 
-              <a ng-click="submit()" class="button-wrapper">
+              <a ng-click="submit()" class="button-wrapper" ng-class="{ 'disabled-btn': contactform.$invalid }">
                 <span class="button email-button">Send Message</span>
               </a>
-              <div class="alert alert-danger">
-                alert
-              </div>
             </form>
 
           </div>
