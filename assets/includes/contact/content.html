@@ -90,8 +90,14 @@
               <a ng-click="submit()" class="button-wrapper" ng-class="{ 'disabled-btn': contactform.$invalid }">
                 <span class="button email-button">Send Message</span>
               </a>
-            </form>
 
+              <div ng-show="clicked" class="loader {{statusClass}}"></div>
+
+              <div ng-show="statusMessage" class="statusMessage">
+                <img src="{{statusImage}}" alt="">
+                <span class="{{statusClass}}" ng-bind-html="statusMessage"></span>
+              </div>
+            </form>
           </div>
         </div>
       </div>

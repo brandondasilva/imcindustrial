@@ -40,13 +40,13 @@
 
       .button-wrapper {
         float: right;
-        padding-top: 15px;
+        display: inline-block;
 
         .button.email-button {
           width: auto !important;
           color: $body-text-white;
           background-color: $main-color;
-          margin-top: 5px;
+          // margin-top: 5px;
           padding-left: 10px;
           padding-right: 10px;
         }
@@ -54,6 +54,13 @@
         &.disabled-btn span {
           background-color: $separator-color !important;
         }
+      }
+
+      .statusMessage, .loader {
+
+        .success { color: #4FDC43; }
+        .failed { color: #a94442; }
+        span { padding-left: 8px; }
       }
 
     }

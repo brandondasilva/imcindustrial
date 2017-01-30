@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Contact-Page---Desktop-HD" transform="translate(-825.000000, -819.000000)" fill-rule="nonzero" fill="#4FDC43">
+            <g id="Page-Content" transform="translate(144.000000, 301.000000)">
+                <g id="Contact-Form" transform="translate(681.000000, 0.000000)">
+                    <path d="M12,518 C5.376,518 0,523.376 0,530 C0,536.624 5.376,542 12,542 C18.624,542 24,536.624 24,530 C24,523.376 18.624,518 12,518 Z M9.6,536 L3.6,530 L5.292,528.308 L9.6,532.604 L18.708,523.496 L20.4,525.2 L9.6,536 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -104,6 +104,22 @@ a.button-wrapper .button {
   background: rgba(255, 255, 255, 0.5);
   z-index: -1; }
 
+.loader {
+  border: 4px solid #f3f3f3;
+  /* Light grey */
+  border-top: 4px solid #3498db;
+  /* Blue */
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  float: left;
+  animation: spin 0.75s linear infinite; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 /*
  *******
  File Imports
@@ -463,16 +479,21 @@ a.button-wrapper .button {
   box-shadow: inset 0 0 3px 1px rgba(169, 68, 66, 0.5); }
 #contact-content #contact-content #contact-form .button-wrapper {
   float: right;
-  padding-top: 15px; }
+  display: inline-block; }
   #contact-content #contact-content #contact-form .button-wrapper .button.email-button {
     width: auto !important;
     color: #f0f0f0;
     background-color: #812822;
-    margin-top: 5px;
     padding-left: 10px;
     padding-right: 10px; }
   #contact-content #contact-content #contact-form .button-wrapper.disabled-btn span {
     background-color: #979797 !important; }
+#contact-content #contact-content #contact-form .statusMessage .success, #contact-content #contact-content #contact-form .loader .success {
+  color: #4FDC43; }
+#contact-content #contact-content #contact-form .statusMessage .failed, #contact-content #contact-content #contact-form .loader .failed {
+  color: #a94442; }
+#contact-content #contact-content #contact-form .statusMessage span, #contact-content #contact-content #contact-form .loader span {
+  padding-left: 8px; }
 
 #portfolio-posts hr {
   margin-top: 0px !important;

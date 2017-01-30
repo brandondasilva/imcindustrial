@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="25px" viewBox="0 0 25 25" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop-HD" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Contact-Page---Desktop-HD" transform="translate(-824.000000, -818.000000)" fill-rule="nonzero" fill="#A94442">
+            <g id="Page-Content" transform="translate(144.000000, 301.000000)">
+                <g id="Contact-Form" transform="translate(676.000000, 0.000000)">
+                    <path d="M16.9705627,517.970563 C10.3465627,517.970563 4.97056275,523.346563 4.97056275,529.970563 C4.97056275,536.594563 10.3465627,541.970563 16.9705627,541.970563 C23.5945627,541.970563 28.9705627,536.594563 28.9705627,529.970563 C28.9705627,523.346563 23.5945627,517.970563 16.9705627,517.970563 Z M22.9705627,531.170563 L18.1705627,531.170563 L18.1705627,535.970563 L15.7705627,535.970563 L15.7705627,531.170563 L10.9705627,531.170563 L10.9705627,528.770563 L15.7705627,528.770563 L15.7705627,523.970563 L18.1705627,523.970563 L18.1705627,528.770563 L22.9705627,528.770563 L22.9705627,531.170563 Z" id="Shape" transform="translate(16.970563, 529.970563) rotate(45.000000) translate(-16.970563, -529.970563) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

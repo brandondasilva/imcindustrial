@@ -28,23 +28,15 @@ define([], function() {
       }
     });
 
-    var errorMessages = [
-      "Name is not defined. Please enter your name.",
-      "Email is not defined. Please enter your email.",
-      "Subject is not defined. Please enter a subject for your message.",
-      "Message is not defined. Please enter a message."
-    ];
+
 
     $scope.submit = function() {
 
       var url = 'https://hidden-inlet-49886.herokuapp.com/api/contact';
 
-
-      var errors = [];
-
-      // Error handling
-      console.log($scope.formData);
-
+      $scope.statusMessage = null;
+      $scope.clicked = true;
+      $scope.statusClass = "loading-class";
 
       var dataJSON = {
         name: $scope.formData.inputName,
@@ -68,11 +60,30 @@ define([], function() {
         data: dataJSON
       }
 
-      $http(req).then(function(data) {
-        console.log("success = " + data);
-      }, function(error) {
-        console.log("error! = " + error);
-      });
+        $http(req).then(function(data) {
+
+          $scope.clicked = false;
+
+          if (data.status == 200 || data.status == 202) {
+            $scope.statusMessage = 'Success!';
+            $scope.statusImage = path + '/images/icons/check.svg';
+            $scope.statusClass = 'success';
+          } else {
+            $scope.statusMessage = 'Error! Try again.';
+            $scope.statusImage = path + '/images/icons/error.svg';
+            $scope.statusClass = 'failed';
+          }
+
+
+        }, function(error) {
+
+          $scope.clicked = false;
+
+          $scope.statusMessage = 'Error! Try again.';
+          $scope.statusImage = path + '/images/icons/error.svg';
+          $scope.statusClass = 'failed';
+        });
+
     }
   }
 
