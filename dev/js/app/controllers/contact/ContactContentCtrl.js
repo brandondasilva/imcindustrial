@@ -60,11 +60,14 @@ define([], function() {
         data: dataJSON
       }
 
-        $http(req).then(function(data) {
+        $http(req).then(function(response) {
 
           $scope.clicked = false;
 
-          if (data.status == 200 || data.status == 202) {
+          // console.log(response);
+          // console.log(response.data.statusCode);
+
+          if (response.data.statusCode == 200 || response.data.statusCode == 202) {
             $scope.statusMessage = 'Success!';
             $scope.statusImage = path + '/images/icons/check.svg';
             $scope.statusClass = 'success';
