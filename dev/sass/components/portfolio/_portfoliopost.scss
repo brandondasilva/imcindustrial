@@ -117,8 +117,6 @@
 
     }
 
-
-
     h2 {
       text-transform: uppercase;
       font-size: 42px;
@@ -130,12 +128,15 @@
     padding: $section-padding;
 
     @media (max-width: 991px) {
-      .portfolio-post, .post-panel {
+      .portfolio-post, .post-panel, h2 {
         margin-right: 0px !important;
       }
     }
 
-    h2 { margin-top: 0px; }
+    h2 {
+      margin-top: 0px;
+      margin-right: 20px;
+    }
 
     hr.hr-sm {
       margin-left: 0px !important;
