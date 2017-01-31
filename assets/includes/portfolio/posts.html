@@ -1,19 +1,22 @@
 <div id="portfolio-posts" class="container" ng-controller="PortfolioPostsCtrl">
   <div id="portfolio-featured" class="row">
     <div class="col-md-12 portfolio-content" ng-repeat="post in portfolioFeatured">
-      <h2 class="" ng-bind-html="post.heading"></h2>
+      <a href="" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
 
       <div class="row featured-panel">
 
         <div class="col-md-8 featured-image" style="background-image: url({{post.image}}); "></div>
 
         <div class="col-md-4 featured-information">
-          <p ng-bind-html="post.desc"></p>
+          <p class="featured-date">{{post.date | date:'MM/dd/yyyy'}}</p>
+
+          <p class="featured-description" ng-bind-html="post.desc"></p>
+
+          <a href="" class="button-wrapper post-button">
+            <span class="button">Read More</span>
+          </a>
         </div>
-
       </div>
-
-
     </div>
   </div>
 
@@ -22,22 +25,38 @@
   <div id="portfolio-content" class="row">
     <div class="col-md-8 portfolio-content">
       <div class="col-md-6 portfolio-post" ng-repeat="post in portfolioPosts">
-        <h3 class="" ng-bind-html="post.heading"></h3>
+        <a href="" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
 
         <div class="post-panel">
-          <p ng-bind-html="post.desc"></p>
+
+          <div class="post-image" style="background-image: url({{post.image}});"></div>
+
+          <div class="post-information">
+            <p class="post-date">{{post.date | date:'MM/dd/yyyy'}}</p>
+
+            <p class="post-description" ng-bind-html="post.desc"></p>
+
+            <a href="" class="button-wrapper post-button">
+              <span class="button">Read More</span>
+            </a>
+          </div>
         </div>
+
+
       </div>
 
-      <div class="">
-        pagination stuff
+      <div class="view-posts">
+        <a href="">
+          <span>View All Posts</span>
+          <div id="next"></div>
+        </a>
       </div>
     </div>
 
     <hr class="hr-sm hidden-lg hidden-md">
 
-    <div id="portfolio-categories" class="col-md-4 portfolio-content">
-      <h3>Categories</h3>
+    <div id="portfolio-categories" class="col-md-4">
+      <h2>Categories</h2>
 
       <ul>
         <li><a href="">Category 1</a></li>

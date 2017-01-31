@@ -22,15 +22,27 @@
     padding-right: 0px !important;
   }
 
-  .portfolio-post {
-    padding-left: 0px !important;
-    padding-bottom: 20px;
+  .post-title {
+    color: $main-black;
+  }
 
-    .post-panel {
-      margin-right: 20px;
-      padding: 20px;
-      background-color: $main-color;
-      border-radius: 5px;
+  .button-wrapper {
+
+    &.post-button {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 20px;
+      width: auto;
+    }
+
+    .button {
+      background-color: $main-black;
+      color: $body-text-white;
+      text-align: center;
+      width: 100% !important;
+      padding-left: 12px;
+      padding-right: 12px;
     }
   }
 
@@ -42,7 +54,37 @@
 
     padding: $section-padding;
 
+    .featured-panel {
+      display: flex;
+      border-radius: 5px;
+      min-height: 300px;
+      box-shadow: $box-shadow-post;
+
+      .featured-image {
+        background-position: center;
+        background-size: cover;
+      }
+
+      .featured-information {
+
+        p.featured-date {
+          font-size: 12px;
+          color: $home-featured-color;
+          padding-bottom: 12px;
+        }
+
+        p.featured-description {
+          font-size: 16px;
+        }
+      }
+    }
+
     div:first-child {
+
+      .featured-image {
+        order: 1;
+        border-radius: 0 5px 5px 0 !important;
+      }
 
       & .featured-information {
         border-radius: 5px 0 0 5px !important;
@@ -54,6 +96,10 @@
 
       h2 {
         text-align: right;
+      }
+
+      .featured-image {
+        border-radius: 5px 0 0 5px;
       }
 
       & .featured-information {
@@ -83,13 +129,104 @@
 
     padding: $section-padding;
 
+    @media (max-width: 991px) {
+      .portfolio-post, .post-panel {
+        margin-right: 0px !important;
+      }
+    }
+
+    h2 { margin-top: 0px; }
+
     hr.hr-sm {
       margin-left: 0px !important;
       margin-right: 0px !important;
     }
+
+    .portfolio-post {
+      padding-left: 0px !important;
+      margin-bottom: 20px;
+
+      .post-panel {
+        border-radius: 5px;
+        box-shadow: $box-shadow-post;
+        margin-right: 20px;
+
+        .post-image {
+          min-height: 200px;
+          border-radius: 5px 5px 0 0;
+          background-position: center;
+          background-size: cover;
+        }
+
+        .post-information {
+
+          padding: 20px;
+          background-color: $main-color;
+          border-radius: 0 0 5px 5px;
+          min-height: 225px;
+
+          p.post-date {
+            font-size: 11px;
+            color: $home-featured-color;
+            padding-bottom: 10px;
+          }
+
+          p.post-description {
+            font-size: 14px;
+            margin-bottom: 50px;
+          }
+        }
+      }
+
+    }
+
+    .view-posts {
+
+      @media (max-width: 991px) {
+        margin-right: 0px !important;
+
+        span { display: none; }
+      }
+
+      float: right;
+      margin-right: 20px;
+      clear: both;
+
+      a {
+        display: flex;
+
+        span {
+          color: $main-color;
+          font-size: 18px;
+          margin-top: 18px;
+          margin-right: 12px;
+        }
+
+        #next {
+          background-image: url($imagePath + "icons/next.svg");
+          background-repeat: no-repeat;
+          background-position: center;
+          display: inline-block;
+          width: 70px;
+          height: 70px;
+        }
+      }
+
+      a:hover {
+        #next {
+          background-image: url($imagePath + "icons/next-hover.svg");
+        }
+      }
+
+
+
+
+    }
   }
 
   #portfolio-categories {
+
+    h2 { margin-top: 0px; }
 
     @media (max-width: 991px) {
       padding-top: $section-padding;
