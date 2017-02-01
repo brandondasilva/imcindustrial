@@ -25,11 +25,9 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-<script type="text/javascript" data-main="<?php bloginfo('template_directory'); ?>/assets/js/main" src="<?php bloginfo('template_directory'); ?>/assets/js/require.js"></script>
-
     <?php wp_head(); ?>
 
-
+    <script type="text/javascript" data-main="<?php bloginfo('template_directory'); ?>/assets/js/main" src="<?php bloginfo('template_directory'); ?>/assets/js/require.js"></script>
   </head>
 
   <body>

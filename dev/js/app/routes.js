@@ -4,7 +4,7 @@ define([], function() {
 
   function config($stateProvider, $urlRouterProvider, $locationProvider) {
 
-    var includes = '/wp-content/themes/imcindustrial/assets/includes';
+    var includes = 'wp-content/themes/imcindustrial/assets/includes';
 
     $stateProvider
       .state('main', {
