@@ -33,7 +33,8 @@ define([], function() {
       })
       .state('careers', {
         url: '/careers',
-        templateUrl: includes + '/careers/careers.html'
+        templateUrl: includes + '/careers/careers.html',
+        target: "_self"
       })
       .state('careers-posts', {
         url: '/careers/:slug',

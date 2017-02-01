@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-cloak>
   <head>
     <base href="/wordpress/" target="_blank">
 
@@ -27,7 +27,7 @@
 
     <?php wp_head(); ?>
 
-    <script type="text/javascript" data-main="<?php bloginfo('template_directory'); ?>/assets/js/main" src="<?php bloginfo('template_directory'); ?>/assets/js/require.js"></script>
+    <!-- <script type="text/javascript" data-main="<?php bloginfo('template_directory'); ?>/assets/js/main" src="<?php bloginfo('template_directory'); ?>/assets/js/require.js"></script> -->
   </head>
 
   <body>

@@ -1,5 +1,7 @@
 require.config({
 
+  baseUrl: "wp-content/themes/imcindustrial/assets/js",
+
   paths: {
     'jquery'           : '../bower_components/jquery/dist/jquery.min',
     'angular'          : '../bower_components/angular/angular.min',
@@ -21,24 +23,30 @@ require.config({
       exports: 'angular'
     },
     'base64': {
+      deps: ["angular"],
       exports: 'base64'
     },
     'ngSanitize': {
+      deps: ["angular"],
       exports: 'ngSanitize'
     },
     'ngMessages': {
+      deps: ["angular"],
       exports: 'ngMessages'
     },
     'ngMaps': {
+      deps: ["angular"],
       exports: 'ngMaps'
     },
     'ui.router': {
       deps: ["angular"]
     },
     'angular-touch': {
+      deps: ["angular"],
       exports: 'angular-touch'
     },
     'angular-carousel': {
+      deps: ["angular"],
       exports: 'angular-carousel'
     },
     'bootstrap': {
