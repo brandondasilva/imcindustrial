@@ -20,12 +20,14 @@
     'app/directives/portfolio/portfolioposts',
     'app/controllers/portfolio/PortfolioContentCtrl',
     'app/controllers/portfolio/PortfolioPostsCtrl',
+    'app/controllers/portfolio/PostContentCtrl',
     'app/services/getPages'
   ], function(
     portfoliocontent,
     portfolioposts,
     PortfolioContentCtrl,
     PortfolioPostsCtrl,
+    PostContentCtrl,
     getPages
   ) {
 
@@ -36,6 +38,7 @@
            .directive('portfolioposts', portfolioposts)
            .controller('PortfolioContentCtrl', PortfolioContentCtrl)
            .controller('PortfolioPostsCtrl', PortfolioPostsCtrl)
+           .controller('PostContentCtrl', PostContentCtrl)
            .factory('getPages', getPages);
 
     return moduleName;

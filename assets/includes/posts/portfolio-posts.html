@@ -1,1 +1,25 @@
-stuff
+<div id="post" class="" ng-controller="PostContentCtrl">
+  <div id="post-heading" class="page-heading" style="background-image: url('{{post.featured_image.attachment_meta.sizes.large.url}}')">
+    <div class="overlay"></div>
+  </div>
+
+  <div id="post-content" class="page-content">
+    <div class="container">
+      <h1 ng-bind-html="post.title"></h1>
+      <div class="post-date">Posted: {{post.date | date:'MM/dd/yyyy'}}</div>
+
+      <div class="row post-content">
+        <div class="col-md-10 col-md-offset-1 col-sm-12" ng-bind-html="post.content"></div>
+      </div>
+
+      <a class="back-button" ui-sref="portfolio"><img src="wp-content/themes/imcindustrial/assets/images/icons/backward-red.svg" alt="Back"><span>Back to Porfolio</span></a>
+    </div>
+  </div>
+
+  <div class="container">
+    <hr />
+  </div>
+
+
+  <div>more stuff</div>
+</div>

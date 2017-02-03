@@ -29,13 +29,15 @@ define([], function() {
           desc:    res[0].excerpt,
           date:    res[0].date,
           image:   res[0].featured_image.attachment_meta.sizes.medium_large.url,
-          link:    res[0].guid
+          link:    res[0].guid,
+          slug:    "portfolio/" + res[0].slug
         }, {
           heading: res[1].title,
           desc:    res[1].excerpt,
           date:    res[1].date,
           image:   res[1].featured_image.attachment_meta.sizes.medium_large.url,
-          link:    res[1].guid
+          link:    res[1].guid,
+          slug:    "portfolio/" + res[1].slug
         }
       );
     }).error(function(res) {
@@ -43,8 +45,6 @@ define([], function() {
     });
 
     $http.get('index.php/wp-json/posts/?filter[category_name]=portfolio&filter[posts_per_page]=4').success(function(res) {
-
-      console.log(res);
 
       for (var i = 0; i < res.length; i++) {
 
@@ -54,7 +54,8 @@ define([], function() {
             desc:    res[i].excerpt,
             date:    res[i].date,
             // image:   null,  TODO NEED A PLACEHOLDER IMAGE
-            link:    res[i].guid
+            link:    res[i].guid,
+            slug:    "portfolio/" + res[i].slug
           });
         } else {
           $scope.portfolioPosts.push({
@@ -62,7 +63,8 @@ define([], function() {
             desc:    res[i].excerpt,
             date:    res[i].date,
             image:   res[i].featured_image.attachment_meta.sizes.medium_large.url,
-            link:    res[i].guid
+            link:    res[i].guid,
+            slug:    "portfolio/" + res[i].slug
           });
         }
       }

@@ -1,7 +1,7 @@
 <div id="portfolio-posts" class="container" ng-controller="PortfolioPostsCtrl">
   <div id="portfolio-featured" class="row">
     <div class="col-md-12 portfolio-content" ng-repeat="post in portfolioFeatured">
-      <a ng-href="portfolio/regular-portfolio-post" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
+      <a ng-href="{{post.slug}}" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
 
       <div class="row featured-panel">
 
@@ -12,7 +12,7 @@
 
           <p class="featured-description" ng-bind-html="post.desc"></p>
 
-          <a href="" class="button-wrapper post-button">
+          <a ng-href="{{post.slug}}" class="button-wrapper post-button">
             <span class="button">Read More</span>
           </a>
         </div>
@@ -25,7 +25,7 @@
   <div id="portfolio-content" class="row">
     <div class="col-md-8 portfolio-content">
       <div class="col-md-6 portfolio-post" ng-repeat="post in portfolioPosts">
-        <a href="" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
+        <a ng-href="{{post.slug}}" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
 
         <div class="post-panel">
 
@@ -36,7 +36,7 @@
 
             <p class="post-description" ng-bind-html="post.desc"></p>
 
-            <a href="" class="button-wrapper post-button">
+            <a ng-href="{{post.slug}}" class="button-wrapper post-button">
               <span class="button">Read More</span>
             </a>
           </div>

@@ -1,0 +1,37 @@
+#post {
+
+  hr {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  #post-heading.page-heading {
+    height: 180px;
+
+  }
+
+  #post-content {
+
+    h1 {
+      margin-top: 0px !important;
+      margin-bottom: 20px;
+    }
+
+    .back-button {
+
+      span { padding-left: 10px; }
+    }
+
+    .post-content {
+      padding-top: 20px;
+
+      & div:first-child {
+        padding-bottom: 20px;
+      }
+    }
+
+    .post-date {
+      color: $separator-color;
+    }
+  }
+}
