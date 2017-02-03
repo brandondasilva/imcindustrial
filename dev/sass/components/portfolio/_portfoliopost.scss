@@ -22,29 +22,8 @@
     padding-right: 0px !important;
   }
 
-  .post-title {
-    color: $main-black;
-  }
 
-  .button-wrapper {
 
-    &.post-button {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      margin: 20px;
-      width: auto;
-    }
-
-    .button {
-      background-color: $main-black;
-      color: $body-text-white;
-      text-align: center;
-      width: 100% !important;
-      padding-left: 12px;
-      padding-right: 12px;
-    }
-  }
 
   #portfolio-featured {
 
@@ -127,11 +106,7 @@
 
     padding: $section-padding;
 
-    @media (max-width: 991px) {
-      .portfolio-post, .post-panel, h2 {
-        margin-right: 0px !important;
-      }
-    }
+
 
     h2 {
       margin-top: 0px;
@@ -143,43 +118,7 @@
       margin-right: 0px !important;
     }
 
-    .portfolio-post {
-      padding-left: 0px !important;
-      margin-bottom: 20px;
 
-      .post-panel {
-        border-radius: 5px;
-        box-shadow: $box-shadow-post;
-        margin-right: 20px;
-
-        .post-image {
-          min-height: 200px;
-          border-radius: 5px 5px 0 0;
-          background-position: center;
-          background-size: cover;
-        }
-
-        .post-information {
-
-          padding: 20px;
-          background-color: $main-color;
-          border-radius: 0 0 5px 5px;
-          min-height: 225px;
-
-          p.post-date {
-            font-size: 11px;
-            color: $home-featured-color;
-            padding-bottom: 10px;
-          }
-
-          p.post-description {
-            font-size: 14px;
-            margin-bottom: 50px;
-          }
-        }
-      }
-
-    }
 
     .view-posts {
 

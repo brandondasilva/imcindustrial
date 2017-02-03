@@ -17,6 +17,7 @@
       margin-bottom: 20px;
     }
 
+
     .back-button {
 
       span { padding-left: 10px; }
@@ -32,6 +33,13 @@
 
     .post-date {
       color: $separator-color;
+    }
+  }
+
+  #latest-posts {
+    p {
+      color: $body-text-white;
+      margin-bottom: 0px;
     }
   }
 }

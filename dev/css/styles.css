@@ -95,6 +95,50 @@ a.button-wrapper .button {
   padding-top: 30px;
   padding-bottom: 30px; }
 
+.post-title {
+  color: #1E1E1E; }
+
+@media (max-width: 991px) {
+  .portfolio-post, .post-panel, h2 {
+    margin-right: 0px !important; } }
+.portfolio-post {
+  padding-left: 0px !important;
+  margin-bottom: 20px; }
+  .portfolio-post .post-panel {
+    border-radius: 5px;
+    box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+    margin-right: 20px; }
+    .portfolio-post .post-panel .post-image {
+      min-height: 200px;
+      border-radius: 5px 5px 0 0;
+      background-position: center;
+      background-size: cover; }
+    .portfolio-post .post-panel .post-information {
+      padding: 20px;
+      background-color: #812822;
+      border-radius: 0 0 5px 5px;
+      min-height: 225px; }
+      .portfolio-post .post-panel .post-information p.post-date {
+        font-size: 11px;
+        color: #dfdfdf;
+        padding-bottom: 10px; }
+      .portfolio-post .post-panel .post-information p.post-description {
+        font-size: 14px;
+        margin-bottom: 50px; }
+  .portfolio-post .button-wrapper.post-button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin: 20px;
+    width: auto; }
+  .portfolio-post .button-wrapper .button {
+    background-color: #1E1E1E;
+    color: #f0f0f0;
+    text-align: center;
+    width: 100% !important;
+    padding-left: 12px;
+    padding-right: 12px; }
+
 .overlay {
   position: absolute;
   top: 0;
@@ -509,8 +553,6 @@ a.button-wrapper .button {
 #portfolio-posts .portfolio-content, #portfolio-posts .portfolio-post {
   padding-left: 0px !important;
   padding-right: 0px !important; }
-#portfolio-posts .post-title {
-  color: #1E1E1E; }
 #portfolio-posts .button-wrapper.post-button {
   position: absolute;
   bottom: 0;
@@ -573,30 +615,6 @@ a.button-wrapper .button {
   #portfolio-posts #portfolio-content hr.hr-sm {
     margin-left: 0px !important;
     margin-right: 0px !important; }
-  #portfolio-posts #portfolio-content .portfolio-post {
-    padding-left: 0px !important;
-    margin-bottom: 20px; }
-    #portfolio-posts #portfolio-content .portfolio-post .post-panel {
-      border-radius: 5px;
-      box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
-      margin-right: 20px; }
-      #portfolio-posts #portfolio-content .portfolio-post .post-panel .post-image {
-        min-height: 200px;
-        border-radius: 5px 5px 0 0;
-        background-position: center;
-        background-size: cover; }
-      #portfolio-posts #portfolio-content .portfolio-post .post-panel .post-information {
-        padding: 20px;
-        background-color: #812822;
-        border-radius: 0 0 5px 5px;
-        min-height: 225px; }
-        #portfolio-posts #portfolio-content .portfolio-post .post-panel .post-information p.post-date {
-          font-size: 11px;
-          color: #dfdfdf;
-          padding-bottom: 10px; }
-        #portfolio-posts #portfolio-content .portfolio-post .post-panel .post-information p.post-description {
-          font-size: 14px;
-          margin-bottom: 50px; }
   #portfolio-posts #portfolio-content .view-posts {
     float: right;
     margin-right: 20px;
@@ -650,5 +668,8 @@ a.button-wrapper .button {
     padding-bottom: 20px; }
 #post #post-content .post-date {
   color: #979797; }
+#post #latest-posts p {
+  color: #f0f0f0;
+  margin-bottom: 0px; }
 
 /*# sourceMappingURL=styles.css.map */
