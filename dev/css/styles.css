@@ -553,19 +553,6 @@ a.button-wrapper .button {
 #portfolio-posts .portfolio-content, #portfolio-posts .portfolio-post {
   padding-left: 0px !important;
   padding-right: 0px !important; }
-#portfolio-posts .button-wrapper.post-button {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  margin: 20px;
-  width: auto; }
-#portfolio-posts .button-wrapper .button {
-  background-color: #1E1E1E;
-  color: #f0f0f0;
-  text-align: center;
-  width: 100% !important;
-  padding-left: 12px;
-  padding-right: 12px; }
 #portfolio-posts #portfolio-featured {
   padding: 30px; }
   @media (max-width: 991px) {
@@ -606,9 +593,6 @@ a.button-wrapper .button {
     font-size: 42px; }
 #portfolio-posts #portfolio-content {
   padding: 30px; }
-  @media (max-width: 991px) {
-    #portfolio-posts #portfolio-content .portfolio-post, #portfolio-posts #portfolio-content .post-panel, #portfolio-posts #portfolio-content h2 {
-      margin-right: 0px !important; } }
   #portfolio-posts #portfolio-content h2 {
     margin-top: 0px;
     margin-right: 20px; }
@@ -621,9 +605,7 @@ a.button-wrapper .button {
     clear: both; }
     @media (max-width: 991px) {
       #portfolio-posts #portfolio-content .view-posts {
-        margin-right: 0px !important; }
-        #portfolio-posts #portfolio-content .view-posts span {
-          display: none; } }
+        margin-right: 0px !important; } }
     #portfolio-posts #portfolio-content .view-posts a {
       display: flex; }
       #portfolio-posts #portfolio-content .view-posts a span {
@@ -644,7 +626,7 @@ a.button-wrapper .button {
   margin-top: 0px; }
 @media (max-width: 991px) {
   #portfolio-posts #portfolio-categories {
-    padding-top: 30px; } }
+    display: none; } }
 #portfolio-posts #portfolio-categories hr {
   margin: 0px !important; }
 #portfolio-posts #portfolio-categories ul {

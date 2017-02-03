@@ -22,7 +22,7 @@
      var path = "index.php/wp-json/posts?filter[category_name]=portfolio&";
 
      $http.get(path + 'filter[name]=' + $stateParams.slug).success(function(res) {
-       $scope.post = res[0];
+       $scope.postContent = res[0];
      });
 
      $scope.latest = [];

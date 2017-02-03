@@ -26,6 +26,11 @@ define([], function() {
         templateUrl: includes + '/posts/portfolio-posts.html',
         target: "_self"
       })
+      .state('portfolio-pagination', {
+        url: '/portfolio/p/:page',
+        templateUrl: includes + '/posts/portfolio-pagination.html',
+        target: "_self"
+      })
       .state('contact', {
         url: '/contact',
         templateUrl: includes + '/contact/contact.html',
@@ -46,8 +51,6 @@ define([], function() {
 
     $locationProvider.html5Mode(true);
   }
-
-
 
   return ["$stateProvider", "$urlRouterProvider", "$locationProvider", config];
 });
