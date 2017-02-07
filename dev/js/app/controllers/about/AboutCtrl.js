@@ -20,10 +20,10 @@ define([], function() {
 
     getPages.success(function(res) {
       for (var i = 0; i < res.length; i++) {
-        if (res[i].title === "About") {
-          $scope.title = res[i].title;
-          $scope.featuredImage = res[i].featured_image.attachment_meta.sizes.large.url;
-          $scope.content = res[i].content;
+        if (res[i].title.rendered === "About") {
+          $scope.title = res[i].title.rendered;
+          $scope.featuredImage = res[i].better_featured_image.media_details.sizes.large.source_url;
+          $scope.content = res[i].content.rendered;
         }
       }
     });

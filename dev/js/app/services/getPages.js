@@ -28,4 +28,4 @@ define([], function() {
 
   return ["$http", "apiPath", getPages];
 
-})
+});

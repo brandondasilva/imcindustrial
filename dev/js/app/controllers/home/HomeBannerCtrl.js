@@ -16,9 +16,9 @@
 
 define([], function() {
 
-  function HomeBannerCtrl($scope, $http, apiPath) {
+  function HomeBannerCtrl($scope, $http, apiPath_v1) {
 
-    $http.get(apiPath).success(function(res) {
+    $http.get(apiPath_v1).success(function(res) {
       // console.log(res.routes)
       // console.log(res.routes["/wp/v2/settings"].endpoints[1].args.title)
       $scope.name = res.name;
@@ -30,6 +30,6 @@ define([], function() {
     });
   }
 
-  return ["$scope", "$http", "apiPath", HomeBannerCtrl];
+  return ["$scope", "$http", "apiPath_v1", HomeBannerCtrl];
 
 });

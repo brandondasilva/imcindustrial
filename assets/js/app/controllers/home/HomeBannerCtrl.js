@@ -1,1 +1,1 @@
-"use strict";define([],function(){function a(a,b,c){b.get(c).success(function(b){a.name=b.name,a.description=b.description}).error(function(){a.name="IMC Industrial",a.description="Industrial Solutions for SME's"})}return["$scope","$http","apiPath",a]});
+"use strict";define([],function(){function a(a,b,c){b.get(c).success(function(b){a.name=b.name,a.description=b.description}).error(function(){a.name="IMC Industrial",a.description="Industrial Solutions for SME's"})}return["$scope","$http","apiPath_v1",a]});
