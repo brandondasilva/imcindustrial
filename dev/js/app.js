@@ -46,8 +46,7 @@ define([
      .controller('NavCtrl', NavCtrl);
 
   app.constant('path', 'wp-content/themes/imcindustrial/assets');
-  app.constant('apiPath_v1', 'index.php/wp-json/');
-  app.constant('apiPath', '?rest_route=/wp/v2/');
+  app.constant('apiPath', '?json_route=/');
 
   app.init = function() {
     angular.element(document).ready(function() {

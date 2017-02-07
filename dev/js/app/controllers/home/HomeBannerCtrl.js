@@ -16,7 +16,7 @@
 
 define([], function() {
 
-  function HomeBannerCtrl($scope, $http, apiPath_v1) {
+  function HomeBannerCtrl($scope, $http, apiPath) {
 
     $http.get(apiPath_v1).success(function(res) {
       // console.log(res.routes)
@@ -30,6 +30,6 @@ define([], function() {
     });
   }
 
-  return ["$scope", "$http", "apiPath_v1", HomeBannerCtrl];
+  return ["$scope", "$http", "apiPath", HomeBannerCtrl];
 
 });

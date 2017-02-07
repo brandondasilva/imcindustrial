@@ -38,7 +38,7 @@
              date:    res[i].date,
              // image:   null,  TODO NEED A PLACEHOLDER IMAGE
              link:    res[i].guid,
-             slug:    "/portfolio/" + res[i].slug
+             slug:    "portfolio/" + res[i].slug
            });
          } else {
            $scope.latest.push({
@@ -47,7 +47,7 @@
              date:    res[i].date,
              image:   res[i].featured_image.attachment_meta.sizes.medium_large.url,
              link:    res[i].guid,
-             slug:    "/portfolio/" + res[i].slug
+             slug:    "portfolio/" + res[i].slug
            });
          }
        }
