@@ -1,1 +1,1 @@
-"use strict";define([],function(){function a(a){return a.get("?rest_route=/wp/v2/pages").success(function(a){return console.log(a),a}).error(function(a){return a})}return["$http",a]});
+"use strict";define([],function(){function a(a,b){return a.get("?rest_route=/wp/v2/pages").success(function(a){return console.log(a),a}).error(function(a){return a})}return["$http","apiPath",a]});
