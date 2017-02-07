@@ -42,7 +42,7 @@ define([], function() {
         templateUrl: includes + '/posts/careers-posts.html'
       });
 
-    $urlRouterProvider.otherwise('/');
+    $urlRouterProvider.otherwise(includes + '/404.html');
   }
 
   return ["$stateProvider", "$urlRouterProvider", "$locationProvider", config];
