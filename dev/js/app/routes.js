@@ -2,7 +2,7 @@
 
 define([], function() {
 
-  function config($stateProvider, $urlRouterProvider, $locationProvider) {
+  function config($stateProvider, $urlRouterProvider) {
 
     var includes = 'wp-content/themes/imcindustrial/assets/includes';
 
@@ -48,9 +48,7 @@ define([], function() {
       });
 
     $urlRouterProvider.otherwise('/');
-
-    $locationProvider.html5Mode(true);
   }
 
-  return ["$stateProvider", "$urlRouterProvider", "$locationProvider", config];
+  return ["$stateProvider", "$urlRouterProvider", config];
 });
