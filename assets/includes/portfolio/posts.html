@@ -1,6 +1,6 @@
 <div id="portfolio-posts" class="container" ng-controller="PortfolioPostsCtrl">
   <div id="portfolio-featured" class="row">
-    <div class="col-md-12 portfolio-content" ng-repeat="post in portfolioFeatured">
+    <div class="col-md-12 portfolio-post" ng-repeat="post in portfolioFeatured">
       <a ng-href="{{post.slug}}" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
 
       <div class="row featured-panel">
@@ -45,12 +45,12 @@
 
       </div>
 
-      <div class="view-posts">
+      <!-- <div class="view-posts">
         <a ui-sref="portfolio-pagination">
           <span>View All Posts</span>
           <div id="next"></div>
         </a>
-      </div>
+      </div> -->
     </div>
 
     <!-- <hr class="hr-sm hidden-lg hidden-md"> -->

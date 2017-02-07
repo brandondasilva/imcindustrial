@@ -18,7 +18,8 @@ define([], function() {
 
   function getPages($http) {
 
-    return $http.get('index.php/wp-json/pages').success(function(res) {
+    return $http.get('?rest_route=/wp/v2/pages').success(function(res) {
+      console.log(res)
       return res;
     })
     .error(function(err) {
