@@ -48,6 +48,10 @@ define([
   app.constant('path', 'assets');
   app.constant('apiPath', 'http://imcindustrial.premus.ca/?rest_route=/');
 
+  app.run(['$state', '$stateParams', function($state, $stateParams) {
+
+  }]);
+
   app.init = function() {
     angular.element(document).ready(function() {
       angular.bootstrap(document, [appName]);

@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'dev/js',
         src: ['*.js', '**/*.js'],
-        dest: 'public/assets/js',
+        dest: 'assets/js',
         ext: '.js'
       }
     },
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'dev/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'public/assets/css',
+          dest: 'assets/css',
           ext: '.min.css'
         }]
       }
