@@ -12,12 +12,12 @@ define([], function() {
         templateUrl: includes + '/home/home.html'
       })
       .state('about', {
-        url: '/about',
+        url: '/about/',
         templateUrl: includes + '/about/about.html',
         target: "_self"
       })
       .state('portfolio', {
-        url: '/portfolio',
+        url: '/portfolio/',
         templateUrl: includes + '/portfolio/portfolio.html',
         target: "_self"
       })
@@ -32,12 +32,12 @@ define([], function() {
         target: "_self"
       })
       .state('contact', {
-        url: '/contact',
+        url: '/contact/',
         templateUrl: includes + '/contact/contact.html',
         target: "_self"
       })
       .state('careers', {
-        url: '/careers',
+        url: '/careers/',
         templateUrl: includes + '/careers/careers.html',
         target: "_se;f"
       })
