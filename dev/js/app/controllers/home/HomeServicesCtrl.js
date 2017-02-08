@@ -18,7 +18,7 @@ define([], function() {
 
   function HomeServicesCtrl($scope, $http, path, apiPath) {
 
-    $http.get(apiPat + 'posts/?filter[category_name]=services&filter[tag]=excerpt').success(function(res) {
+    $http.get(apiPath + 'posts/?filter[category_name]=services&filter[tag]=excerpt').success(function(res) {
 
       $scope.result = res;
       $scope.services = [];
