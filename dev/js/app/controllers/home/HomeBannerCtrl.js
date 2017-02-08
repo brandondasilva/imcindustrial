@@ -19,8 +19,6 @@ define([], function() {
   function HomeBannerCtrl($scope, $http, apiPath) {
 
     $http.get(apiPath).success(function(res) {
-      // console.log(res.routes)
-      // console.log(res.routes["/wp/v2/settings"].endpoints[1].args.title)
       $scope.name = res.name;
       $scope.description = res.description;
     }).error(function() {

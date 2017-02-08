@@ -32,7 +32,7 @@ define([], function() {
         target: "_self"
       })
       .state('contact', {
-        url: '/pages/contact',
+        url: '/contact',
         templateUrl: includes + '/contact/contact.html',
         target: "_self"
       })
