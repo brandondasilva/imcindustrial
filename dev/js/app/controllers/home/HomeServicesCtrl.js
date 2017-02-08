@@ -16,9 +16,9 @@
 
 define([], function() {
 
-  function HomeServicesCtrl($scope, $http, path) {
+  function HomeServicesCtrl($scope, $http, path, apiPath) {
 
-    $http.get('index.php/wp-json/posts/?filter[category_name]=services&filter[tag]=excerpt').success(function(res) {
+    $http.get(apiPath + 'wp/v2/posts/?filter[category_name]=services&filter[tag]=excerpt').success(function(res) {
 
       $scope.result = res;
       $scope.services = [];
@@ -57,6 +57,6 @@ define([], function() {
 
   }
 
-  return ["$scope", "$http", "path", HomeServicesCtrl];
+  return ["$scope", "$http", "path", "apiPath", HomeServicesCtrl];
 
 });

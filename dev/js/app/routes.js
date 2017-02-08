@@ -6,7 +6,7 @@ define([], function() {
 
     $locationProvider.html5Mode(true);
 
-    var includes = 'wp-content/themes/imcindustrial/assets/includes';
+    var includes = 'assets/includes';
 
     $stateProvider
       .state('main', {

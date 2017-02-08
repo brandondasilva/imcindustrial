@@ -16,12 +16,12 @@
 
 define([], function() {
 
-  function PortfolioPostsCtrl($scope, $http) {
+  function PortfolioPostsCtrl($scope, $http, apiPath) {
 
     $scope.portfolioFeatured = [];
     $scope.portfolioPosts    = [];
 
-    $http.get('index.php/wp-json/posts/?filter[category_name]=featured&filter[posts_per_page]=2').success(function(res) {
+    $http.get(apiPath + 'posts/?filter[category_name]=featured&filter[posts_per_page]=2').success(function(res) {
 
       $scope.portfolioFeatured.push(
         {
@@ -44,7 +44,7 @@ define([], function() {
       console.log('ERROR: ' + res);
     });
 
-    $http.get('index.php/wp-json/posts/?filter[category_name]=portfolio&filter[posts_per_page]=4').success(function(res) {
+    $http.get(apiPath + 'posts/?filter[category_name]=portfolio&filter[posts_per_page]=4').success(function(res) {
 
       for (var i = 0; i < res.length; i++) {
 
@@ -73,5 +73,5 @@ define([], function() {
     });
   }
 
-  return ["$scope", "$http", PortfolioPostsCtrl];
+  return ["$scope", "$http", "apiPath", PortfolioPostsCtrl];
 });

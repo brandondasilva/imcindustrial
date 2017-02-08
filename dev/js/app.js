@@ -45,8 +45,8 @@ define([
      .directive('mapsection', mapsection)
      .controller('NavCtrl', NavCtrl);
 
-  app.constant('path', 'wp-content/themes/imcindustrial/assets');
-  app.constant('apiPath', '?json_route=/');
+  app.constant('path', 'assets');
+  app.constant('apiPath', 'http://imcindustrial.premus.ca/?rest_route=/');
 
   app.init = function() {
     angular.element(document).ready(function() {

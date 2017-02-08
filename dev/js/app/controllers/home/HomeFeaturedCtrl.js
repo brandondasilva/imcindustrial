@@ -16,11 +16,11 @@
 
 define([], function() {
 
-  function HomeFeaturedCtrl($scope, $http) {
+  function HomeFeaturedCtrl($scope, $http, apiPath) {
 
     $scope.slides = [];
 
-    $http.get('index.php/wp-json/posts/?filter[category_name]=featured&filter[posts_per_page]=5').success(function(res) {
+    $http.get(apiPath + 'wp/v2/posts/?filter[category_name]=featured&filter[posts_per_page]=5').success(function(res) {
 
       for (var i = 0; i < res.length; i++) {
 
@@ -44,6 +44,6 @@ define([], function() {
 
   }
 
-  return ["$scope", "$http", HomeFeaturedCtrl];
+  return ["$scope", "$http", "apiPath", HomeFeaturedCtrl];
 
 });

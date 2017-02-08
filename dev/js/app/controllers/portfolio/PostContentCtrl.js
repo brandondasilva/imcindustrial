@@ -17,9 +17,9 @@
 
  define([], function() {
 
-   function PostContentCtrl($scope, $http, $stateParams) {
+   function PostContentCtrl($scope, $http, $stateParams, apiPath) {
 
-     var path = "index.php/wp-json/posts?filter[category_name]=portfolio&";
+     var path = apiPath + "posts?filter[category_name]=portfolio&";
 
      $http.get(path + 'filter[name]=' + $stateParams.slug).success(function(res) {
        $scope.postContent = res[0];
@@ -54,6 +54,6 @@
      })
    }
 
-   return ["$scope", "$http", "$stateParams", PostContentCtrl];
+   return ["$scope", "$http", "$stateParams", "apiPath", PostContentCtrl];
 
  })

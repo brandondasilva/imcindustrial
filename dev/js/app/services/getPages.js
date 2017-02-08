@@ -18,7 +18,7 @@ define([], function() {
 
   function getPages($http, apiPath) {
 
-    return $http.get(apiPath + "pages").success(function(res) {
+    return $http.get(apiPath + "wp/v2/pages").success(function(res) {
       return res;
     })
     .error(function(err) {
