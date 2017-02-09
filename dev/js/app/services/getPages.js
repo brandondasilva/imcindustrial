@@ -19,7 +19,6 @@ define([], function() {
   function getPages($http, apiPath) {
 
     return $http.get(apiPath + 'pages').success(function(res) {
-      console.log(res)
       return res;
     })
     .error(function(err) {
@@ -29,4 +28,4 @@ define([], function() {
 
   return ["$http", "apiPath", getPages];
 
-})
+});

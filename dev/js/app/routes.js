@@ -2,7 +2,12 @@
 
 define([], function() {
 
-  function config($stateProvider, $urlRouterProvider, $locationProvider) {
+  function config(
+    $stateProvider,
+    $urlRouterProvider,
+    $locationProvider,
+    $uiViewScrollProvider
+  ) {
 
     var includes = 'wp-content/themes/imcindustrial/assets/includes';
 
@@ -39,7 +44,7 @@ define([], function() {
       .state('careers', {
         url: '/careers/',
         templateUrl: includes + '/careers/careers.html',
-        target: "_se;f"
+        target: "_self"
       })
       .state('careers-posts', {
         url: '/careers/:slug',
@@ -50,7 +55,15 @@ define([], function() {
     $urlRouterProvider.otherwise('/');
 
     $locationProvider.html5Mode(true);
+
+    $uiViewScrollProvider.useAnchorScroll();
   }
 
-  return ["$stateProvider", "$urlRouterProvider", "$locationProvider", config];
+  return [
+    "$stateProvider",
+    "$urlRouterProvider",
+    "$locationProvider",
+    "$uiViewScrollProvider",
+    config
+  ];
 });

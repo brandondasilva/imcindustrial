@@ -104,10 +104,14 @@ a.button-wrapper .button {
 .portfolio-post {
   padding-left: 0px !important;
   margin-bottom: 20px; }
+  .portfolio-post h2 {
+    margin-left: 10px;
+    margin-right: 10px; }
   .portfolio-post .post-panel {
     border-radius: 5px;
     box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
-    margin-right: 20px; }
+    margin-left: 10px;
+    margin-right: 10px; }
     .portfolio-post .post-panel .post-image {
       min-height: 200px;
       border-radius: 5px 5px 0 0;
@@ -124,12 +128,14 @@ a.button-wrapper .button {
         padding-bottom: 10px; }
       .portfolio-post .post-panel .post-information p.post-description {
         font-size: 14px;
+        color: #f0f0f0;
         margin-bottom: 50px; }
   .portfolio-post .button-wrapper.post-button {
     position: absolute;
     bottom: 0;
     left: 0;
     margin: 20px;
+    margin-left: 30px;
     width: auto; }
   .portfolio-post .button-wrapper .button {
     background-color: #1E1E1E;
@@ -138,6 +144,15 @@ a.button-wrapper .button {
     width: 100% !important;
     padding-left: 12px;
     padding-right: 12px; }
+
+.pagination-wrapper {
+  text-align: center; }
+  .pagination-wrapper .pagination .active a {
+    background-color: #812822;
+    color: #fff;
+    border: none; }
+  .pagination-wrapper .pagination li a {
+    color: #812822; }
 
 .overlay {
   position: absolute;
@@ -547,9 +562,6 @@ a.button-wrapper .button {
   margin-right: 30px; }
 #portfolio-posts h3 {
   margin-top: 0px !important; }
-#portfolio-posts p {
-  color: #f0f0f0;
-  margin-bottom: 0px; }
 #portfolio-posts .portfolio-content, #portfolio-posts .portfolio-post {
   padding-left: 0px !important;
   padding-right: 0px !important; }
@@ -566,12 +578,13 @@ a.button-wrapper .button {
     #portfolio-posts #portfolio-featured .featured-panel .featured-image {
       background-position: center;
       background-size: cover; }
-    #portfolio-posts #portfolio-featured .featured-panel .featured-information p.featured-date {
-      font-size: 12px;
-      color: #dfdfdf;
-      padding-bottom: 12px; }
-    #portfolio-posts #portfolio-featured .featured-panel .featured-information p.featured-description {
-      font-size: 16px; }
+    #portfolio-posts #portfolio-featured .featured-panel .featured-information {
+      color: #dfdfdf; }
+      #portfolio-posts #portfolio-featured .featured-panel .featured-information p.featured-date {
+        font-size: 12px;
+        padding-bottom: 12px; }
+      #portfolio-posts #portfolio-featured .featured-panel .featured-information p.featured-description {
+        font-size: 16px; }
   #portfolio-posts #portfolio-featured div:first-child .featured-image {
     order: 1;
     border-radius: 0 5px 5px 0 !important; }
@@ -591,6 +604,8 @@ a.button-wrapper .button {
   #portfolio-posts #portfolio-featured h2 {
     text-transform: uppercase;
     font-size: 42px; }
+  #portfolio-posts #portfolio-featured .button-wrapper.post-button {
+    margin-left: 20px; }
 #portfolio-posts #portfolio-content {
   padding: 30px; }
   #portfolio-posts #portfolio-content h2 {
@@ -601,7 +616,7 @@ a.button-wrapper .button {
     margin-right: 0px !important; }
   #portfolio-posts #portfolio-content .view-posts {
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
     clear: both; }
     @media (max-width: 991px) {
       #portfolio-posts #portfolio-content .view-posts {

@@ -4,6 +4,7 @@ require.config({
 
   paths: {
     'jquery'           : '../bower_components/jquery/dist/jquery.min',
+    'underscore'       : '../bower_components/underscore/underscore-min',
     'angular'          : '../bower_components/angular/angular.min',
     'base64'           : '../bower_components/angular-base64/angular-base64.min',
     'ngSanitize'       : '../bower_components/angular-sanitize/angular-sanitize.min',
@@ -18,6 +19,9 @@ require.config({
   shim: {
     'jquery': {
       exports: '$'
+    },
+    'underscore': {
+      exports: 'underscore'
     },
     'angular': {
       exports: 'angular'
@@ -55,6 +59,7 @@ require.config({
   },
 
   deps: [
+    'underscore',
     'angular',
     'base64',
     'ngSanitize',

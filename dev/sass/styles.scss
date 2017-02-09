@@ -194,10 +194,16 @@ a.button-wrapper {
   padding-left: 0px !important;
   margin-bottom: 20px;
 
+  h2 {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
   .post-panel {
     border-radius: 5px;
     box-shadow: $box-shadow-post;
-    margin-right: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 
     .post-image {
       min-height: 200px;
@@ -221,6 +227,7 @@ a.button-wrapper {
 
       p.post-description {
         font-size: 14px;
+        color: $body-text-white;
         margin-bottom: 50px;
       }
     }
@@ -233,6 +240,7 @@ a.button-wrapper {
       bottom: 0;
       left: 0;
       margin: 20px;
+      margin-left: 30px;
       width: auto;
     }
 
@@ -243,6 +251,22 @@ a.button-wrapper {
       width: 100% !important;
       padding-left: 12px;
       padding-right: 12px;
+    }
+  }
+}
+
+.pagination-wrapper {
+  text-align: center;
+
+  .pagination {
+    .active a {
+      background-color: $main-color;
+      color: #fff;
+      border: none;
+    }
+
+    li a {
+      color: $main-color;
     }
   }
 }

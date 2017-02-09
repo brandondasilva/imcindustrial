@@ -20,15 +20,19 @@
     'app/directives/portfolio/portfolioposts',
     'app/controllers/portfolio/PortfolioContentCtrl',
     'app/controllers/portfolio/PortfolioPostsCtrl',
+    'app/controllers/portfolio/PortfolioPaginationCtrl',
     'app/controllers/portfolio/PostContentCtrl',
-    'app/services/getPages'
+    'app/services/getPages',
+    'app/services/PagerService'
   ], function(
     portfoliocontent,
     portfolioposts,
     PortfolioContentCtrl,
     PortfolioPostsCtrl,
+    PortfolioPaginationCtrl,
     PostContentCtrl,
-    getPages
+    getPages,
+    PagerService
   ) {
 
     var moduleName = 'imcindustrial.portfolio';
@@ -38,8 +42,10 @@
            .directive('portfolioposts', portfolioposts)
            .controller('PortfolioContentCtrl', PortfolioContentCtrl)
            .controller('PortfolioPostsCtrl', PortfolioPostsCtrl)
+           .controller('PortfolioPaginationCtrl', PortfolioPaginationCtrl)
            .controller('PostContentCtrl', PostContentCtrl)
-           .factory('getPages', getPages);
+           .factory('getPages', getPages)
+           .factory('PagerService', PagerService);
 
     return moduleName;
 

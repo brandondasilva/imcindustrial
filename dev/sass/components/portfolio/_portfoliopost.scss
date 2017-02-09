@@ -12,11 +12,6 @@
     margin-top: 0px !important;
   }
 
-  p {
-    color: $body-text-white;
-    margin-bottom: 0px;
-  }
-
   .portfolio-content, .portfolio-post {
     padding-left: 0px !important;
     padding-right: 0px !important;
@@ -46,9 +41,10 @@
 
       .featured-information {
 
+        color: $home-featured-color;
+
         p.featured-date {
           font-size: 12px;
-          color: $home-featured-color;
           padding-bottom: 12px;
         }
 
@@ -100,6 +96,10 @@
       text-transform: uppercase;
       font-size: 42px;
     }
+
+    .button-wrapper.post-button {
+      margin-left: 20px;
+    }
   }
 
   #portfolio-content {
@@ -129,7 +129,7 @@
       }
 
       float: right;
-      margin-right: 20px;
+      margin-right: 10px;
       clear: both;
 
       a {

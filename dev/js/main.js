@@ -7,6 +7,7 @@ if (typeof jQuery === 'function') {
 
 require(['wp-content/themes/imcindustrial/assets/js/config'], function() {
   require([
+    'underscore',
     'angular',
     'base64',
     'ngSanitize',
