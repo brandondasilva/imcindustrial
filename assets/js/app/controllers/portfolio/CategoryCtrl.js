@@ -1,0 +1,1 @@
+"use strict";define([],function(){function a(a,b,c,d){a.categories=[],b.get(c+"taxonomies/category/terms").success(function(b){console.log(b);for(var c=0;c<b.length;c++)null!=b[c].parent&&"portfolio"===b[c].parent.slug&&a.categories.push({name:b[c].name,slug:"portfolio/c/"+b[c].slug});console.log(a.categories)})}return["$scope","$http","apiPath","PagerService",a]});

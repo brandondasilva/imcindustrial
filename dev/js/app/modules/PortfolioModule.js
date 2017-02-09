@@ -21,6 +21,8 @@
     'app/controllers/portfolio/PortfolioContentCtrl',
     'app/controllers/portfolio/PortfolioPostsCtrl',
     'app/controllers/portfolio/PortfolioPaginationCtrl',
+    'app/controllers/portfolio/CategoryCtrl',
+    'app/controllers/portfolio/CategoryPostsCtrl',
     'app/controllers/portfolio/PostContentCtrl',
     'app/services/getPages',
     'app/services/PagerService'
@@ -30,6 +32,8 @@
     PortfolioContentCtrl,
     PortfolioPostsCtrl,
     PortfolioPaginationCtrl,
+    CategoryCtrl,
+    CategoryPostsCtrl,
     PostContentCtrl,
     getPages,
     PagerService
@@ -43,6 +47,8 @@
            .controller('PortfolioContentCtrl', PortfolioContentCtrl)
            .controller('PortfolioPostsCtrl', PortfolioPostsCtrl)
            .controller('PortfolioPaginationCtrl', PortfolioPaginationCtrl)
+           .controller('CategoryCtrl', CategoryCtrl)
+           .controller('CategoryPostsCtrl', CategoryPostsCtrl)
            .controller('PostContentCtrl', PostContentCtrl)
            .factory('getPages', getPages)
            .factory('PagerService', PagerService);

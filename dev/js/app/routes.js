@@ -36,6 +36,11 @@ define([], function() {
         templateUrl: includes + '/posts/portfolio-pagination.html',
         target: "_self"
       })
+      .state('portfolio-category', {
+        url: '/portfolio/c/:category',
+        templateUrl: includes + '/posts/category-pagination.html',
+        target: "_self"
+      })
       .state('contact', {
         url: '/contact/',
         templateUrl: includes + '/contact/contact.html',

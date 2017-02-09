@@ -56,13 +56,11 @@
     <!-- <hr class="hr-sm hidden-lg hidden-md"> -->
     <hr class="hr-sm hidden">
 
-    <div id="portfolio-categories" class="col-md-4">
+    <div id="portfolio-categories" class="col-md-4" ng-controller="CategoryCtrl">
       <h2>Categories</h2>
 
       <ul>
-        <li><a href="">Category 1</a></li>
-        <li><a href="">Category 2</a></li>
-        <li><a href="">Category 3</a></li>
+        <li ng-repeat="category in categories"><a ng-href="{{category.slug}}">{{category.name}}</a></li>
       </ul>
 
       <hr class="hidden-sm hidden-xs">

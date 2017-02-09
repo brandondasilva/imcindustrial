@@ -1,0 +1,65 @@
+<div id="category-pagination">
+  <div
+    id="category-pagination-header"
+    ng-controller="PortfolioContentCtrl"
+    class="page-heading"
+    style="background-image: url('{{featuredImage}}');">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 header-content">
+          <h1>Portfolio things</h1>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+  </div>
+
+  <div
+    id="category-pagination-content"
+    ng-controller="CategoryPaginationCtrl as vm"
+    class="page-content">
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 portfolio-post" ng-repeat="item in vm.items">
+          <a ng-href="portfolio/{{item.slug}}" class="post-title"><h2 ng-bind-html="item.title"></h2></a>
+
+          <div class="post-panel">
+
+            <div class="post-image" style="background-image: url({{item.featured_image.attachment_meta.sizes.medium_large.url}});"></div>
+
+            <div class="post-information">
+              <p class="post-date">{{item.date | date:'MM/dd/yyyy'}}</p>
+
+              <p class="post-description" ng-bind-html="item.excerpt"></p>
+
+              <a ng-href="portfolio/{{item.slug}}" class="button-wrapper post-button">
+                <span class="button">Read More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pagination-wrapper">
+      <ul ng-if="vm.pager.pages.length" class="pagination">
+        <li ng-class="{ disabled : vm.pager.currentPage === 1 }">
+          <a ng-click="vm.setPage(vm.pager.currentPage - 1); scroll();">Previous</a>
+        </li>
+        <li class="hidden-sm hidden-xs" ng-repeat="page in vm.pager.pages" ng-class="{ active : vm.pager.currentPage === page}">
+          <a ng-href="portfolio/p/#{{page}}" ng-click="vm.setPage(page); scroll();">{{page}}</a>
+        </li>
+        <li ng-class="{ disabled : vm.pager.currentPage === vm.pager.totalPages }">
+          <a ng-click="vm.setPage(vm.pager.currentPage + 1); scroll();">Next</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <hr>
+    </div>
+  </div>
+
+</div>
