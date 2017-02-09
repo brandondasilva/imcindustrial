@@ -20,13 +20,18 @@ define([], function() {
     var vm = this;
 
     vm.allPosts = [];
+    vm.pageTitle = "";
     vm.pager = {};
     vm.setPage = setPage;
 
-    $http.get(apiPath + 'posts/?filter[category_name]=portfolio&filter[posts_per_page]=-1').success(function(res) {
+    $http.get(apiPath + 'posts/?filter[category_name]=' + $stateParams.category + '&filter[posts_per_page]=-1').success(function(res) {
       vm.allPosts = res;
 
       initController();
+    });
+
+    $http.get(apiPath + 'taxonomies/category/terms/?filter[slug]=' + $stateParams.category).success(function(res) {
+      vm.pageTitle = res[0].name;
     });
 
     function initController() {

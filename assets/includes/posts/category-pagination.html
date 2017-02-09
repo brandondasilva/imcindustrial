@@ -1,4 +1,4 @@
-<div id="category-pagination">
+<div id="category-pagination" ng-controller="CategoryPostsCtrl as vm">
   <div
     id="category-pagination-header"
     ng-controller="PortfolioContentCtrl"
@@ -8,7 +8,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12 header-content">
-          <h1>Portfolio things</h1>
+          <h1>{{vm.pageTitle}}</h1>
         </div>
       </div>
     </div>
@@ -17,7 +17,6 @@
 
   <div
     id="category-pagination-content"
-    ng-controller="CategoryPaginationCtrl as vm"
     class="page-content">
 
     <div class="container">
@@ -43,7 +42,7 @@
       </div>
     </div>
 
-    <div class="container pagination-wrapper">
+    <div class="container pagination-wrapper" ng-class="{ hidden : vm.pager.pages.length }">
       <ul ng-if="vm.pager.pages.length" class="pagination">
         <li ng-class="{ disabled : vm.pager.currentPage === 1 }">
           <a ng-click="vm.setPage(vm.pager.currentPage - 1); scroll();">Previous</a>
@@ -58,7 +57,7 @@
     </div>
 
     <div class="container">
-      <hr>
+      <a class="back-button" ui-sref="portfolio"><img src="wp-content/themes/imcindustrial/assets/images/icons/backward-red.svg" alt="Back"><span>Back to Porfolio</span></a>
     </div>
   </div>
 

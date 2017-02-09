@@ -12,6 +12,19 @@
         <div class="col-md-10 col-md-offset-1 col-sm-12" ng-bind-html="postContent.content"></div>
       </div>
 
+      <slick
+        dots="true"
+        autoplay="true"
+        slides-to-show="1"
+        slides-to-scroll="1"
+        init-onload="true"
+        data="media">
+
+        <div ng-if="image.is_image" ng-repeat="image in media">
+          <img ng-src="{{ image.attachment_meta.sizes.medium.url }}" alt="{{ image.title }}">
+        </div>
+      </slick>
+
       <a class="back-button" ui-sref="portfolio"><img src="wp-content/themes/imcindustrial/assets/images/icons/backward-red.svg" alt="Back"><span>Back to Porfolio</span></a>
     </div>
   </div>

@@ -24,7 +24,7 @@ $separator-color: #979797;
 
 // ** SPACING
 $section-padding: 30px;
-$navbar-offset: 80px;
+$navbar-offset: 100px;
 $mobile-margins: 10px;
 
 // ** SHAPES
@@ -141,6 +141,10 @@ a.button-wrapper {
   }
 }
 
+.back-button {
+  span { padding-left: 10px; }
+}
+
 // Disabled button
 .disabled-btn {
   pointer-events: none;
@@ -254,6 +258,8 @@ a.button-wrapper {
     }
   }
 }
+
+// .size-medium { display: none; }
 
 .pagination-wrapper {
   text-align: center;

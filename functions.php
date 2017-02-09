@@ -3,6 +3,8 @@
   // Add scripts and stylesheets
   function startwordpress_scripts() {
     wp_enqueue_style('styles', get_template_directory_uri() . '/assets/css/styles.min.css');
+    wp_enqueue_style('slick', get_template_directory_uri() . '/assets/bower_components/slick-carousel/slick/slick.css');
+    wp_enqueue_style('slick-theme', get_template_directory_uri() . '/assets/bower_components/slick-carousel/slick/slick-theme.css');
     wp_enqueue_script('jquery', get_template_directory_uri() . '/assets/bower_components/jquery/dist/jquery.min.js');
     wp_enqueue_script('require', get_template_directory_uri() . '/assets/js/require.js');
     wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js');

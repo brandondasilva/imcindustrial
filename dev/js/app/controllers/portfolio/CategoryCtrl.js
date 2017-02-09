@@ -22,18 +22,14 @@ define([], function() {
 
     $http.get(apiPath + 'taxonomies/category/terms').success(function(res) {
 
-      console.log(res);
-
       for (var i = 0; i < res.length; i++) {
         if (res[i].parent != null && res[i].parent.slug === "portfolio") {
           $scope.categories.push({
             name: res[i].name,
-            slug: 'portfolio/c/' + res[i].slug
+            link: 'portfolio/c/' + res[i].slug
           })
         }
       }
-
-      console.log($scope.categories)
     });
   }
 

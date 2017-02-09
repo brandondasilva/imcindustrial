@@ -7,6 +7,7 @@ if (typeof jQuery === 'function') {
 
 require(['wp-content/themes/imcindustrial/assets/js/config'], function() {
   require([
+    '$',
     'underscore',
     'angular',
     'base64',
@@ -15,6 +16,8 @@ require(['wp-content/themes/imcindustrial/assets/js/config'], function() {
     'ngMaps',
     'ui.router',
     'angular-touch',
+    'slick-carousel',
+    'slick',
     'angular-carousel',
     'bootstrap'
   ], function() {

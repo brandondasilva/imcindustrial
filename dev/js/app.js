@@ -31,6 +31,7 @@ define([
     'ngSanitize',
     'ngMessages',
     'ngMaps',
+    'slick',
     'angular-carousel',
     HomeModule,
     AboutModule,
@@ -45,11 +46,11 @@ define([
      .directive('mapsection', mapsection)
      .controller('NavCtrl', NavCtrl);
 
-  app.constant('_', window._);
+  app.constant('_', window._); // Underscore
   app.constant('path', 'wp-content/themes/imcindustrial/assets');
   app.constant('apiPath', 'wp-json/');
 
-  
+
 
   app.init = function() {
     angular.element(document).ready(function() {

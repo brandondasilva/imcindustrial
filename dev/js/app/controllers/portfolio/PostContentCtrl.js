@@ -23,6 +23,13 @@
 
      $http.get(path + 'filter[name]=' + $stateParams.slug).success(function(res) {
        $scope.postContent = res[0];
+       console.log(res)
+     });
+
+     $http.get('?rest_route=/wp/v2/media/?filter[post]=' + $stateParams.ID).success(function(res) {
+       console.log(res)
+       console.log($stateParams.slug)
+       $scope.media = res;
      });
 
      $scope.latest = [];

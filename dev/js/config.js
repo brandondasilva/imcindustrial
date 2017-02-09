@@ -3,7 +3,7 @@ require.config({
   baseUrl: "wp-content/themes/imcindustrial/assets/js",
 
   paths: {
-    'jquery'           : '../bower_components/jquery/dist/jquery.min',
+    '$'                : '../bower_components/jquery/dist/jquery.min',
     'underscore'       : '../bower_components/underscore/underscore-min',
     'angular'          : '../bower_components/angular/angular.min',
     'base64'           : '../bower_components/angular-base64/angular-base64.min',
@@ -12,12 +12,14 @@ require.config({
     'ngMaps'           : '../bower_components/ng-maps/dist/ng-maps.min',
     'ui.router'        : '../bower_components/angular-ui-router/release/angular-ui-router.min',
     'angular-touch'    : '../bower_components/angular-touch/angular-touch.min',
+    'slick-carousel'   : '../bower_components/slick-carousel/slick/slick.min',
+    'slick'            : '../bower_components/angular-slick/dist/slick.min',
     'angular-carousel' : '../bower_components/angular-carousel/dist/angular-carousel.min',
     'bootstrap'        : '../bower_components/bootstrap/dist/js/bootstrap.min'
   },
 
   shim: {
-    'jquery': {
+    '$': {
       exports: '$'
     },
     'underscore': {
@@ -49,16 +51,26 @@ require.config({
       deps: ["angular"],
       exports: 'angular-touch'
     },
+    'slick-carousel': {
+      deps: ["$"],
+      exports: 'slick'
+    },
+    'slick': {
+      deps: ["angular", "$"],
+      exports: 'slick'
+    },
     'angular-carousel': {
       deps: ["angular"],
       exports: 'angular-carousel'
     },
     'bootstrap': {
+      deps: ["$"],
       exports: 'bootstrap'
     }
   },
 
   deps: [
+    '$',
     'underscore',
     'angular',
     'base64',
@@ -67,6 +79,8 @@ require.config({
     'ngMaps',
     'ui.router',
     'angular-touch',
+    'slick-carousel',
+    'slick',
     'angular-carousel',
     'bootstrap'
   ]
