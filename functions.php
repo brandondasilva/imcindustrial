@@ -31,3 +31,8 @@
   	return 30;
   }
   add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+  add_filter( 'query_vars', function( $query_vars ) {
+  	$query_vars[] = 'post_parent';
+  	return $query_vars;
+  });

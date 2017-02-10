@@ -7,23 +7,32 @@
     <div class="container">
       <h1 ng-bind-html="postContent.title"></h1>
       <div class="post-date">Posted: {{postContent.date | date:'MM/dd/yyyy'}}</div>
+      <div class="post-categories">
+        <span>Categories:</span>
+        <a ng-href="portfolio/c/{{category.slug}}" ng-repeat="category in postCategories">{{category.name}}<span ng-hide="$last">, </span></a>
+      </div>
 
       <div class="row post-content">
         <div class="col-md-10 col-md-offset-1 col-sm-12" ng-bind-html="postContent.content"></div>
       </div>
 
-      <slick
-        dots="true"
-        autoplay="true"
-        slides-to-show="1"
-        slides-to-scroll="1"
-        init-onload="true"
-        data="media">
+      <div class="col-md-12 post-slick">
+        <slick
+          dots="true"
+          autoplay="false"
+          mobileFirst="true"
+          adaptiveHeight="true"
+          variableWidth="true"
+          slides-to-show="1"
+          slides-to-scroll="1"
+          init-onload="true"
+          data="media">
 
-        <div ng-if="image.is_image" ng-repeat="image in media">
-          <img ng-src="{{ image.attachment_meta.sizes.medium.url }}" alt="{{ image.title }}">
-        </div>
-      </slick>
+          <div ng-if="image.is_image" ng-repeat="image in media">
+            <img ng-src="{{ image.attachment_meta.sizes.medium_large.url }}" alt="{{ image.title }}">
+          </div>
+        </slick>
+      </div>
 
       <a class="back-button" ui-sref="portfolio"><img src="wp-content/themes/imcindustrial/assets/images/icons/backward-red.svg" alt="Back"><span>Back to Porfolio</span></a>
     </div>

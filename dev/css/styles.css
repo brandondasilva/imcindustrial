@@ -148,6 +148,31 @@ a.button-wrapper .button {
     padding-left: 12px;
     padding-right: 12px; }
 
+.size-medium {
+  display: none; }
+
+.slick-slider {
+  margin-bottom: 50px; }
+  .slick-slider .slick-prev:before, .slick-slider .slick-next:before {
+    color: black; }
+
+.post-slick .slick-slider .slick-slide {
+  padding: 20px; }
+  .post-slick .slick-slider .slick-slide img {
+    margin: auto;
+    box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 6px;
+    width: 100%; }
+
+.categories h2 {
+  margin-top: 0px; }
+.categories hr {
+  margin: 0px !important; }
+.categories ul {
+  padding-left: 0px; }
+  .categories ul li {
+    display: block; }
+
 .pagination-wrapper {
   text-align: center; }
   .pagination-wrapper .pagination .active a {
@@ -252,7 +277,8 @@ a.button-wrapper .button {
   position: relative;
   clear: both; }
   #footer #footer-content {
-    padding-bottom: 20px; }
+    padding-bottom: 40px;
+    padding-top: 30px; }
     #footer #footer-content h2, #footer #footer-content h3, #footer #footer-content h4, #footer #footer-content p, #footer #footer-content a {
       color: #f0f0f0; }
     @media (max-width: 767px) {
@@ -355,7 +381,7 @@ a.button-wrapper .button {
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.75); }
   @media (max-width: 767px) {
     #header {
-      height: 500px;
+      height: 450px;
       background-image: url("../images/banner@0,5x.jpg"); } }
   #header #header-image {
     height: 500px;
@@ -366,14 +392,15 @@ a.button-wrapper .button {
     background-repeat: no-repeat; }
     @media (max-width: 767px) {
       #header #header-image {
-        height: 300px;
+        height: 350px;
+        margin-top: 0px;
         background-image: url("../images/gear@0,5x.png"); } }
     #header #header-image #header-text {
       padding-top: 250px;
       text-align: center; }
       @media (max-width: 767px) {
         #header #header-image #header-text {
-          padding-top: 250px; }
+          padding-top: 175px; }
           #header #header-image #header-text h1 {
             font-size: 32px !important;
             margin-top: 30px;
@@ -397,9 +424,9 @@ a.button-wrapper .button {
 
 #homeservices {
   background-color: #812822;
-  padding-bottom: 40px; }
+  padding-bottom: 70px; }
   #homeservices .service-section {
-    padding-top: 30px;
+    padding-top: 50px;
     text-align: center; }
     #homeservices .service-section h1, #homeservices .service-section h2 {
       color: #f0f0f0; }
@@ -431,6 +458,7 @@ a.button-wrapper .button {
 #homefeatured {
   background-color: #dfdfdf;
   padding: 30px;
+  padding-top: 50px;
   padding-bottom: 0px; }
   #homefeatured h1.section-header {
     text-align: center;
@@ -611,7 +639,9 @@ a.button-wrapper .button {
   #portfolio-posts #portfolio-featured .button-wrapper.post-button {
     margin-left: 20px; }
 #portfolio-posts #portfolio-content {
-  padding: 30px; }
+  padding: 30px;
+  padding-left: 0px;
+  padding-right: 15px; }
   #portfolio-posts #portfolio-content h2 {
     margin-top: 0px;
     margin-right: 20px; }
@@ -641,17 +671,6 @@ a.button-wrapper .button {
         height: 70px; }
     #portfolio-posts #portfolio-content .view-posts a:hover #next {
       background-image: url("../images/icons/next-hover.svg"); }
-#portfolio-posts #portfolio-categories h2 {
-  margin-top: 0px; }
-@media (max-width: 991px) {
-  #portfolio-posts #portfolio-categories {
-    display: none; } }
-#portfolio-posts #portfolio-categories hr {
-  margin: 0px !important; }
-#portfolio-posts #portfolio-categories ul {
-  padding-left: 0px; }
-  #portfolio-posts #portfolio-categories ul li {
-    display: block; }
 
 #post hr {
   margin-top: 0px;
@@ -661,6 +680,8 @@ a.button-wrapper .button {
 #post #post-content h1 {
   margin-top: 0px !important;
   margin-bottom: 20px; }
+#post #post-content .post-categories span {
+  color: #979797; }
 #post #post-content .post-content {
   padding-top: 20px; }
   #post #post-content .post-content div:first-child {
@@ -670,5 +691,16 @@ a.button-wrapper .button {
 #post #latest-posts p {
   color: #f0f0f0;
   margin-bottom: 0px; }
+
+.pagination-page {
+  padding-bottom: 30px; }
+  .pagination-page .page-heading {
+    height: 180px; }
+  .pagination-page h1 {
+    margin-top: 0px; }
+  .pagination-page h2 {
+    color: #1E1E1E; }
+  .pagination-page .page-content {
+    padding-bottom: 0px; }
 
 /*# sourceMappingURL=styles.css.map */

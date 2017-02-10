@@ -1,13 +1,13 @@
 #homeservices {
   background-color: $main-color;
 
-  padding-bottom: 40px;
+  padding-bottom: 70px;
 
   // Local variables
   $services-box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.75);
 
   .service-section {
-    padding-top: $section-padding;
+    padding-top: $section-padding + 20px;
     text-align: center;
 
     h1, h2 {

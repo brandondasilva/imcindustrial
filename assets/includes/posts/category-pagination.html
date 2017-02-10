@@ -1,17 +1,10 @@
-<div id="category-pagination" ng-controller="CategoryPostsCtrl as vm">
+<div id="category-pagination" class="pagination-page" ng-controller="CategoryPostsCtrl as vm">
   <div
     id="category-pagination-header"
     ng-controller="PortfolioContentCtrl"
     class="page-heading"
     style="background-image: url('{{featuredImage}}');">
 
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12 header-content">
-          <h1>{{vm.pageTitle}}</h1>
-        </div>
-      </div>
-    </div>
     <div class="overlay"></div>
   </div>
 
@@ -20,6 +13,8 @@
     class="page-content">
 
     <div class="container">
+      <h1 ng-bind-html="vm.pageTitle"></h1>
+
       <div class="row">
         <div class="col-md-4 col-sm-12 portfolio-post" ng-repeat="item in vm.items">
           <a ng-href="portfolio/{{item.slug}}" class="post-title"><h2 ng-bind-html="item.title"></h2></a>
@@ -59,6 +54,19 @@
     <div class="container">
       <a class="back-button" ui-sref="portfolio"><img src="wp-content/themes/imcindustrial/assets/images/icons/backward-red.svg" alt="Back"><span>Back to Porfolio</span></a>
     </div>
+
+    <div class="container">
+      <hr>
+    </div>
   </div>
 
+  <div class="container">
+    <div class="col-md-4 categories" ng-controller="CategoryCtrl">
+      <h2>Categories</h2>
+
+      <ul>
+        <li ng-repeat="category in categories"><a ng-href="{{category.link}}">{{category.name}}</a></li>
+      </ul>
+    </div>
+  </div>
 </div>

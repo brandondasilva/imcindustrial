@@ -23,8 +23,8 @@
   <hr class="hidden-sm hidden-xs">
 
   <div id="portfolio-content" class="row">
-    <div class="col-md-8 portfolio-content">
-      <div class="col-md-6 portfolio-post" ng-repeat="post in portfolioPosts">
+    <div class="col-md-8 col-sm-12 portfolio-content">
+      <div class="col-md-6 col-sm-12 portfolio-post" ng-repeat="post in portfolioPosts">
         <a ng-href="{{post.slug}}" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
 
         <div class="post-panel">
@@ -41,8 +41,6 @@
             </a>
           </div>
         </div>
-
-
       </div>
 
       <div class="view-posts">
@@ -53,10 +51,7 @@
       </div>
     </div>
 
-    <!-- <hr class="hr-sm hidden-lg hidden-md"> -->
-    <hr class="hr-sm hidden">
-
-    <div id="portfolio-categories" class="col-md-4" ng-controller="CategoryCtrl">
+    <div class="col-md-4 col-sm-12 categories hidden-sm hidden-xs" ng-controller="CategoryCtrl">
       <h2>Categories</h2>
 
       <ul>
