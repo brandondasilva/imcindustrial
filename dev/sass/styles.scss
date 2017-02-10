@@ -311,6 +311,8 @@ a.button-wrapper {
   text-align: center;
 
   .pagination {
+    box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.75);
+
     .active a {
       background-color: $main-color;
       color: #fff;

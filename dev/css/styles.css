@@ -175,12 +175,14 @@ a.button-wrapper .button {
 
 .pagination-wrapper {
   text-align: center; }
-  .pagination-wrapper .pagination .active a {
-    background-color: #812822;
-    color: #fff;
-    border: none; }
-  .pagination-wrapper .pagination li a {
-    color: #812822; }
+  .pagination-wrapper .pagination {
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75); }
+    .pagination-wrapper .pagination .active a {
+      background-color: #812822;
+      color: #fff;
+      border: none; }
+    .pagination-wrapper .pagination li a {
+      color: #812822; }
 
 .overlay {
   position: absolute;
