@@ -8,7 +8,7 @@
 
 		  <div class="home-featured-content">
 
-				<ul id="home-carousel" rn-carousel rn-carousel-controls rn-carousel-controls-allow-loop rn-carousel-auto-slide="5" >
+				<!-- <ul id="home-carousel" rn-carousel rn-carousel-controls rn-carousel-controls-allow-loop rn-carousel-auto-slide="5" >
 					<li ng-repeat="slide in slides">
 						<div ng-if="slide.image" class="row layer home-featured-post">
 				  		<div class="col-md-5 col-sm-5 post-thumbnail" style="background-image: url({{slide.image}})"></div>
@@ -29,7 +29,40 @@
 				    </div>
 					</li>
 					<div id="info-indicators" rn-carousel-indicators ng-if="slides.length > 1" slides="slides" rn-carousel-index="carouselIndex"></div>
-				</ul>
+				</ul> -->
+
+				<div class="col-md-12 post-slick">
+					<slick
+						dots="true"
+						autoplay="false"
+						mobileFirst="true"
+						variableWidth="true"
+						adaptiveHeight="true"
+						slides-to-show="1"
+						slides-to-scroll="1"
+						init-onload="true"
+						data="slides">
+
+						<div ng-repeat="slide in slides">
+							<div class="row featured-panel">
+
+				        <div class="col-md-7 featured-image" style="background-image: url({{slide.image}}); "></div>
+
+				        <div class="col-md-5 featured-information">
+									<a ng-href="{{slide.slug}}" class="post-title"><h2 ng-bind-html="slide.heading"></h2></a>
+
+				          <p class="featured-date">{{slide.date | date:'MM/dd/yyyy'}}</p>
+
+				          <p class="featured-description" ng-bind-html="slide.desc"></p>
+
+				          <a ng-href="{{slide.slug}}" class="button-wrapper post-button">
+				            <span class="button">Read More</span>
+				          </a>
+				        </div>
+				      </div>
+						</div>
+					</slick>
+				</div>
 		  </div>
 		</div>
 

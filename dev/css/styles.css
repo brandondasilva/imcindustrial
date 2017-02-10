@@ -104,6 +104,22 @@ a.button-wrapper .button {
 @media (max-width: 991px) {
   .portfolio-post, .post-panel, h2 {
     margin-right: 0px !important; } }
+.featured-panel {
+  display: flex;
+  border-radius: 5px;
+  min-height: 300px;
+  box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
+  .featured-panel .featured-image {
+    background-position: center;
+    background-size: cover; }
+  .featured-panel .featured-information {
+    color: #dfdfdf; }
+    .featured-panel .featured-information p.featured-date {
+      font-size: 12px;
+      padding-bottom: 12px; }
+    .featured-panel .featured-information p.featured-description {
+      font-size: 16px; }
+
 .portfolio-post {
   padding-left: 0px !important;
   margin-bottom: 20px; }
@@ -473,6 +489,12 @@ a.button-wrapper .button {
       color: black; }
     #homefeatured #home-featured-template .home-featured-content #info-indicators {
       text-align: center; }
+    #homefeatured #home-featured-template .home-featured-content .post-slick {
+      margin-top: 30px; }
+    #homefeatured #home-featured-template .home-featured-content .featured-panel .featured-image {
+      border-radius: 5px 0 0 5px; }
+    #homefeatured #home-featured-template .home-featured-content .featured-panel .featured-information {
+      border-radius: 0 5px 5px 0; }
     #homefeatured #home-featured-template .home-featured-content .home-featured-post {
       padding-top: 30px;
       margin-left: 15px;
@@ -604,21 +626,6 @@ a.button-wrapper .button {
   @media (max-width: 991px) {
     #portfolio-posts #portfolio-featured {
       display: none; } }
-  #portfolio-posts #portfolio-featured .featured-panel {
-    display: flex;
-    border-radius: 5px;
-    min-height: 300px;
-    box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
-    #portfolio-posts #portfolio-featured .featured-panel .featured-image {
-      background-position: center;
-      background-size: cover; }
-    #portfolio-posts #portfolio-featured .featured-panel .featured-information {
-      color: #dfdfdf; }
-      #portfolio-posts #portfolio-featured .featured-panel .featured-information p.featured-date {
-        font-size: 12px;
-        padding-bottom: 12px; }
-      #portfolio-posts #portfolio-featured .featured-panel .featured-information p.featured-description {
-        font-size: 16px; }
   #portfolio-posts #portfolio-featured div:first-child .featured-image {
     order: 1;
     border-radius: 0 5px 5px 0 !important; }
@@ -696,7 +703,7 @@ a.button-wrapper .button {
 
 .pagination-page {
   padding-bottom: 30px; }
-  .pagination-page .page-heading {
+  .pagination-page #category-pagination.page-heading {
     height: 180px; }
   .pagination-page h1 {
     margin-top: 0px; }

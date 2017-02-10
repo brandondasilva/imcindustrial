@@ -25,32 +25,6 @@
 
     padding: $section-padding;
 
-    .featured-panel {
-      display: flex;
-      border-radius: 5px;
-      min-height: 300px;
-      box-shadow: $box-shadow-post;
-
-      .featured-image {
-        background-position: center;
-        background-size: cover;
-      }
-
-      .featured-information {
-
-        color: $home-featured-color;
-
-        p.featured-date {
-          font-size: 12px;
-          padding-bottom: 12px;
-        }
-
-        p.featured-description {
-          font-size: 16px;
-        }
-      }
-    }
-
     div:first-child {
 
       .featured-image {

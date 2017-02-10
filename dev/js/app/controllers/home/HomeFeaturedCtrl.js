@@ -28,15 +28,17 @@ define([], function() {
           $scope.slides.push({
             heading: res[i].title,
             desc:    res[i].excerpt,
+            date:    res[i].date,
             image:   null,
-            link:    res[i].guid
+            slug:    'portfolio/' + res[i].slug
           });
         } else {
           $scope.slides.push({
             heading: res[i].title,
             desc:    res[i].excerpt,
+            date:    res[i].date,
             image:   res[i].featured_image.attachment_meta.sizes.medium_large.url,
-            link:    res[i].guid
+            slug:    'portfolio/' + res[i].slug
           });
         }
       }
