@@ -28,10 +28,10 @@ define([
   var depends = [
     'ui.router',
     'base64',
+    'slick',
     'ngSanitize',
     'ngMessages',
     'ngMaps',
-    'slick',
     HomeModule,
     AboutModule,
     PortfolioModule,

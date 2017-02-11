@@ -12,8 +12,8 @@ require.config({
     'ngMaps'           : '../bower_components/ng-maps/dist/ng-maps.min',
     'ui.router'        : '../bower_components/angular-ui-router/release/angular-ui-router.min',
     'angular-touch'    : '../bower_components/angular-touch/angular-touch.min',
-    'slick-carousel'   : '../bower_components/slick-carousel/slick/slick.min',
     'slick'            : '../bower_components/angular-slick/dist/slick.min',
+    'slick-carousel'   : '../bower_components/slick-carousel/slick/slick.min',
     'angular-carousel' : '../bower_components/angular-carousel/dist/angular-carousel.min',
     'bootstrap'        : '../bower_components/bootstrap/dist/js/bootstrap.min'
   },
@@ -51,12 +51,12 @@ require.config({
       deps: ["angular"],
       exports: 'angular-touch'
     },
-    'slick-carousel': {
-      deps: ["$"],
-      exports: 'slick'
-    },
     'slick': {
       deps: ["angular", "$"],
+      exports: 'slick'
+    },
+    'slick-carousel': {
+      deps: ["$"],
       exports: 'slick'
     },
     'bootstrap': {
@@ -75,8 +75,8 @@ require.config({
     'ngMaps',
     'ui.router',
     'angular-touch',
-    'slick-carousel',
     'slick',
+    'slick-carousel',
     'bootstrap'
   ]
 
