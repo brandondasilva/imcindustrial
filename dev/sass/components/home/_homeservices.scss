@@ -6,55 +6,58 @@
   // Local variables
   $services-box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.75);
 
-  .service-section {
-    padding-top: $section-padding + 20px;
-    text-align: center;
+  padding-top: $section-padding + 20px;
+  text-align: center;
 
-    h1, h2 {
-      color: $body-text-white;
+  h1, h2 {
+    color: $body-text-white;
+  }
+
+  #service-content {
+    h2 {
+      margin-bottom: 25px;
+      margin-top: 25px;
     }
 
-    div.service-content {
-      h2 {
-        margin-bottom: 25px;
-        margin-top: 25px;
-      }
+    .service-image-wrapper {
 
+      .service-image {
 
-      .service-image-wrapper {
-        .service-image {
-          height: 245px;
-          width: 245px;
-          display: inline-block;
-
-          background-position: center;
-          background-size: cover;
-
-          border-radius: 50%;
-          border: 2px solid white;
-
-          // Clipping the image
-          -webkit-clip-path: circle(50% at 50% 50%);
-          clip-path: circle(50% at 50% 50%);
-
-          -webkit-box-shadow: $services-box-shadow;
-          -moz-box-shadow: $services-box-shadow;
-          box-shadow: $services-box-shadow;
-
-          & {
-            padding: 40px;
-            padding-top: 60px;
-            padding-bottom: 10px;
-            font-weight: bold;
-          }
-
-          .service-button {
-            background-color: black;
-            color: $body-text-white;
-          }
+        @media (min-width: 768px) and (max-width: 991px) {
+          height: 180px !important;
+          width: 180px !important;
+          padding: 20px;
         }
-      }
 
+        height: 245px;
+        width: 245px;
+        display: inline-block;
+
+        background-position: center;
+        background-size: cover;
+
+        border-radius: 50%;
+        border: 2px solid white;
+
+        // Clipping the image
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+
+        -webkit-box-shadow: $services-box-shadow;
+        -moz-box-shadow: $services-box-shadow;
+        box-shadow: $services-box-shadow;
+
+        padding: 40px;
+        margin: auto;
+        font-weight: bold;
+        div:first-child {
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+      }
     }
+
   }
 }

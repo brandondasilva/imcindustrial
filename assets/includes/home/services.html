@@ -1,10 +1,10 @@
 <div id="homeservices" ng-controller="HomeServicesCtrl">
-  <div class="service-section container">
 
+  <div class="container">
     <h1 class="section-header">Services</h1>
 
-    <div class="row service-content">
-      <div class="col-md-4" ng-repeat="service in services" ng-cloak>
+    <div id="service-content" class="row">
+      <div class="col-sm-4 col-md-4" ng-repeat="service in services" ng-cloak>
 
         <h2>{{service.heading}}</h2>
 
@@ -13,11 +13,6 @@
 
             <div ng-bind-html="service.desc"></div>
 
-            <!-- <a href="{{service.link}}" class="button-wrapper">
-              <span class="button service-button">
-                More Info
-              </span>
-            </a> -->
             <div class="overlay"></div>
           </div>
 

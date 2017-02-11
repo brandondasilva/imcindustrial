@@ -129,7 +129,7 @@ a.button-wrapper .button {
       padding-bottom: 12px; }
     .featured-panel .featured-information p.featured-description {
       font-size: 16px;
-      padding-bottom: 66px; }
+      padding-bottom: 60px; }
       @media (max-width: 767px) {
         .featured-panel .featured-information p.featured-description {
           font-size: 14px !important; } }
@@ -476,36 +476,39 @@ a.button-wrapper .button {
 
 #homeservices {
   background-color: #812822;
-  padding-bottom: 70px; }
-  #homeservices .service-section {
-    padding-top: 50px;
-    text-align: center; }
-    #homeservices .service-section h1, #homeservices .service-section h2 {
-      color: #f0f0f0; }
-    #homeservices .service-section div.service-content h2 {
-      margin-bottom: 25px;
-      margin-top: 25px; }
-    #homeservices .service-section div.service-content .service-image-wrapper .service-image {
-      height: 245px;
-      width: 245px;
-      display: inline-block;
-      background-position: center;
-      background-size: cover;
-      border-radius: 50%;
-      border: 2px solid white;
-      -webkit-clip-path: circle(50% at 50% 50%);
-      clip-path: circle(50% at 50% 50%);
-      -webkit-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
-      -moz-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
-      box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75); }
-      #homeservices .service-section div.service-content .service-image-wrapper .service-image {
-        padding: 40px;
-        padding-top: 60px;
-        padding-bottom: 10px;
-        font-weight: bold; }
-      #homeservices .service-section div.service-content .service-image-wrapper .service-image .service-button {
-        background-color: black;
-        color: #f0f0f0; }
+  padding-bottom: 70px;
+  padding-top: 50px;
+  text-align: center; }
+  #homeservices h1, #homeservices h2 {
+    color: #f0f0f0; }
+  #homeservices #service-content h2 {
+    margin-bottom: 25px;
+    margin-top: 25px; }
+  #homeservices #service-content .service-image-wrapper .service-image {
+    height: 245px;
+    width: 245px;
+    display: inline-block;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    border: 2px solid white;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    -webkit-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
+    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
+    padding: 40px;
+    margin: auto;
+    font-weight: bold; }
+    @media (min-width: 768px) and (max-width: 991px) {
+      #homeservices #service-content .service-image-wrapper .service-image {
+        height: 180px !important;
+        width: 180px !important;
+        padding: 20px; } }
+    #homeservices #service-content .service-image-wrapper .service-image div:first-child {
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%); }
 
 #homefeatured {
   background-color: #dfdfdf;
@@ -658,9 +661,9 @@ a.button-wrapper .button {
 
 .pagination-page {
   padding-bottom: 30px; }
-  .pagination-page #category-pagination.page-heading {
-    height: 180px; }
-  .pagination-page h1 {
+  .pagination-page #category-pagination-header {
+    height: 180px !important; }
+  .pagination-page #category-pagination-content h1 {
     margin-top: 0px; }
   .pagination-page h2 {
     color: #1E1E1E; }
