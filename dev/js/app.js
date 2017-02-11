@@ -32,7 +32,6 @@ define([
     'ngMessages',
     'ngMaps',
     'slick',
-    'angular-carousel',
     HomeModule,
     AboutModule,
     PortfolioModule,

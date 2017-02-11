@@ -12,6 +12,11 @@
     }
 
     .footer-left {
+
+      @media (min-width: 768px) {
+        padding-left: 0px;
+      }
+
       @media (max-width: 767px) {
         text-align: center;
       }
@@ -43,6 +48,11 @@
     }
 
     .footer-right {
+
+      @media (min-width: 768px) {
+        padding-right: 0px;
+      }
+
       @media (max-width: 767px) {
         text-align: center;
       }

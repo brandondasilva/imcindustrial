@@ -200,6 +200,21 @@ a.button-wrapper {
   min-height: 300px;
   box-shadow: $box-shadow-post;
 
+  @media (max-width: 767px) {
+    flex-direction: column;
+
+    .featured-image {
+      height: 150px;
+      order: 1;
+      border-radius: 5px 5px 0 0 !important;
+    }
+
+    .featured-information {
+      order: 2;
+      border-radius: 0 0 5px 5px !important;
+    }
+  }
+
   .featured-image {
     background-position: center;
     background-size: cover;
@@ -208,6 +223,7 @@ a.button-wrapper {
   .featured-information {
 
     color: $home-featured-color;
+    background-color: $main-color;
 
     p.featured-date {
       font-size: 12px;
@@ -215,7 +231,34 @@ a.button-wrapper {
     }
 
     p.featured-description {
+
+      @media (max-width: 767px) {
+        font-size: 14px !important;
+      }
+
       font-size: 16px;
+      padding-bottom: 66px;
+    }
+
+    .button-wrapper {
+
+      &.post-button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 20px;
+        margin-left: 15px;
+        width: auto;
+      }
+
+      .button {
+        background-color: $main-black;
+        color: $body-text-white;
+        text-align: center;
+        width: 100% !important;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
     }
   }
 }

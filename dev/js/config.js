@@ -59,10 +59,6 @@ require.config({
       deps: ["angular", "$"],
       exports: 'slick'
     },
-    'angular-carousel': {
-      deps: ["angular"],
-      exports: 'angular-carousel'
-    },
     'bootstrap': {
       deps: ["$"],
       exports: 'bootstrap'
@@ -81,7 +77,6 @@ require.config({
     'angular-touch',
     'slick-carousel',
     'slick',
-    'angular-carousel',
     'bootstrap'
   ]
 

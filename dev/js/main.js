@@ -18,7 +18,6 @@ require(['wp-content/themes/imcindustrial/assets/js/config'], function() {
     'angular-touch',
     'slick-carousel',
     'slick',
-    'angular-carousel',
     'bootstrap'
   ], function() {
     require(['app'], function(app) {

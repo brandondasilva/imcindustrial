@@ -1,70 +1,40 @@
 <div id="homefeatured" ng-controller="HomeFeaturedCtrl">
 
-	<div class="container blog-main">
+	<div class="container">
 
 		<h1 class="section-header">Featured Projects</h1>
 
-		<div id="home-featured-template" class="blog-post">
+		<div class="col-xs-12 col-md-12 home-featured-content post-slick">
+			<slick
+				dots="true"
+				autoplay="false"
+				mobileFirst="true"
+				variableWidth="true"
+				adaptiveHeight="true"
+				slides-to-show="1"
+				slides-to-scroll="1"
+				init-onload="true"
+				data="slides">
 
-		  <div class="home-featured-content">
+				<div ng-repeat="slide in slides">
+					<div class="row featured-panel">
 
-				<!-- <ul id="home-carousel" rn-carousel rn-carousel-controls rn-carousel-controls-allow-loop rn-carousel-auto-slide="5" >
-					<li ng-repeat="slide in slides">
-						<div ng-if="slide.image" class="row layer home-featured-post">
-				  		<div class="col-md-5 col-sm-5 post-thumbnail" style="background-image: url({{slide.image}})"></div>
+		        <div class="col-xs-12 col-sm-6 col-md-7 featured-image" style="background-image: url({{slide.image}}); "></div>
 
-				  		<div id="post-exerpt1" class="col-md-6 col-sm-6 col-md-offset-1 col-sm-offset-1">
+		        <div class="col-xs-12 col-sm-6 col-md-5 featured-information">
+							<a ng-href="{{slide.slug}}" class="post-title"><h2 ng-bind-html="slide.heading"></h2></a>
 
-				        <a href=""><h2 ng-bind-html="slide.heading"></h2></a>
-								<div class="" ng-bind-html="slide.desc"></div>
-				  		</div>
-				    </div>
+		          <p class="featured-date">{{slide.date | date:'MM/dd/yyyy'}}</p>
 
-						<div ng-hide="slide.image" class="row home-featured-post">
-			        <div id="post-exerpt2" class="col-md-8 col-sm-10 col-sm-offset-1 col-md-offset-2">
+		          <p class="featured-description" ng-bind-html="slide.desc"></p>
 
-								<a href=""><h2 ng-bind-html="slide.heading"></h2></a>
-								<div class="" ng-bind-html="slide.desc"></div>
-				      </div>
-				    </div>
-					</li>
-					<div id="info-indicators" rn-carousel-indicators ng-if="slides.length > 1" slides="slides" rn-carousel-index="carouselIndex"></div>
-				</ul> -->
-
-				<div class="col-md-12 post-slick">
-					<slick
-						dots="true"
-						autoplay="false"
-						mobileFirst="true"
-						variableWidth="true"
-						adaptiveHeight="true"
-						slides-to-show="1"
-						slides-to-scroll="1"
-						init-onload="true"
-						data="slides">
-
-						<div ng-repeat="slide in slides">
-							<div class="row featured-panel">
-
-				        <div class="col-md-7 featured-image" style="background-image: url({{slide.image}}); "></div>
-
-				        <div class="col-md-5 featured-information">
-									<a ng-href="{{slide.slug}}" class="post-title"><h2 ng-bind-html="slide.heading"></h2></a>
-
-				          <p class="featured-date">{{slide.date | date:'MM/dd/yyyy'}}</p>
-
-				          <p class="featured-description" ng-bind-html="slide.desc"></p>
-
-				          <a ng-href="{{slide.slug}}" class="button-wrapper post-button">
-				            <span class="button">Read More</span>
-				          </a>
-				        </div>
-				      </div>
-						</div>
-					</slick>
+		          <a ng-href="{{slide.slug}}" class="button-wrapper post-button">
+		            <span class="button">Read More</span>
+		          </a>
+		        </div>
+		      </div>
 				</div>
-		  </div>
+			</slick>
 		</div>
-
 	</div>
 </div>

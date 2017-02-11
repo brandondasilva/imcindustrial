@@ -3,7 +3,12 @@
   background-color: $home-featured-color;
   padding: $section-padding;
   padding-top: $section-padding + 20px;
-  padding-bottom: 0px;
+  padding-bottom: $section-padding + 20px;
+
+  @media (max-width: 767px) {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
 
   h1.section-header {
 
@@ -11,176 +16,33 @@
     color: black;
   }
 
-  #home-featured-template {
+  .home-featured-content {
 
-    .home-featured-content {
+    // Local variables
+    $postHeight: 250px;
 
-      // Local variables
-      $postHeight: 250px;
+    h1.section-header { color: black; }
 
-      h1.section-header { color: black; }
+    #info-indicators { text-align: center; }
 
-      #info-indicators { text-align: center; }
+    .post-slick { margin-top: 30px; }
 
-      .post-slick { margin-top: 30px; }
+    .featured-panel {
 
-      .featured-panel {
-
-        .featured-image {
-          border-radius: 5px 0 0 5px;
-        }
-
-        & .featured-information {
-          border-radius: 0 5px 5px 0;
-        }
+      .featured-image {
+        border-radius: 5px 0 0 5px;
       }
 
-      .home-featured-post {
+      .featured-information {
 
-        padding-top: $section-padding;
-        margin-left: 15px;
-        margin-right: 15px;
-
-        .post-thumbnail {
-
-          @media (max-width: 767px) {
-            height: 175px;
-            margin-bottom: 10px;
-          }
-
-          height: $postHeight;
-          padding: $section-padding;
-
-          background-repeat: no-repeat;
-          background-size: cover;
-
-          -webkit-box-shadow: $box-shadow-post;
-          -moz-box-shadow: $box-shadow-post;
-          box-shadow: $box-shadow-post;
-
-          border-radius: $border-radius-rect;
-
+        @media (max-width: 767px) {
+          // min-height: 300px;
         }
 
-        #post-exerpt1, #post-exerpt2 {
+        border-radius: 0 5px 5px 0;
 
-          @media (max-width: 991px) {
-            h2 {
-              font-size: 24px;
-            }
-            padding: 10px !important;
-          }
-
-          @media (max-width: 767px) {
-            height: auto;
-          }
-
+        a.post-title {
           color: $body-text-white;
-
-          h2 {
-            margin-top: 5px;
-            margin-bottom: 10px;
-            color: $body-text-white;
-
-            &:hover, &:active, &:focus {
-              text-decoration: none;
-            }
-
-            &:hover {
-              text-shadow: 1px 1px 2px rgba(150, 150, 150, 1);
-            }
-
-            &:active {
-              text-shadow: 1px 1px 2.05px rgba(75, 75, 75, 0.9);
-            }
-          }
-
-          background-color: $main-color;
-          text-align: left;
-
-          height: $postHeight;
-          padding: $section-padding;
-
-          border-radius: $border-radius-rect;
-
-          -webkit-box-shadow: $box-shadow-post;
-          -moz-box-shadow: $box-shadow-post;
-          box-shadow: $box-shadow-post;
-        }
-      }
-
-      /*
-        Font and height settings for the content in the info section
-      */
-
-      ul {
-        padding-left: 30px;
-        padding-right: 30px;
-      }
-
-      .rn-carousel-control-prev, .rn-carousel-control-next {
-
-        position: relative;
-        padding: 0px;
-        float: left;
-      }
-
-      .rn-carousel-control-prev {
-
-        margin-left: -22px;
-
-        &::before {
-          content: "❮" !important;
-          font-size: 40px;
-          color: $main-black;
-        }
-      }
-
-      .rn-carousel-control-next {
-
-        margin-left: 100%;
-
-        &::before {
-          content: "❯" !important;
-          font-size: 40px;
-          color: $main-black;
-        }
-      }
-
-      // Smallest screen sizes
-      @media screen and (max-width: 767px) {
-        ul {
-          height: 480px;
-        }
-
-        .rn-carousel-control-prev, .rn-carousel-control-next {
-          bottom: 250px;
-        }
-
-        #post-exerpt2 {
-          margin-top: 92px;
-        }
-      }
-
-      // Smaller screen sizes
-      @media screen and (min-width: 768px) and (max-width: 1029px) {
-        ul {
-          height: 350px;
-        }
-
-        .rn-carousel-control-prev, .rn-carousel-control-next {
-          bottom: 175px;
-        }
-      }
-
-      // Larger screen sizes
-      @media screen and (min-width: 1030px) {
-        ul {
-          height: $postHeight + 50px;
-        }
-
-        .rn-carousel-control-prev, .rn-carousel-control-next {
-          bottom: ($postHeight + 50px) / 2;
         }
       }
     }
