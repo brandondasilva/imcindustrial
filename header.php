@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-cloak ng-controller="MainCtrl">
   <head>
-    <base href="/wordpress/" target="_blank">
+    <base href="/" target="_blank">
 
     <title ng-bind-html="SetTitle.title()"></title>
 
