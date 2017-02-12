@@ -234,6 +234,9 @@ a.button-wrapper .button {
   .slick-slider .slick-prev:before, .slick-slider .slick-next:before {
     color: black; }
 
+.post-slick {
+  padding-bottom: 20px; }
+
 .post-slick .slick-slider .slick-slide {
   padding: 20px; }
   .post-slick .slick-slider .slick-slide img {
