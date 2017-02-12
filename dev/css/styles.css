@@ -316,7 +316,7 @@ a.button-wrapper .button {
     @media (max-width: 767px) {
       #navbar .nav img {
         height: 80px !important; }
-      #navbar .nav .navi, #navbar .nav .nav-right, #navbar .nav #mobileNav {
+      #navbar .nav .navi, #navbar .nav #mobileNav {
         display: none; } }
     @media (min-width: 768px) {
       #navbar .nav .menu {
@@ -336,9 +336,10 @@ a.button-wrapper .button {
         padding: 0px; }
     #navbar .nav .menu {
       width: 100% !important;
+      padding-right: 0px !important;
       background-image: url("../images/icons/menu.svg");
       background-repeat: no-repeat;
-      background-size: 60px;
+      background-size: 50px;
       background-position-x: 100%;
       background-position-y: 50%; }
   #navbar #mobileNav {
@@ -411,6 +412,11 @@ a.button-wrapper .button {
           margin-top: 5px;
           padding-left: 10px;
           padding-right: 10px; }
+      #footer #footer-content .footer-right p img {
+        height: 20px;
+        vertical-align: middle;
+        vertical-align: -webkit-baseline-middle;
+        padding-left: 2px; }
 
 #map {
   background-color: #812822;

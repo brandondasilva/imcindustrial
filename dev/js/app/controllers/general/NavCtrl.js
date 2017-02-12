@@ -41,6 +41,11 @@ define([], function() {
       name: "Careers",
       link: "careers"
     }
+
+    $scope.premus = {
+      name: "Premus Inc.",
+      path: path + "/images/premus.png"
+    }
   }
 
   return ["$scope", "$http", "path", NavCtrl];
