@@ -37,6 +37,8 @@
 
     @media (max-width: 767px) {
 
+      h2 { text-align: center !important; }
+
       div:first-child {
         .featured-image {
           height: 150px;
@@ -53,8 +55,10 @@
 
     div:last-child {
 
-      h2 {
-        text-align: right;
+      h2 { text-align: right; }
+
+      @media (max-width: 767px) {
+        h2 { text-align: center; }
       }
 
       .featured-image {

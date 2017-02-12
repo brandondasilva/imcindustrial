@@ -210,18 +210,19 @@ a.button-wrapper .button {
         .portfolio-post .post-panel .button-wrapper.post-button {
           left: auto !important;
           margin-left: 0px; } }
-    @media (max-width: 375px) {
+    @media (max-width: 435px) {
       .portfolio-post .post-panel {
-        display: flex; }
+        flex-direction: column;
+        margin-right: 0px; }
         .portfolio-post .post-panel .post-image {
+          height: 150px;
           order: 1;
-          width: 40%;
-          min-height: auto;
-          border-radius: 5px 0 0 5px !important; }
+          width: 100%;
+          border-radius: 5px 5px 0 0 !important; }
         .portfolio-post .post-panel .post-information {
           order: 2;
-          width: 60%;
-          border-radius: 0 5px 5px 0 !important; }
+          width: 100%;
+          border-radius: 0 0 5px 5px !important; }
         .portfolio-post .post-panel .button-wrapper.post-button {
           left: auto !important;
           margin-left: 0px; } }
@@ -635,6 +636,8 @@ a.button-wrapper .button {
   #portfolio-posts #portfolio-featured div:first-child .featured-information {
     border-radius: 5px 0 0 5px !important; }
   @media (max-width: 767px) {
+    #portfolio-posts #portfolio-featured h2 {
+      text-align: center !important; }
     #portfolio-posts #portfolio-featured div:first-child .featured-image {
       height: 150px;
       order: 1;
@@ -644,6 +647,9 @@ a.button-wrapper .button {
       border-radius: 0 0 5px 5px !important; } }
   #portfolio-posts #portfolio-featured div:last-child h2 {
     text-align: right; }
+  @media (max-width: 767px) {
+    #portfolio-posts #portfolio-featured div:last-child h2 {
+      text-align: center; } }
   #portfolio-posts #portfolio-featured div:last-child .featured-image {
     border-radius: 5px 0 0 5px; }
   #portfolio-posts #portfolio-featured div:last-child .featured-information {

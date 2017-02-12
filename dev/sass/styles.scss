@@ -335,7 +335,7 @@ a.button-wrapper {
     }
 
     @media (max-width: 767px) {
-      // flex-direction: row;
+
       display: flex;
 
       .post-image {
@@ -360,21 +360,22 @@ a.button-wrapper {
       }
     }
 
-    @media (max-width: 375px) {
-      // flex-direction: row;
-      display: flex;
+    @media (max-width: 435px) {
+
+      flex-direction: column;
+      margin-right: 0px;
 
       .post-image {
+        height: 150px;
         order: 1;
-        width: 40%;
-        min-height: auto;
-        border-radius: 5px 0 0 5px !important;
+        width: 100%;
+        border-radius: 5px 5px 0 0 !important;
       }
 
       .post-information {
         order: 2;
-        width: 60%;
-        border-radius: 0 5px 5px 0 !important;
+        width: 100%;
+        border-radius: 0 0 5px 5px !important;
       }
 
       .button-wrapper {
