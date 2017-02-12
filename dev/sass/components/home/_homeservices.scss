@@ -29,6 +29,12 @@
           padding: 20px;
         }
 
+        @media (min-width: 992px) {
+          height: 275px !important;
+          width: 275px !important;
+          padding: 50px;
+        }
+
         height: 245px;
         width: 245px;
         display: inline-block;

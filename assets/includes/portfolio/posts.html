@@ -5,9 +5,9 @@
 
       <div class="row featured-panel">
 
-        <div class="col-md-8 featured-image" style="background-image: url({{post.image}}); "></div>
+        <div class="col-xs-12 col-sm-6 col-md-8 featured-image" style="background-image: url({{post.image}}); "></div>
 
-        <div class="col-md-4 featured-information">
+        <div class="col-xs-12 col-sm-6 col-md-4 featured-information">
           <p class="featured-date">{{post.date | date:'MM/dd/yyyy'}}</p>
 
           <p class="featured-description" ng-bind-html="post.desc"></p>
@@ -20,11 +20,11 @@
     </div>
   </div>
 
-  <hr class="hidden-sm hidden-xs">
+  <hr class="">
 
   <div id="portfolio-content" class="row">
-    <div class="col-md-8 col-sm-12 portfolio-content">
-      <div class="col-md-6 col-sm-12 portfolio-post" ng-repeat="post in portfolioPosts">
+    <div class="col-sm-12 col-md-8 portfolio-content">
+      <div class="col-xs-12 col-sm-6 col-md-6 portfolio-post" ng-repeat="post in portfolioPosts">
         <a ng-href="{{post.slug}}" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
 
         <div class="post-panel">
@@ -51,7 +51,7 @@
       </div>
     </div>
 
-    <div class="col-md-4 col-sm-12 categories hidden-sm hidden-xs" ng-controller="CategoryCtrl">
+    <div class="col-md-4 categories hidden-sm hidden-xs" ng-controller="CategoryCtrl">
       <h2>Categories</h2>
 
       <ul>

@@ -37,6 +37,9 @@ hr {
 @media (max-width: 767px) {
   .container {
     width: auto; } }
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: auto; } }
 .row {
   margin-left: 0px;
   margin-right: 0px; }
@@ -101,7 +104,7 @@ a.button-wrapper .button {
   color: #1E1E1E; }
 
 @media (max-width: 991px) {
-  .portfolio-post, .post-panel, h2 {
+  .portfolio-post, h2 {
     margin-right: 0px !important; } }
 .featured-panel {
   display: flex;
@@ -150,6 +153,7 @@ a.button-wrapper .button {
 
 .portfolio-post {
   padding-left: 0px !important;
+  padding-right: 0px !important;
   margin-bottom: 20px; }
   .portfolio-post h2 {
     margin-left: 10px;
@@ -177,20 +181,50 @@ a.button-wrapper .button {
         font-size: 14px;
         color: #f0f0f0;
         margin-bottom: 50px; }
-  .portfolio-post .button-wrapper.post-button {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    margin: 20px;
-    margin-left: 30px;
-    width: auto; }
-  .portfolio-post .button-wrapper .button {
-    background-color: #1E1E1E;
-    color: #f0f0f0;
-    text-align: center;
-    width: 100% !important;
-    padding-left: 12px;
-    padding-right: 12px; }
+    .portfolio-post .post-panel .button-wrapper.post-button {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      margin: 20px;
+      margin-left: 30px;
+      width: auto; }
+    .portfolio-post .post-panel .button-wrapper .button {
+      background-color: #1E1E1E;
+      color: #f0f0f0;
+      text-align: center;
+      width: 100% !important;
+      padding-left: 12px;
+      padding-right: 12px; }
+    @media (max-width: 767px) {
+      .portfolio-post .post-panel {
+        display: flex; }
+        .portfolio-post .post-panel .post-image {
+          order: 1;
+          width: 40%;
+          min-height: auto;
+          border-radius: 5px 0 0 5px !important; }
+        .portfolio-post .post-panel .post-information {
+          order: 2;
+          width: 60%;
+          border-radius: 0 5px 5px 0 !important; }
+        .portfolio-post .post-panel .button-wrapper.post-button {
+          left: auto !important;
+          margin-left: 0px; } }
+    @media (max-width: 375px) {
+      .portfolio-post .post-panel {
+        display: flex; }
+        .portfolio-post .post-panel .post-image {
+          order: 1;
+          width: 40%;
+          min-height: auto;
+          border-radius: 5px 0 0 5px !important; }
+        .portfolio-post .post-panel .post-information {
+          order: 2;
+          width: 60%;
+          border-radius: 0 5px 5px 0 !important; }
+        .portfolio-post .post-panel .button-wrapper.post-button {
+          left: auto !important;
+          margin-left: 0px; } }
 
 .size-medium {
   display: none; }
@@ -505,6 +539,11 @@ a.button-wrapper .button {
         height: 180px !important;
         width: 180px !important;
         padding: 20px; } }
+    @media (min-width: 992px) {
+      #homeservices #service-content .service-image-wrapper .service-image {
+        height: 275px !important;
+        width: 275px !important;
+        padding: 50px; } }
     #homeservices #service-content .service-image-wrapper .service-image div:first-child {
       position: relative;
       top: 50%;
@@ -580,15 +619,22 @@ a.button-wrapper .button {
   padding-left: 0px !important;
   padding-right: 0px !important; }
 #portfolio-posts #portfolio-featured {
-  padding: 30px; }
-  @media (max-width: 991px) {
-    #portfolio-posts #portfolio-featured {
-      display: none; } }
+  padding: 30px;
+  padding-left: 10px;
+  padding-right: 10px; }
   #portfolio-posts #portfolio-featured div:first-child .featured-image {
     order: 1;
     border-radius: 0 5px 5px 0 !important; }
   #portfolio-posts #portfolio-featured div:first-child .featured-information {
     border-radius: 5px 0 0 5px !important; }
+  @media (max-width: 767px) {
+    #portfolio-posts #portfolio-featured div:first-child .featured-image {
+      height: 150px;
+      order: 1;
+      border-radius: 5px 5px 0 0 !important; }
+    #portfolio-posts #portfolio-featured div:first-child .featured-information {
+      order: 2;
+      border-radius: 0 0 5px 5px !important; } }
   #portfolio-posts #portfolio-featured div:last-child h2 {
     text-align: right; }
   #portfolio-posts #portfolio-featured div:last-child .featured-image {
@@ -602,7 +648,9 @@ a.button-wrapper .button {
     padding: 20px; }
   #portfolio-posts #portfolio-featured h2 {
     text-transform: uppercase;
-    font-size: 42px; }
+    font-size: 42px;
+    margin-left: 0px;
+    margin-right: 0px; }
   #portfolio-posts #portfolio-featured .button-wrapper.post-button {
     margin-left: 20px; }
 #portfolio-posts #portfolio-content {

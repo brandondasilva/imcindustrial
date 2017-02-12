@@ -96,6 +96,12 @@ hr {
   }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .container {
+    width: auto;
+  }
+}
+
 .row {
   margin-left: 0px;
   margin-right: 0px;
@@ -189,7 +195,7 @@ a.button-wrapper {
 .post-title { color: $main-black; }
 
 @media (max-width: 991px) {
-  .portfolio-post, .post-panel, h2 {
+  .portfolio-post, h2 {
     margin-right: 0px !important;
   }
 }
@@ -265,6 +271,7 @@ a.button-wrapper {
 
 .portfolio-post {
   padding-left: 0px !important;
+  padding-right: 0px !important;
   margin-bottom: 20px;
 
   h2 {
@@ -273,6 +280,7 @@ a.button-wrapper {
   }
 
   .post-panel {
+
     border-radius: 5px;
     box-shadow: $box-shadow-post;
     margin-left: 10px;
@@ -304,26 +312,78 @@ a.button-wrapper {
         margin-bottom: 50px;
       }
     }
-  }
 
-  .button-wrapper {
+    .button-wrapper {
 
-    &.post-button {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      margin: 20px;
-      margin-left: 30px;
-      width: auto;
+      &.post-button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 20px;
+        margin-left: 30px;
+        width: auto;
+      }
+
+      .button {
+        background-color: $main-black;
+        color: $body-text-white;
+        text-align: center;
+        width: 100% !important;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
     }
 
-    .button {
-      background-color: $main-black;
-      color: $body-text-white;
-      text-align: center;
-      width: 100% !important;
-      padding-left: 12px;
-      padding-right: 12px;
+    @media (max-width: 767px) {
+      // flex-direction: row;
+      display: flex;
+
+      .post-image {
+        order: 1;
+        width: 40%;
+        min-height: auto;
+        border-radius: 5px 0 0 5px !important;
+      }
+
+      .post-information {
+        order: 2;
+        width: 60%;
+        border-radius: 0 5px 5px 0 !important;
+      }
+
+      .button-wrapper {
+
+        &.post-button {
+          left: auto !important;
+          margin-left: 0px;
+        }
+      }
+    }
+
+    @media (max-width: 375px) {
+      // flex-direction: row;
+      display: flex;
+
+      .post-image {
+        order: 1;
+        width: 40%;
+        min-height: auto;
+        border-radius: 5px 0 0 5px !important;
+      }
+
+      .post-information {
+        order: 2;
+        width: 60%;
+        border-radius: 0 5px 5px 0 !important;
+      }
+
+      .button-wrapper {
+
+        &.post-button {
+          left: auto !important;
+          margin-left: 0px;
+        }
+      }
     }
   }
 }
