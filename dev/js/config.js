@@ -12,6 +12,7 @@ require.config({
     'ngMaps'           : '../bower_components/ng-maps/dist/ng-maps.min',
     'ui.router'        : '../bower_components/angular-ui-router/release/angular-ui-router.min',
     'angular-touch'    : '../bower_components/angular-touch/angular-touch.min',
+    'angular-loading-bar' : '../bower_components/angular-loading-bar/build/loading-bar.min',
     'slick'            : '../bower_components/angular-slick/dist/slick.min',
     'slick-carousel'   : '../bower_components/slick-carousel/slick/slick.min',
     'angular-carousel' : '../bower_components/angular-carousel/dist/angular-carousel.min',
@@ -51,6 +52,10 @@ require.config({
       deps: ["angular"],
       exports: 'angular-touch'
     },
+    'angular-loading-bar': {
+      deps: ["angular"],
+      exports: 'angular-loading-bar'
+    },
     'slick': {
       deps: ["angular", "$"],
       exports: 'slick'
@@ -75,6 +80,7 @@ require.config({
     'ngMaps',
     'ui.router',
     'angular-touch',
+    'angular-loading-bar',
     'slick',
     'slick-carousel',
     'bootstrap'

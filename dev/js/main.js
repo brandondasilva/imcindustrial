@@ -16,6 +16,7 @@ require(['wp-content/themes/imcindustrial/assets/js/config'], function() {
     'ngMaps',
     'ui.router',
     'angular-touch',
+    'angular-loading-bar',
     'slick',
     'slick-carousel',
     'bootstrap'

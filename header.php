@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-cloak ng-controller="MainCtrl">
   <head>
-    <base href="/" target="_blank">
+    <base href="/wordpress/" target="_blank">
 
     <title ng-bind-html="SetTitle.title()"></title>
 
@@ -30,8 +30,9 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <!-- Bootstrap core CSS -->
+    <!-- Stylesheets CSS -->
     <link href="<?php bloginfo('template_directory'); ?>/assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php bloginfo('template_directory'); ?>/assets/bower_components/angular-loading-bar/build/loading-bar.min.css" rel="stylesheet">
     <!-- Angular Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-carousel/1.0.1/angular-carousel.min.css" />
 

@@ -6,7 +6,8 @@ define([], function() {
     $stateProvider,
     $urlRouterProvider,
     $locationProvider,
-    $uiViewScrollProvider
+    $uiViewScrollProvider,
+    cfpLoadingBarProvider
   ) {
 
     var includes = 'wp-content/themes/imcindustrial/assets/includes';
@@ -62,6 +63,8 @@ define([], function() {
     $locationProvider.html5Mode(true);
 
     $uiViewScrollProvider.useAnchorScroll();
+
+    cfpLoadingBarProvider.includeSpinner = false;
   }
 
   return [
@@ -69,6 +72,7 @@ define([], function() {
     "$urlRouterProvider",
     "$locationProvider",
     "$uiViewScrollProvider",
+    "cfpLoadingBarProvider",
     config
   ];
 });

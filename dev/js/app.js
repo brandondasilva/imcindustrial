@@ -33,6 +33,7 @@ define([
     'ui.router',
     'base64',
     'slick',
+    'angular-loading-bar',
     'ngSanitize',
     'ngMessages',
     'ngMaps',

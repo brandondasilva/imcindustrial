@@ -282,11 +282,9 @@ a.button-wrapper .button {
   float: left;
   animation: spin 0.75s linear infinite; }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg); }
-  100% {
-    transform: rotate(360deg); } }
+#loading-bar .bar {
+  background: #812822; }
+
 /*
  *******
  File Imports
