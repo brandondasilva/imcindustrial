@@ -16,7 +16,10 @@
 
 define([], function() {
 
-  function ContactContentCtrl($scope, $http, path, getPages) {
+  function ContactContentCtrl($scope, $http, path, getPages, SetTitle) {
+
+    // Set Page Title
+    SetTitle.setTitle('Contact | IMC Industrial Inc.');
 
     getPages.success(function(res) {
       for (var i = 0; i < res.length; i++) {
@@ -27,8 +30,6 @@ define([], function() {
         }
       }
     });
-
-
 
     $scope.submit = function() {
 
@@ -60,36 +61,31 @@ define([], function() {
         data: dataJSON
       }
 
-        $http(req).then(function(response) {
+      $http(req).then(function(response) {
 
-          $scope.clicked = false;
+        $scope.clicked = false;
 
-          // console.log(response);
-          // console.log(response.data.statusCode);
-
-          if (response.data.statusCode == 200 || response.data.statusCode == 202) {
-            $scope.statusMessage = 'Success!';
-            $scope.statusImage = path + '/images/icons/check.svg';
-            $scope.statusClass = 'success';
-          } else {
-            $scope.statusMessage = 'Error! Try again.';
-            $scope.statusImage = path + '/images/icons/error.svg';
-            $scope.statusClass = 'failed';
-          }
-
-
-        }, function(error) {
-
-          $scope.clicked = false;
-
+        if (response.data.statusCode == 200 || response.data.statusCode == 202) {
+          $scope.statusMessage = 'Success!';
+          $scope.statusImage = path + '/images/icons/check.svg';
+          $scope.statusClass = 'success';
+        } else {
           $scope.statusMessage = 'Error! Try again.';
           $scope.statusImage = path + '/images/icons/error.svg';
           $scope.statusClass = 'failed';
-        });
+        }
 
+      }, function(error) {
+
+        $scope.clicked = false;
+
+        $scope.statusMessage = 'Error! Try again.';
+        $scope.statusImage = path + '/images/icons/error.svg';
+        $scope.statusClass = 'failed';
+      });
     }
   }
 
-  return ["$scope", "$http", "path", "getPages", ContactContentCtrl];
+  return ["$scope", "$http", "path", "getPages", "SetTitle", ContactContentCtrl];
 
 });

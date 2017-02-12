@@ -17,13 +17,17 @@
 
 define([], function() {
 
-  function PostContentCtrl($scope, $http, $stateParams, apiPath) {
+  function PostContentCtrl($scope, $http, $stateParams, apiPath, SetTitle) {
+
 
     var path = apiPath + "posts?filter[category_name]=portfolio&";
 
     $http.get(path + 'filter[name]=' + $stateParams.slug).success(function(res) {
       $scope.postContent = res[0];
       $scope.postCategories = res[0].terms.category;
+
+      // Set Page Title
+      SetTitle.setTitle($scope.postContent.title + ' | IMC Industrial Inc.');
 
       $http.get(apiPath + 'media?filter[post_parent]=' + res[0].ID).success(function(res2) {
         if ( res2.length >= 1 ) {
@@ -61,6 +65,6 @@ define([], function() {
     });
    }
 
-   return ["$scope", "$http", "$stateParams", "apiPath", PostContentCtrl];
+   return ["$scope", "$http", "$stateParams", "apiPath", "SetTitle", PostContentCtrl];
 
  })

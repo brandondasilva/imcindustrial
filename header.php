@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html lang="en" ng-cloak>
+<html lang="en" ng-cloak ng-controller="MainCtrl">
   <head>
     <base href="/wordpress/" target="_blank">
+
+    <title ng-bind-html="SetTitle.title()"></title>
 
     <link rel="apple-touch-icon" sizes="57x57" href="<?php bloginfo('template_directory'); ?>/assets/images/favicon.ico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="<?php bloginfo('template_directory'); ?>/assets/images/favicon.ico/apple-icon-60x60.png">
@@ -33,10 +35,6 @@
     <!-- Angular Carousel CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-carousel/1.0.1/angular-carousel.min.css" />
 
-    <!-- Custom styles for this template -->
-    <!-- <link href="<?php bloginfo('template_directory'); ?>/assets/css/styles.min.css" rel="stylesheet"> -->
-
-
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -44,8 +42,6 @@
     <![endif]-->
 
     <?php wp_head(); ?>
-
-    <!-- <script type="text/javascript" data-main="<?php bloginfo('template_directory'); ?>/assets/js/main" src="<?php bloginfo('template_directory'); ?>/assets/js/require.js"></script> -->
   </head>
 
   <body>

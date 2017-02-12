@@ -16,7 +16,10 @@
 
 define([], function() {
 
-  function AboutCtrl($scope, $http, getPages) {
+  function AboutCtrl($scope, $http, getPages, SetTitle) {
+
+    // Set Page Title
+    SetTitle.setTitle('About | IMC Industrial Inc.');
 
     getPages.success(function(res) {
       for (var i = 0; i < res.length; i++) {
@@ -29,6 +32,6 @@ define([], function() {
     });
   }
 
-  return ["$scope", "$http", 'getPages', AboutCtrl];
+  return ["$scope", "$http", 'getPages', 'SetTitle', AboutCtrl];
 
 });

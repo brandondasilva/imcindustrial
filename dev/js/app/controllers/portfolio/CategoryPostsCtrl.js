@@ -16,7 +16,7 @@
 
 define([], function() {
 
-  function CategoryPostsCtrl($scope, $http, $stateParams, apiPath, PagerService) {
+  function CategoryPostsCtrl($scope, $http, $stateParams, apiPath, PagerService, SetTitle) {
     var vm = this;
 
     vm.allPosts = [];
@@ -32,6 +32,9 @@ define([], function() {
 
     $http.get(apiPath + 'taxonomies/category/terms/?filter[slug]=' + $stateParams.category).success(function(res) {
       vm.pageTitle = res[0].name;
+
+      // Setting Page Title
+      SetTitle.setTitle(vm.pageTitle + ' | IMC Industrial Inc.');
     });
 
     function initController() {
@@ -55,6 +58,6 @@ define([], function() {
     };
   }
 
-  return ["$scope", "$http", "$stateParams", "apiPath", "PagerService", CategoryPostsCtrl];
+  return ["$scope", "$http", "$stateParams", "apiPath", "PagerService", "SetTitle", CategoryPostsCtrl];
 
 });

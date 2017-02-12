@@ -16,18 +16,20 @@
 
 define([], function() {
 
-  function HomeBannerCtrl($scope, $http, apiPath) {
+  function HomeBannerCtrl($scope, $http, apiPath, SetTitle) {
+
+    // Setting Page Title
+    SetTitle.setTitle('IMC Industrial Inc.');
 
     $http.get(apiPath).success(function(res) {
       $scope.name = res.name;
       $scope.description = res.description;
     }).error(function() {
-
       $scope.name = "IMC Industrial";
       $scope.description = "Industrial Solutions for SME's"
     });
   }
 
-  return ["$scope", "$http", "apiPath", HomeBannerCtrl];
+  return ["$scope", "$http", "apiPath", "SetTitle", HomeBannerCtrl];
 
 });

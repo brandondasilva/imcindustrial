@@ -1,0 +1,1 @@
+"use strict";define([],function(){function a(){var a="IMC Industrial Inc.";return{title:function(){return a},setTitle:function(b){a=b}}}return[a]});

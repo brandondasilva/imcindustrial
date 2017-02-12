@@ -16,7 +16,11 @@
 
 define([], function() {
 
-  function PortfolioPaginationCtrl($scope, $http, apiPath, PagerService) {
+  function PortfolioPaginationCtrl($scope, $http, apiPath, PagerService, SetTitle) {
+
+    // Setting Page Title
+    SetTitle.setTitle('Portfolio | IMC Industrial Inc.');
+
     var vm = this;
 
     vm.allPosts = [];
@@ -50,6 +54,6 @@ define([], function() {
     };
   }
 
-  return ["$scope", "$http", "apiPath", "PagerService", PortfolioPaginationCtrl];
+  return ["$scope", "$http", "apiPath", "PagerService", "SetTitle", PortfolioPaginationCtrl];
 
 });

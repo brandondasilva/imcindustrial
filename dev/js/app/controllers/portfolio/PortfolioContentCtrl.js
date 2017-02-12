@@ -16,7 +16,10 @@
 
 define([], function() {
 
-  function PortfolioContentCtrl($scope, $http, getPages) {
+  function PortfolioContentCtrl($scope, $http, getPages, SetTitle) {
+
+    // Setting Page Title
+    SetTitle.setTitle('Portfolio | IMC Industrial Inc.');
 
     getPages.success(function(res) {
       for (var i = 0; i < res.length; i++) {
@@ -29,6 +32,6 @@ define([], function() {
     });
   }
 
-  return ["$scope", "$http", 'getPages', PortfolioContentCtrl];
+  return ["$scope", "$http", "getPages", "SetTitle", PortfolioContentCtrl];
 
 });

@@ -8,6 +8,8 @@ define([
   'app/directives/general/bottom',
   'app/directives/general/mapsection',
   'app/controllers/general/NavCtrl',
+  'app/controllers/general/MainCtrl',
+  'app/services/SetTitle',
   'app/modules/HomeModule',
   'app/modules/AboutModule',
   'app/modules/PortfolioModule',
@@ -18,6 +20,8 @@ define([
   bottom,
   mapsection,
   NavCtrl,
+  MainCtrl,
+  SetTitle,
   HomeModule,
   AboutModule,
   PortfolioModule,
@@ -43,13 +47,13 @@ define([
   app.directive('navbar', navbar)
      .directive('bottom', bottom)
      .directive('mapsection', mapsection)
-     .controller('NavCtrl', NavCtrl);
+     .controller('NavCtrl', NavCtrl)
+     .controller('MainCtrl', MainCtrl)
+     .factory('SetTitle', SetTitle);
 
   app.constant('_', window._); // Underscore
   app.constant('path', 'wp-content/themes/imcindustrial/assets');
   app.constant('apiPath', 'wp-json/');
-
-
 
   app.init = function() {
     angular.element(document).ready(function() {
