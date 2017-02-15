@@ -22,17 +22,8 @@
     width: 100%;
   }
 
-  .nav-right {
-    display: table-cell;
-    position: relative;
-    float: right;
-    line-height: 90px;
-  }
-  // @media (max-width: 767px) { .nav-right { display: none; } }
 
   .nav {
-
-
 
     @media (max-width: 767px) {
 
@@ -93,12 +84,12 @@
     div {
       padding-top: $nav-items-padding;
 
-      &#navbar-Contact {
+      &#navbar-Careers {
         padding-bottom: $nav-items-padding;
       }
     }
 
-    #navbar-Careers {
+    #navbar-Contact {
       padding-top: 0px !important;
       padding-bottom: $nav-items-padding;
     }

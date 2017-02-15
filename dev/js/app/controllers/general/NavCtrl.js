@@ -32,15 +32,13 @@ define([], function() {
         name: "Portfolio",
         link: "portfolio"
       }, {
+        name: "Careers",
+        link: "careers"
+      }, {
         name: "Contact",
         link: "contact"
-      },
+      }
     ];
-
-    $scope.careers = {
-      name: "Careers",
-      link: "careers"
-    }
 
     $scope.premus = {
       name: "Premus Inc.",

@@ -1,3 +1,4 @@
+
 (function ( define, angular ) {
 
 'use strict';
@@ -63,6 +64,7 @@ define([
   };
 
   return app;
+  
 });
 
 }( define, angular ));

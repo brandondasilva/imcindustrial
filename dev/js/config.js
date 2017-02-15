@@ -15,7 +15,6 @@ require.config({
     'angular-loading-bar' : '../bower_components/angular-loading-bar/build/loading-bar.min',
     'slick'            : '../bower_components/angular-slick/dist/slick.min',
     'slick-carousel'   : '../bower_components/slick-carousel/slick/slick.min',
-    'angular-carousel' : '../bower_components/angular-carousel/dist/angular-carousel.min',
     'bootstrap'        : '../bower_components/bootstrap/dist/js/bootstrap.min'
   },
 
