@@ -29,6 +29,8 @@ define([], function() {
           $scope.content = res[i].content;
         }
       }
+    }).error(function(res) {
+      console.log('page not found! ' + res)
     });
   }
 

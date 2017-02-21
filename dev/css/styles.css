@@ -729,6 +729,27 @@ a.button-wrapper .button {
       padding-left: 12px;
       padding-right: 12px; }
 
+#career-posting #career-posting-header.page-heading {
+  height: 180px; }
+#career-posting #career-posting-content h1 {
+  margin-top: 0px !important;
+  margin-bottom: 20px; }
+#career-posting #career-posting-content #posting-content {
+  padding-left: 0px !important; }
+  #career-posting #career-posting-content #posting-content .post-content {
+    padding-top: 20px;
+    padding-bottom: 20px; }
+  #career-posting #career-posting-content #posting-content .post-date {
+    color: #979797; }
+#career-posting #career-posting-content #posting-form {
+  padding-right: 0px !important; }
+  @media (min-width: 992px) {
+    #career-posting #career-posting-content #posting-form h1 {
+      text-align: right; } }
+  @media (max-width: 991px) {
+    #career-posting #career-posting-content #posting-form h1 {
+      text-align: center; } }
+
 @media (max-width: 767px) {
   #contact-content #contact-content #contact-form h1 {
     text-align: center !important;

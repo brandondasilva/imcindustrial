@@ -22,7 +22,7 @@ define([], function() {
       return res;
     })
     .error(function(err) {
-      return err;
+      return "Error! " + err;
     });
   }
 
