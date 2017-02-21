@@ -1,0 +1,57 @@
+// General classes across the Careers pages
+.careers-post {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+  margin-bottom: 20px;
+
+  h2 {
+    margin-top: 0px;
+    color: $body-text-white;
+  }
+
+  .post-panel {
+
+    border-radius: 5px;
+    box-shadow: $box-shadow-post;
+    margin-left: 10px;
+    margin-right: 10px;
+
+    padding: 20px;
+    background-color: $main-color;
+
+    p.post-date {
+      font-size: 11px;
+      color: $home-featured-color;
+      padding-bottom: 10px;
+    }
+
+    p.post-description {
+      font-size: 14px;
+      color: $body-text-white;
+      margin-bottom: 50px;
+    }
+
+    .button-wrapper {
+
+      &.post-button {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 20px;
+        margin-left: 30px;
+        width: auto;
+      }
+
+      .button {
+        background-color: $main-black;
+        color: $body-text-white;
+        text-align: center;
+        width: 100% !important;
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
+  }
+
+
+}

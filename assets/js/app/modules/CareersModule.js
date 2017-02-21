@@ -1,0 +1,1 @@
+!function(a,b){"use strict";a(["app/controllers/careers/CareersContentCtrl","app/controllers/careers/CareersPostsCtrl","app/services/getPages"],function(a,c,d){var e="imcindustrial.careers";return b.module(e,["ui.router"]).controller("CareersContentCtrl",a).controller("CareersPostsCtrl",c).factory("getPages",d),e})}(define,angular);

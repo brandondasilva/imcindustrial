@@ -14,6 +14,7 @@ define([
   'app/modules/HomeModule',
   'app/modules/AboutModule',
   'app/modules/PortfolioModule',
+  'app/modules/CareersModule',
   'app/modules/ContactModule'
 ], function (
   routes,
@@ -26,6 +27,7 @@ define([
   HomeModule,
   AboutModule,
   PortfolioModule,
+  CareersModule,
   ContactModule
 ) {
 
@@ -41,6 +43,7 @@ define([
     HomeModule,
     AboutModule,
     PortfolioModule,
+    CareersModule,
     ContactModule
   ];
 
@@ -64,7 +67,7 @@ define([
   };
 
   return app;
-  
+
 });
 
 }( define, angular ));

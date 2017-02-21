@@ -1,0 +1,1 @@
+"use strict";define([],function(){function a(a,b,c){c.setTitle("Careers | IMC Industrial Inc."),b.success(function(b){for(var c=0;c<b.length;c++)"Careers"===b[c].title&&(a.featuredImage=b[c].featured_image.attachment_meta.sizes.large.url)})}return["$scope","getPages","SetTitle",a]});
