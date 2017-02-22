@@ -301,12 +301,14 @@ a.button-wrapper {
       min-height: 225px;
 
       p.post-date {
+        @media (max-width: 991px) { font-size: 10px; }
         font-size: 11px;
         color: $home-featured-color;
         padding-bottom: 10px;
       }
 
       p.post-description {
+        @media (max-width: 991px) { font-size: 12px; }
         font-size: 14px;
         color: $body-text-white;
         margin-bottom: 50px;

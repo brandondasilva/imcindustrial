@@ -46,7 +46,7 @@
 
   <div id="latest-posts" class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-12 portfolio-post" ng-repeat="post in latest">
+      <div class="col-xs-12 col-sm-4 col-md-4 portfolio-post" ng-repeat="post in latest">
         <a ng-href="{{post.slug}}" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
 
         <div class="post-panel">
@@ -54,7 +54,7 @@
           <div class="post-image" style="background-image: url({{post.image}});"></div>
 
           <div class="post-information">
-            <p class="post-date">{{post.date | date:'MM/dd/yyyy'}}</p>
+            <p class="post-date">Posted: {{post.date | date:'MM/dd/yyyy'}}</p>
 
             <p class="post-description" ng-bind-html="post.desc"></p>
 

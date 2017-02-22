@@ -19,10 +19,10 @@ define([], function() {
 
   function PostContentCtrl($scope, $http, $stateParams, apiPath, SetTitle) {
 
-
     var path = apiPath + "posts?filter[category_name]=portfolio&";
 
     $http.get(path + 'filter[name]=' + $stateParams.slug).success(function(res) {
+
       $scope.postContent = res[0];
       $scope.postCategories = res[0].terms.category;
 
@@ -62,6 +62,8 @@ define([], function() {
           });
         }
       }
+    }).error(function(err) {
+      console.log("ERROR: " + err);
     });
    }
 

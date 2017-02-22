@@ -8,20 +8,100 @@
     <div class="overlay"></div>
   </div>
 
+
   <div
     id="career-posting-content"
-    class="page-content">
+    class="page-content"
+    ng-controller="CareerPostingCtrl">
 
     <div class="container">
       <div class="row">
         <div id="posting-content" class="col-xs-12 col-sm-6 col-md-7">
-          <h1>Title</h1>
-          <div class="post-date">Posted: </div>
-          <div class="post-content">stuff</div>
+          <h1 ng-bind-html="postContent.title"></h1>
+          <div class="post-date">Posted: {{postContent.date | date:'MM/dd/yyyy'}}</div>
+          <div class="post-content" ng-bind-html="postContent.content"></div>
         </div>
 
         <div id="posting-form" class="col-xs-12 col-sm-6 col-md-5">
           <h1>Apply here</h1>
+
+          <form name="contactform" novalidate>
+            <div class="col-md-12 name input" ng-class="{ 'has-error': contactform.name.$touched && contactform.name.$invalid }">
+              <label for="inputName">Name</label>
+              <input
+                ng-model="formData.inputName"
+                id="inputName"
+                type="text"
+                name="name"
+                value=""
+                placeholder="Enter Name"
+                required>
+
+              <div class="help-block" ng-messages="contactform.name.$error" ng-if="contactform.name.$touched">
+                <p ng-message="required">Your name is required.</p>
+              </div>
+            </div>
+
+            <div class="col-md-12 email input" ng-class="{ 'has-error': contactform.email.$touched && contactform.email.$invalid }">
+              <label for="inputEmail">Email</label>
+              <input
+                ng-model="formData.inputEmail"
+                id="inputEmail"
+                type="email"
+                name="email"
+                value=""
+                placeholder="Enter Email"
+                required>
+
+              <div class="help-block" ng-messages="contactform.email.$error" ng-if="contactform.email.$touched">
+                <p ng-message="required">Your name is required.</p>
+                <p ng-message="email">Your email must be valid.</p>
+              </div>
+            </div>
+
+            <div class="col-md-12 subject input" ng-class="{ 'has-error': contactform.subject.$touched && contactform.subject.$invalid }">
+              <label for="inputSubject">Subject</label>
+              <input
+                ng-model="formData.inputSubject"
+                id="inputSubject"
+                type="text"
+                name="subject"
+                value=""
+                placeholder="Enter Subject"
+                required>
+
+              <div class="help-block" ng-messages="contactform.subject.$error" ng-if="contactform.subject.$touched">
+                <p ng-message="required">A subject is required.</p>
+              </div>
+            </div>
+
+            <div class="col-md-12 message input" ng-class="{ 'has-error': contactform.message.$touched && contactform.message.$invalid }">
+              <label for="inputMessage">Message</label>
+              <textarea
+                ng-model="formData.inputMessage"
+                id="inputMessage"
+                name="message"
+                rows="4"
+                placeholder="Compose message..."
+                required>
+              </textarea>
+
+              <div class="help-block" ng-messages="contactform.message.$error" ng-if="contactform.message.$touched">
+                <p ng-message="required">A message is required.</p>
+              </div>
+            </div>
+
+            <a ng-click="submit()" class="button-wrapper" ng-class="{ 'disabled-btn': contactform.$invalid }">
+              <span class="button email-button">Send Message</span>
+            </a>
+
+            <div ng-show="clicked" class="loader {{statusClass}}"></div>
+
+            <div ng-show="statusMessage" class="statusMessage">
+              <img src="{{statusImage}}" alt="">
+              <span class="{{statusClass}}" ng-bind-html="statusMessage"></span>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -30,15 +110,30 @@
         <span>Back to Careers</span>
       </a>
     </div>
-  </div>
 
-  <div class="container">
-    <hr>
-  </div>
+    <div class="container">
+      <hr />
+    </div>
 
-  <div class="container">
-    <div class="row">
-      stuff
+    <div
+      id="careers-recent-posts"
+      class="container">
+
+      <div class="row">
+        <div class="col-sm-12 col-md-4 careers-post" ng-repeat="item in recentPostings">
+          <div class="post-panel">
+            <a ng-href="careers/{{item.slug}}"><h2 ng-bind-html="item.title"></h2></a>
+
+            <p class="post-date">Posted: {{item.date | date:'MM/dd/yyyy'}}</p>
+
+            <p class="post-description" ng-bind-html="item.excerpt"></p>
+
+            <a ng-href="careers/{{item.slug}}" class="button-wrapper post-button">
+              <span class="button">More Info</span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>

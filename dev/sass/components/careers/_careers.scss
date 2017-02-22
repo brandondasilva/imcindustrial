@@ -56,6 +56,10 @@
 
 #career-posting {
 
+  @media (max-width: 991px) {
+    h1 { text-align: center; }
+  }
+
   #career-posting-header.page-heading {
     height: 180px;
   }
@@ -69,8 +73,6 @@
 
     #posting-content {
       padding-left: 0px !important;
-
-
 
       .post-content {
         padding-top: 20px;
@@ -93,8 +95,5 @@
         h1 { text-align: center; }
       }
     }
-
-
-
   }
 }

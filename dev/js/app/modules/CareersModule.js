@@ -18,10 +18,12 @@
   define([
     'app/controllers/careers/CareersContentCtrl',
     'app/controllers/careers/CareersPostsCtrl',
+    'app/controllers/careers/CareerPostingCtrl',
     'app/services/getPages'
   ], function(
     CareersContentCtrl,
     CareersPostsCtrl,
+    CareerPostingCtrl,
     getPages
   ) {
 
@@ -30,6 +32,7 @@
     angular.module(moduleName, ['ui.router'])
            .controller('CareersContentCtrl', CareersContentCtrl)
            .controller('CareersPostsCtrl', CareersPostsCtrl)
+           .controller('CareerPostingCtrl', CareerPostingCtrl)
            .factory('getPages', getPages);
 
     return moduleName;

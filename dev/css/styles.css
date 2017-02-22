@@ -177,10 +177,16 @@ a.button-wrapper .button {
         font-size: 11px;
         color: #dfdfdf;
         padding-bottom: 10px; }
+        @media (max-width: 991px) {
+          .portfolio-post .post-panel .post-information p.post-date {
+            font-size: 10px; } }
       .portfolio-post .post-panel .post-information p.post-description {
         font-size: 14px;
         color: #f0f0f0;
         margin-bottom: 50px; }
+        @media (max-width: 991px) {
+          .portfolio-post .post-panel .post-information p.post-description {
+            font-size: 12px; } }
     .portfolio-post .post-panel .button-wrapper.post-button {
       position: absolute;
       bottom: 0;
@@ -729,6 +735,9 @@ a.button-wrapper .button {
       padding-left: 12px;
       padding-right: 12px; }
 
+@media (max-width: 991px) {
+  #career-posting h1 {
+    text-align: center; } }
 #career-posting #career-posting-header.page-heading {
   height: 180px; }
 #career-posting #career-posting-content h1 {
