@@ -469,6 +469,57 @@ a.button-wrapper {
   z-index: -1;
 }
 
+// Helper Messages
+.help-block {
+  &.ng-inactive, p { margin: 0px !important; }
+}
+
+// Forms
+form {
+  .input {
+    padding-top: 15px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    &:first-child {
+      padding-top: 0px;
+    }
+  }
+
+  .statusMessage, .loader {
+    .success { color: #4FDC43; }
+    .failed { color: #a94442; }
+    span { padding-left: 8px; }
+  }
+
+  // Formatting input highlighting to a red-ish colour for errors
+  .ng-touched {
+    &.ng-invalid-required, &.ng-invalid-email {
+      border: #a94442 1px solid;
+      box-shadow: inset 0 0 3px 1px rgba(169,68,66,0.5);
+    }
+  }
+
+  .button-wrapper {
+    padding-top: 10px;
+    float: right;
+    display: inline-block;
+
+    .button.email-button {
+      width: auto !important;
+      color: $body-text-white;
+      background-color: $main-color;
+      // margin-top: 5px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    &.disabled-btn span {
+      background-color: $separator-color !important;
+    }
+  }
+}
+
 // Loaders
 .loader {
   border: 4px solid #f3f3f3; /* Light grey */

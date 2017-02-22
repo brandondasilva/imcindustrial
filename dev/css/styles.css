@@ -281,6 +281,37 @@ a.button-wrapper .button {
   background: rgba(255, 255, 255, 0.5);
   z-index: -1; }
 
+.help-block.ng-inactive, .help-block p {
+  margin: 0px !important; }
+
+form .input {
+  padding-top: 15px;
+  padding-left: 0px;
+  padding-right: 0px; }
+  form .input:first-child {
+    padding-top: 0px; }
+form .statusMessage .success, form .loader .success {
+  color: #4FDC43; }
+form .statusMessage .failed, form .loader .failed {
+  color: #a94442; }
+form .statusMessage span, form .loader span {
+  padding-left: 8px; }
+form .ng-touched.ng-invalid-required, form .ng-touched.ng-invalid-email {
+  border: #a94442 1px solid;
+  box-shadow: inset 0 0 3px 1px rgba(169, 68, 66, 0.5); }
+form .button-wrapper {
+  padding-top: 10px;
+  float: right;
+  display: inline-block; }
+  form .button-wrapper .button.email-button {
+    width: auto !important;
+    color: #f0f0f0;
+    background-color: #812822;
+    padding-left: 10px;
+    padding-right: 10px; }
+  form .button-wrapper.disabled-btn span {
+    background-color: #979797 !important; }
+
 .loader {
   border: 4px solid #f3f3f3;
   /* Light grey */
@@ -768,29 +799,5 @@ a.button-wrapper .button {
 #contact-content #contact-content #contact-form h1 {
   margin-top: 0px;
   text-align: right; }
-#contact-content #contact-content #contact-form .input {
-  padding-top: 15px;
-  padding-left: 0px;
-  padding-right: 0px; }
-#contact-content #contact-content #contact-form .ng-touched.ng-invalid-required, #contact-content #contact-content #contact-form .ng-touched.ng-invalid-email {
-  border: #a94442 1px solid;
-  box-shadow: inset 0 0 3px 1px rgba(169, 68, 66, 0.5); }
-#contact-content #contact-content #contact-form .button-wrapper {
-  float: right;
-  display: inline-block; }
-  #contact-content #contact-content #contact-form .button-wrapper .button.email-button {
-    width: auto !important;
-    color: #f0f0f0;
-    background-color: #812822;
-    padding-left: 10px;
-    padding-right: 10px; }
-  #contact-content #contact-content #contact-form .button-wrapper.disabled-btn span {
-    background-color: #979797 !important; }
-#contact-content #contact-content #contact-form .statusMessage .success, #contact-content #contact-content #contact-form .loader .success {
-  color: #4FDC43; }
-#contact-content #contact-content #contact-form .statusMessage .failed, #contact-content #contact-content #contact-form .loader .failed {
-  color: #a94442; }
-#contact-content #contact-content #contact-form .statusMessage span, #contact-content #contact-content #contact-form .loader span {
-  padding-left: 8px; }
 
 /*# sourceMappingURL=styles.css.map */

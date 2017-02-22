@@ -28,17 +28,17 @@ define([], function() {
         target: "_self"
       })
       .state('portfolio-posts', {
-        url: '/portfolio/:slug/',
+        url: '/portfolio/:slug',
         templateUrl: includes + '/posts/portfolio-posts.html',
         target: "_self"
       })
       .state('portfolio-pagination', {
-        url: '/portfolio/p/:page/',
+        url: '/portfolio/p/:page',
         templateUrl: includes + '/posts/portfolio-pagination.html',
         target: "_self"
       })
       .state('portfolio-category', {
-        url: '/portfolio/c/:category/',
+        url: '/portfolio/c/:category',
         templateUrl: includes + '/posts/category-pagination.html',
         target: "_self"
       })
@@ -53,7 +53,7 @@ define([], function() {
         target: "_self"
       })
       .state('careers-posts', {
-        url: '/careers/:slug/',
+        url: '/careers/:slug',
         templateUrl: includes + '/posts/careers-posts.html',
         target: "_self"
       });
