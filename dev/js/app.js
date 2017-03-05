@@ -40,6 +40,7 @@ define([
     'ngSanitize',
     'ngMessages',
     'ngFileUpload',
+    'vcRecaptcha',
     'ngMaps',
     HomeModule,
     AboutModule,

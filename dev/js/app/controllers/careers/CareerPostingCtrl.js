@@ -49,6 +49,7 @@ define([], function() {
 
     $scope.display = function() {
       console.log($scope.files)
+      console.log($scope.formData.gRecaptchaResponse)
     }
 
     $scope.submit = function() {

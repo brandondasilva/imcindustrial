@@ -7,7 +7,8 @@ define([], function() {
     $urlRouterProvider,
     $locationProvider,
     $uiViewScrollProvider,
-    cfpLoadingBarProvider
+    cfpLoadingBarProvider,
+    vcRecaptchaServiceProvider
   ) {
 
     var includes = 'wp-content/themes/imcindustrial/assets/includes';
@@ -82,6 +83,14 @@ define([], function() {
     $uiViewScrollProvider.useAnchorScroll();
 
     cfpLoadingBarProvider.includeSpinner = false;
+
+    vcRecaptchaServiceProvider.setDefaults({
+      key: '6LcurRcUAAAAAAhk7x1eq0OIxeNp97Wwbdqmlw9L',
+      theme: 'light',
+      size: 'normal',
+      type: 'image',
+      lang: 'en'
+    });
   }
 
   return [
@@ -90,6 +99,7 @@ define([], function() {
     "$locationProvider",
     "$uiViewScrollProvider",
     "cfpLoadingBarProvider",
+    "vcRecaptchaServiceProvider",
     config
   ];
 });

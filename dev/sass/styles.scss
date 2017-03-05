@@ -459,6 +459,12 @@ a.button-wrapper {
   }
 }
 
+.captcha {
+  div:first-child {
+    margin: auto;
+  }
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -487,6 +493,7 @@ form {
   }
 
   .statusMessage, .loader {
+    padding-top: 10px;
     .success { color: #4FDC43; }
     .failed { color: #a94442; }
     span { padding-left: 8px; }
@@ -522,13 +529,20 @@ form {
 
 // Loaders
 .loader {
+  margin-top: 10px;
+  padding-top: 10px;
   border: 4px solid #f3f3f3; /* Light grey */
-  border-top: 4px solid #3498db; /* Blue */
+  border-top: 4px solid $main-color; /* Blue */
   border-radius: 50%;
   width: 24px;
   height: 24px;
   float: left;
   animation: spin 0.75s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 #loading-bar .bar {

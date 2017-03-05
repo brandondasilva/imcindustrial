@@ -15,6 +15,7 @@ require(['wp-content/themes/imcindustrial/assets/js/config'], function() {
     'ngMessages',
     'ng-file-upload-shim',
     'ng-file-upload',
+    'angular-recaptcha',
     'ngMaps',
     'ui.router',
     'angular-touch',

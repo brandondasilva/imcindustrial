@@ -11,6 +11,7 @@ require.config({
     'ngMessages'       : '../bower_components/angular-messages/angular-messages.min',
     'ng-file-upload-shim' : '../bower_components/ng-file-upload-shim/ng-file-upload-shim.min',
     'ng-file-upload'   : '../bower_components/ng-file-upload/ng-file-upload.min',
+    'angular-recaptcha': '../bower_components/angular-recaptcha/release/angular-recaptcha.min',
     'ngMaps'           : '../bower_components/ng-maps/dist/ng-maps.min',
     'ui.router'        : '../bower_components/angular-ui-router/release/angular-ui-router.min',
     'angular-touch'    : '../bower_components/angular-touch/angular-touch.min',
@@ -50,6 +51,10 @@ require.config({
       deps: ["angular"],
       exports: 'ng-file-upload'
     },
+    'angular-recaptcha': {
+      deps: ["angular"],
+      exports: 'angular-recaptcha'
+    },
     'ngMaps': {
       deps: ["angular"],
       exports: 'ngMaps'
@@ -88,6 +93,7 @@ require.config({
     'ngMessages',
     'ng-file-upload-shim',
     'ng-file-upload',
+    'angular-recaptcha',
     'ngMaps',
     'ui.router',
     'angular-touch',
