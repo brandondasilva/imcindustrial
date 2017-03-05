@@ -800,8 +800,10 @@ form .button-wrapper {
     #career-posting #career-posting-content #posting-form h1 {
       text-align: right; } }
   @media (max-width: 991px) {
-    #career-posting #career-posting-content #posting-form h1 {
-      text-align: center; } }
+    #career-posting #career-posting-content #posting-form {
+      padding-left: 0px !important; }
+      #career-posting #career-posting-content #posting-form h1 {
+        text-align: center; } }
   #career-posting #career-posting-content #posting-form hr {
     margin-top: 10px;
     margin-bottom: 10px; }
