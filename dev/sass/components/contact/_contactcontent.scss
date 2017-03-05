@@ -10,14 +10,21 @@
           padding-right: 0px !important;
         }
 
-        .button-wrapper {
-          float: center;
-        }
+        // .button-wrapper {
+        //   float: center;
+        // }
       }
 
       h1 {
         margin-top: 0px;
         text-align: right;
+      }
+
+      .captcha {
+        iframe {
+          margin-top: 10px;
+        }
+
       }
     }
   }

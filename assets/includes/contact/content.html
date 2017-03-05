@@ -87,15 +87,31 @@
                 </div>
               </div>
 
-              <a ng-click="submit()" class="button-wrapper" ng-class="{ 'disabled-btn': contactform.$invalid }">
-                <span class="button email-button">Send Message</span>
-              </a>
+              <div class="">
+                <hr />
+              </div>
 
-              <div ng-show="clicked" class="loader {{statusClass}}"></div>
 
-              <div ng-show="statusMessage" class="statusMessage">
-                <img src="{{statusImage}}" alt="">
-                <span class="{{statusClass}}" ng-bind-html="statusMessage"></span>
+              <div
+                class="captcha"
+                vc-recaptcha
+                ng-model="formData.gRecaptchaResponse"></div>
+
+              <div class="">
+                <a
+                  ng-click="submit()"
+                  class="button-wrapper"
+                  ng-class="{ 'disabled-btn': contactform.$invalid || (formData.gRecaptchaResponse === undefined) }">
+
+                  <span class="button email-button">Send Message</span>
+                </a>
+
+                <div ng-show="clicked" class="loader {{statusClass}}"></div>
+
+                <div ng-show="statusMessage" class="statusMessage">
+                  <img src="{{statusImage}}" alt="">
+                  <span class="{{statusClass}}" ng-bind-html="statusMessage"></span>
+                </div>
               </div>
             </form>
           </div>
