@@ -789,6 +789,19 @@ form .button-wrapper {
   @media (max-width: 991px) {
     #career-posting #career-posting-content #posting-form h1 {
       text-align: center; } }
+  #career-posting #career-posting-content #posting-form .submit-btn {
+    padding-top: 0px; }
+  #career-posting #career-posting-content #posting-form hr {
+    margin-top: 10px;
+    margin-bottom: 10px; }
+  #career-posting #career-posting-content #posting-form #uploadFiles .left {
+    padding-top: 10px; }
+    #career-posting #career-posting-content #posting-form #uploadFiles .left span {
+      font-size: 12px; }
+    #career-posting #career-posting-content #posting-form #uploadFiles .left h4 {
+      margin-top: 0px;
+      margin-bottom: 5px;
+      font-size: 16px; }
 
 @media (max-width: 767px) {
   #contact-content #contact-content #contact-form h1 {

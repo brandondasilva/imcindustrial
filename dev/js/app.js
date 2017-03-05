@@ -39,6 +39,7 @@ define([
     'angular-loading-bar',
     'ngSanitize',
     'ngMessages',
+    'ngFileUpload',
     'ngMaps',
     HomeModule,
     AboutModule,

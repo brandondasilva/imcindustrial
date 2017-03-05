@@ -9,6 +9,8 @@ require.config({
     'base64'           : '../bower_components/angular-base64/angular-base64.min',
     'ngSanitize'       : '../bower_components/angular-sanitize/angular-sanitize.min',
     'ngMessages'       : '../bower_components/angular-messages/angular-messages.min',
+    'ng-file-upload-shim' : '../bower_components/ng-file-upload-shim/ng-file-upload-shim.min',
+    'ng-file-upload'   : '../bower_components/ng-file-upload/ng-file-upload.min',
     'ngMaps'           : '../bower_components/ng-maps/dist/ng-maps.min',
     'ui.router'        : '../bower_components/angular-ui-router/release/angular-ui-router.min',
     'angular-touch'    : '../bower_components/angular-touch/angular-touch.min',
@@ -39,6 +41,14 @@ require.config({
     'ngMessages': {
       deps: ["angular"],
       exports: 'ngMessages'
+    },
+    'ng-file-upload-shim': {
+      deps: ["angular"],
+      exports: 'ng-file-upload-shim'
+    },
+    'ng-file-upload': {
+      deps: ["angular"],
+      exports: 'ng-file-upload'
     },
     'ngMaps': {
       deps: ["angular"],
@@ -76,6 +86,8 @@ require.config({
     'base64',
     'ngSanitize',
     'ngMessages',
+    'ng-file-upload-shim',
+    'ng-file-upload',
     'ngMaps',
     'ui.router',
     'angular-touch',

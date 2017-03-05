@@ -13,6 +13,8 @@ require(['wp-content/themes/imcindustrial/assets/js/config'], function() {
     'base64',
     'ngSanitize',
     'ngMessages',
+    'ng-file-upload-shim',
+    'ng-file-upload',
     'ngMaps',
     'ui.router',
     'angular-touch',

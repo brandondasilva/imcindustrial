@@ -20,6 +20,8 @@
           <h1 ng-bind-html="postContent.title"></h1>
           <div class="post-date">Posted: {{postContent.date | date:'MM/dd/yyyy'}}</div>
           <div class="post-content" ng-bind-html="postContent.content"></div>
+
+          <hr class="hidden-sm hidden-md hidden-lg">
         </div>
 
         <div id="posting-form" class="col-xs-12 col-sm-6 col-md-5">
@@ -59,22 +61,6 @@
               </div>
             </div>
 
-            <div class="col-md-12 subject input" ng-class="{ 'has-error': contactform.subject.$touched && contactform.subject.$invalid }">
-              <label for="inputSubject">Subject</label>
-              <input
-                ng-model="formData.inputSubject"
-                id="inputSubject"
-                type="text"
-                name="subject"
-                value=""
-                placeholder="Enter Subject"
-                required>
-
-              <div class="help-block" ng-messages="contactform.subject.$error" ng-if="contactform.subject.$touched">
-                <p ng-message="required">A subject is required.</p>
-              </div>
-            </div>
-
             <div class="col-md-12 message input" ng-class="{ 'has-error': contactform.message.$touched && contactform.message.$invalid }">
               <label for="inputMessage">Message</label>
               <textarea
@@ -91,16 +77,49 @@
               </div>
             </div>
 
-            <a ng-click="submit()" class="button-wrapper" ng-class="{ 'disabled-btn': contactform.$invalid }">
-              <span class="button email-button">Send Message</span>
-            </a>
+            <div id="uploadFiles" class="row">
+              <div class="left">
+                <h4>Files (PDF and Image Files Only)</h4>
+                <div class="files-list" ng-repeat="file in files">
+                  <span ng-bind-html="file"></span>
+                </div>
+              </div>
 
-            <div ng-show="clicked" class="loader {{statusClass}}"></div>
+              <a
+                href=""
+                ngf-select
+                ng-model="files"
+                name="files"
+                ngf-multiple="true"
+                ngf-pattern="'image/*,application/pdf'"
+                ngf-max-size="10MB"
+                class="button-wrapper"
+                ng-click="display()">
 
-            <div ng-show="statusMessage" class="statusMessage">
-              <img src="{{statusImage}}" alt="">
-              <span class="{{statusClass}}" ng-bind-html="statusMessage"></span>
+                <span class="button email-button">Attach Files</span>
+              </a>
             </div>
+
+            <hr />
+
+            <div class="">
+              <a
+                href=""
+                ng-click="submit()"
+                class="button-wrapper submit-btn"
+                ng-class="{ 'disabled-btn': contactform.$invalid && files.length === 0 }">
+
+                <span class="button email-button">Submit</span>
+              </a>
+
+              <div ng-show="clicked" class="loader {{statusClass}}"></div>
+
+              <div ng-show="statusMessage" class="statusMessage">
+                <img src="{{statusImage}}" alt="">
+                <span class="{{statusClass}}" ng-bind-html="statusMessage"></span>
+              </div>
+            </div>
+
           </form>
         </div>
       </div>
