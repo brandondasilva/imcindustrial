@@ -104,6 +104,32 @@
         .left {
           padding-top: 10px;
 
+          .files-list {
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+
+            padding-bottom: 5px;
+
+            .delete {
+              background-image: url($imagePath + 'icons/delete.svg');
+              width: 10px;
+              height: 10px;
+              background-repeat: no-repeat;
+              display: inline-block;
+            }
+
+            .pdf-icon {
+              background-image: url($imagePath + 'icons/pdf-icon.svg');
+              width: 22px;
+              height: 22px;
+              background-repeat: no-repeat;
+              display: inline-block;
+              margin-left: 6px;
+              margin-right: 5px;
+            }
+          }
+
           span {
             font-size: 12px;
           }

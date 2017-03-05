@@ -47,9 +47,12 @@ define([], function() {
       console.log("ERROR: " + err);
     });
 
-    $scope.display = function() {
-      console.log($scope.files)
-      console.log($scope.formData.gRecaptchaResponse)
+    $scope.delete = function(filename) {
+      for (var i = 0; i < $scope.files.length; i++) {
+        if ($scope.files[i].name == filename) {
+          $scope.files.splice(i,1);
+        }
+      }
     }
 
     $scope.submit = function() {
