@@ -120,15 +120,24 @@
               display: inline-block;
             }
 
-            .pdf-icon {
-              background-image: url($imagePath + 'icons/pdf-icon.svg');
+            .icon {
               width: 22px;
               height: 22px;
               background-repeat: no-repeat;
               display: inline-block;
               margin-left: 6px;
               margin-right: 5px;
+
+              &.pdf-icon {
+                background-image: url($imagePath + 'icons/pdf-icon.svg');
+              }
+
+              &.word-icon {
+                background-image: url($imagePath + 'icons/word.svg');
+              }
             }
+
+
           }
 
           span {

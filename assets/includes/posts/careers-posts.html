@@ -82,7 +82,7 @@
                 <h4>Files (PDF Files Only)</h4>
                 <div class="files-list" ng-repeat="file in files">
                   <a href="" class="delete" ng-click="delete(file.name)"></a>
-                  <span class="pdf-icon"></span>
+                  <span class="icon" ng-class="icon(file.name)"></span>
                   <span ng-bind-html="file.name"></span>
                 </div>
               </div>
@@ -93,7 +93,7 @@
                 ng-model="files"
                 name="files"
                 ngf-multiple="true"
-                ngf-pattern="'application/pdf'"
+                ngf-pattern="'.pdf,.doc,.docx'"
                 ngf-max-size="5MB"
                 class="button-wrapper">
 

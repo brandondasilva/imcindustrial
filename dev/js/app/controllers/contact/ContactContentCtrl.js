@@ -33,7 +33,7 @@ define([], function() {
 
     $scope.submit = function() {
 
-      var url = 'https://hidden-inlet-49886.herokuapp.com/api/contact';
+      var url = 'https://imcindustrial.herokuapp.com/api/contact';
 
       $scope.statusMessage = null;
       $scope.clicked = true;

@@ -56,12 +56,17 @@
         padding: 40px;
         margin: auto;
         font-weight: bold;
-        div:first-child {
+
+        div.service-desc {
           position: relative;
           top: 50%;
           transform: translateY(-50%);
         }
 
+        .button {
+          background-color: $main-black;
+          color: $body-text-white;
+        }
       }
     }
 

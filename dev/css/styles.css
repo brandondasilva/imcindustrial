@@ -597,10 +597,13 @@ form .button-wrapper {
         height: 275px !important;
         width: 275px !important;
         padding: 50px; } }
-    #homeservices #service-content .service-image-wrapper .service-image div:first-child {
+    #homeservices #service-content .service-image-wrapper .service-image div.service-desc {
       position: relative;
       top: 50%;
       transform: translateY(-50%); }
+    #homeservices #service-content .service-image-wrapper .service-image .button {
+      background-color: #1E1E1E;
+      color: #f0f0f0; }
 
 #homefeatured {
   background-color: #dfdfdf;
@@ -820,14 +823,17 @@ form .button-wrapper {
         height: 10px;
         background-repeat: no-repeat;
         display: inline-block; }
-      #career-posting #career-posting-content #posting-form #uploadFiles .left .files-list .pdf-icon {
-        background-image: url("../images/icons/pdf-icon.svg");
+      #career-posting #career-posting-content #posting-form #uploadFiles .left .files-list .icon {
         width: 22px;
         height: 22px;
         background-repeat: no-repeat;
         display: inline-block;
         margin-left: 6px;
         margin-right: 5px; }
+        #career-posting #career-posting-content #posting-form #uploadFiles .left .files-list .icon.pdf-icon {
+          background-image: url("../images/icons/pdf-icon.svg"); }
+        #career-posting #career-posting-content #posting-form #uploadFiles .left .files-list .icon.word-icon {
+          background-image: url("../images/icons/word.svg"); }
     #career-posting #career-posting-content #posting-form #uploadFiles .left span {
       font-size: 12px; }
     #career-posting #career-posting-content #posting-form #uploadFiles .left h4 {

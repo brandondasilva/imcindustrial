@@ -11,7 +11,13 @@
         <div class="service-image-wrapper">
           <div class="service-image" style="background-image:url('{{service.image}}'); ">
 
-            <div ng-bind-html="service.desc"></div>
+            <div class="service-desc">
+              <span ng-bind-html="service.desc"></span>
+
+              <a href="#" class="button-wrapper">
+                <span class="button">Read More</span>
+              </a>
+            </div>
 
             <div class="overlay"></div>
           </div>

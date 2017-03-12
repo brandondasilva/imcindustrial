@@ -55,9 +55,19 @@ define([], function() {
       }
     }
 
+    $scope.icon = function(name) {
+      var search = name.split('.');
+
+      if (search[search.length - 1] == "pdf") {
+        return 'pdf-icon';
+      } else if (search[search.length - 1] == "doc" || search[search.length - 1] == "docx") {
+        return 'word-icon';
+      }
+    }
+
     $scope.submit = function() {
 
-      var url = 'https://hidden-inlet-49886.herokuapp.com/api/careers';
+      var url = 'https://imcindustrial.herokuapp.com/api/careers';
 
       $scope.statusMessage = null;
       $scope.clicked = true;
