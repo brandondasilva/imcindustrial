@@ -30,14 +30,15 @@ define([], function() {
     var searchPath = apiPath + "posts?filter[category_name]=careers&";
     var jobTitle, jobLink;
 
-    $http.get(searchPath + 'filter[name]=' + $stateParams.slug).success(function(res) {
+    $http.get(searchPath + 'filter[name]=' + $stateParams.slug).then(function(res) {
+      console.log(res.status);
       $scope.postContent = res[0];
       jobTitle = res[0].title;
       jobLink = "imcindustrial.ca/careers/" + res[0].slug;
 
       // Set Page Title
       SetTitle.setTitle($scope.postContent.title + ' | IMC Industrial Inc.');
-    }).error(function(err) {
+    }, function(err) {
       console.log("ERROR: " + err);
     });
 

@@ -62,6 +62,15 @@ define([
   app.constant('path', 'wp-content/themes/imcindustrial/assets');
   app.constant('apiPath', 'wp-json/');
 
+  app.run(['$rootScope', function($rootScope, $state) {
+    $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
+      event.preventDefault();
+      console.log('ERROR ON PAGE')
+      // $state.get('error').error = { code: 123, description: 'Exception stack trace' }
+      return $state.go('/');
+    });
+  }]);
+
   app.init = function() {
     angular.element(document).ready(function() {
       angular.bootstrap(document, [appName]);
