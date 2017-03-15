@@ -188,17 +188,15 @@ a.button-wrapper .button {
           .portfolio-post .post-panel .post-information p.post-description {
             font-size: 12px; } }
     .portfolio-post .post-panel .button-wrapper.post-button {
-      position: absolute;
+      position: relative;
       bottom: 0;
       left: 0;
-      margin: 20px;
-      margin-left: 30px;
       width: auto; }
     .portfolio-post .post-panel .button-wrapper .button {
       background-color: #1E1E1E;
       color: #f0f0f0;
       text-align: center;
-      width: 100% !important;
+      width: 50% !important;
       padding-left: 12px;
       padding-right: 12px; }
     @media (max-width: 767px) {
@@ -251,6 +249,11 @@ a.button-wrapper .button {
     box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
     border-radius: 6px;
     width: 100%; }
+
+.page-posts {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; }
 
 .categories h2 {
   margin-top: 0px; }
@@ -731,8 +734,7 @@ form .button-wrapper {
 #post #post-content .post-date {
   color: #979797; }
 #post #latest-posts p {
-  color: #f0f0f0;
-  margin-bottom: 0px; }
+  color: #f0f0f0; }
 
 .pagination-page {
   padding-bottom: 30px; }

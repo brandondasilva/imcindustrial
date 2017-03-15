@@ -19,6 +19,7 @@ define([], function() {
   function CareerPostingCtrl(
     $scope,
     $http,
+    $state,
     $stateParams,
     Upload,
     getPages,
@@ -31,13 +32,18 @@ define([], function() {
     var jobTitle, jobLink;
 
     $http.get(searchPath + 'filter[name]=' + $stateParams.slug).then(function(res) {
-      console.log(res.status);
-      $scope.postContent = res[0];
-      jobTitle = res[0].title;
-      jobLink = "imcindustrial.ca/careers/" + res[0].slug;
 
-      // Set Page Title
-      SetTitle.setTitle($scope.postContent.title + ' | IMC Industrial Inc.');
+      if (res.data.length == 0) {
+        // Determines if the page actually exists
+        $state.go('main');
+      } else {
+        $scope.postContent = res.data[0];
+        jobLink = "imcindustrial.ca/careers/" + res.data[0].slug;
+
+        // Set Page Title
+        SetTitle.setTitle($scope.postContent.title + ' | IMC Industrial Inc.');
+      }
+
     }, function(err) {
       console.log("ERROR: " + err);
     });
@@ -128,6 +134,7 @@ define([], function() {
   return [
     "$scope",
     "$http",
+    "$state",
     "$stateParams",
     "Upload",
     "getPages",

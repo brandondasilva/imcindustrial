@@ -14,29 +14,7 @@ define([], function() {
 
     var includes = 'wp-content/themes/imcindustrial/assets/includes';
 
-    // $urlMatcherFactoryProvider.caseInsensitive(true);
-    // $urlMatcherFactoryProvider.strictMode(false);
-
-    $urlRouterProvider.when('', '/');
-
-    $urlRouterProvider.otherwise('/');
-
-    // Fixes any URL that doesn't have a trailing by
-    // adding one and redirecting the route correctly.
-    $urlRouterProvider.rule(function ($injector, $location) {
-      var path = $location.url();
-
-      // check to see if the path already has a slash where it should be
-      if (path[path.length - 1] === '/' || path.indexOf('/?') > -1) {
-          return;
-      }
-
-      if (path.indexOf('?') > -1) {
-          return path.replace('?', '/?');
-      }
-
-      return path + '/';
-    });
+    $urlMatcherFactoryProvider.strictMode(false);
 
     $locationProvider.html5Mode(true);
 
@@ -56,7 +34,7 @@ define([], function() {
         target: "_self"
       })
       .state('portfolio-posts', {
-        url: '/portfolio/:slug/',
+        url: '/portfolio/:slug',
         templateUrl: includes + '/posts/portfolio-posts.html',
         target: "_self"
       })
@@ -81,10 +59,13 @@ define([], function() {
         target: "_self"
       })
       .state('careers-posts', {
-        url: '/careers/:slug/',
+        url: '/careers/:slug',
         templateUrl: includes + '/posts/careers-posts.html',
         target: "_self"
       });
+
+
+    $urlRouterProvider.otherwise('/');
 
     $uiViewScrollProvider.useAnchorScroll();
 
@@ -97,6 +78,7 @@ define([], function() {
       type: 'image',
       lang: 'en'
     });
+    
   }
 
   return [

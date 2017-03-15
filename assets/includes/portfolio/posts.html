@@ -23,7 +23,7 @@
   <hr class="">
 
   <div id="portfolio-content" class="row">
-    <div class="col-sm-12 col-md-8 portfolio-content">
+    <div class="col-sm-12 col-md-8 portfolio-content page-posts">
       <div class="col-xs-12 col-sm-6 col-md-6 portfolio-post" ng-repeat="post in portfolioPosts">
         <a ng-href="{{post.slug}}" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
 
@@ -42,13 +42,13 @@
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="view-posts">
-        <a ui-sref="portfolio-pagination">
-          <span>View All Posts</span>
-          <div id="next"></div>
-        </a>
-      </div>
+    <div class="view-posts">
+      <a ui-sref="portfolio-pagination">
+        <span>View All Posts</span>
+        <div id="next"></div>
+      </a>
     </div>
 
     <div class="col-md-4 categories hidden-sm hidden-xs" ng-controller="CategoryCtrl">
