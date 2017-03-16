@@ -24,11 +24,22 @@ define([], function() {
       $scope.services = [];
 
       for (var i = 0; i < $scope.result.length; i++) {
+
+        var link = "";
+
+        if ($scope.result[i].slug == 'millwrighting') {
+          link = "portfolio/c/" + $scope.result[i].slug
+        } else if ($scope.result[i].slug == 'rigging') {
+          link = "portfolio/c/" + $scope.result[i].slug
+        } else {
+          link = "portfolio/c/" + $scope.result[i].slug
+        }
+
         $scope.services.push({
           heading: $scope.result[i].title,
           desc: $scope.result[i].excerpt,
           image: $scope.result[i].featured_image.attachment_meta.sizes.medium.url,
-          link: '#'
+          link: link
         });
       }
     })
