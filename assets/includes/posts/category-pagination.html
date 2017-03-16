@@ -15,7 +15,7 @@
     <div class="container">
       <h1 ng-bind-html="vm.pageTitle"></h1>
 
-      <div class="row">
+      <div class="row page-posts">
         <div class="col-xs-12 col-sm-6 col-md-4 portfolio-post" ng-repeat="item in vm.items">
           <a ng-href="portfolio/{{item.slug}}" class="post-title"><h2 ng-bind-html="item.title"></h2></a>
 

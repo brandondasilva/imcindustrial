@@ -18,7 +18,7 @@
     class="page-content">
 
     <div class="container">
-      <div class="row">
+      <div class="row page-posts">
         <div class="col-xs-12 col-sm-6 col-md-4 careers-post" ng-repeat="item in vm.items">
           <div class="post-panel">
             <a ng-href="careers/{{item.slug}}"><h2 ng-bind-html="item.title"></h2></a>
@@ -38,13 +38,13 @@
     <div class="container pagination-wrapper">
       <ul ng-if="vm.pager.pages.length" class="pagination">
         <li ng-class="{ disabled : vm.pager.currentPage === 1 }">
-          <a ng-href="careers/#{{vm.pager.currentPage - 1}}" ng-click="vm.setPage(vm.pager.currentPage - 1); scroll();">Previous</a>
+          <a href="" ng-click="vm.setPage(vm.pager.currentPage - 1); scroll();">Previous</a>
         </li>
         <li class="hidden-sm hidden-xs" ng-repeat="page in vm.pager.pages" ng-class="{ active : vm.pager.currentPage === page}">
-          <a ng-href="careers/#{{page}}" ng-click="vm.setPage(page); scroll();">{{page}}</a>
+          <a href="" ng-click="vm.setPage(page); scroll();">{{page}}</a>
         </li>
         <li ng-class="{ disabled : vm.pager.currentPage === vm.pager.totalPages }">
-          <a ng-href="careers/#{{vm.pager.currentPage + 1}}" ng-click="vm.setPage(vm.pager.currentPage + 1); scroll();">Next</a>
+          <a href="" ng-click="vm.setPage(vm.pager.currentPage + 1); scroll();">Next</a>
         </li>
       </ul>
     </div>

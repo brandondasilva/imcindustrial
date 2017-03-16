@@ -24,9 +24,13 @@
       .service-image {
 
         @media (min-width: 768px) and (max-width: 991px) {
-          height: 180px !important;
-          width: 180px !important;
+          height: 215px !important;
+          width: 215px !important;
           padding: 20px;
+
+          div.service-desc {
+            font-size: 12px;
+          }
         }
 
         @media (min-width: 992px) {

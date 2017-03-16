@@ -23,33 +23,36 @@
   <hr class="">
 
   <div id="portfolio-content" class="row">
-    <div class="col-sm-12 col-md-8 portfolio-content page-posts">
-      <div class="col-xs-12 col-sm-6 col-md-6 portfolio-post" ng-repeat="post in portfolioPosts">
-        <a ng-href="{{post.slug}}" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
+    <div class="col-sm-12 col-md-8 portfolio-content">
+      <div class="page-posts">
+        <div class="col-xs-12 col-sm-6 col-md-6 portfolio-post" ng-repeat="post in portfolioPosts">
+          <a ng-href="{{post.slug}}" class="post-title"><h2 ng-bind-html="post.heading"></h2></a>
 
-        <div class="post-panel">
+          <div class="post-panel">
 
-          <div class="post-image" style="background-image: url({{post.image}});"></div>
+            <div class="post-image" style="background-image: url({{post.image}});"></div>
 
-          <div class="post-information">
-            <p class="post-date">Posted: {{post.date | date:'MM/dd/yyyy'}}</p>
+            <div class="post-information">
+              <p class="post-date">Posted: {{post.date | date:'MM/dd/yyyy'}}</p>
 
-            <p class="post-description" ng-bind-html="post.desc"></p>
+              <p class="post-description" ng-bind-html="post.desc"></p>
 
-            <a ng-href="{{post.slug}}" class="button-wrapper post-button">
-              <span class="button">Read More</span>
-            </a>
+              <a ng-href="{{post.slug}}" class="button-wrapper post-button">
+                <span class="button">Read More</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>
+
+      <div class="view-posts">
+        <a ui-sref="portfolio-pagination">
+          <span>View All Posts</span>
+          <div id="next"></div>
+        </a>
+      </div>
     </div>
 
-    <div class="view-posts">
-      <a ui-sref="portfolio-pagination">
-        <span>View All Posts</span>
-        <div id="next"></div>
-      </a>
-    </div>
 
     <div class="col-md-4 categories hidden-sm hidden-xs" ng-controller="CategoryCtrl">
       <h2>Categories</h2>
