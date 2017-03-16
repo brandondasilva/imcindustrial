@@ -148,6 +148,8 @@ a.button-wrapper {
 }
 
 .back-button {
+  display: flex;
+  float: left;
   span { padding-left: 10px; }
 }
 

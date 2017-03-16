@@ -17,23 +17,38 @@
 
 define([], function() {
 
-  function PostContentCtrl($scope, $http, $stateParams, apiPath, SetTitle) {
+  function PostContentCtrl(
+    $scope,
+    $http,
+    $state,
+    $stateParams,
+    apiPath,
+    SetTitle
+  ) {
 
     var path = apiPath + "posts?filter[category_name]=portfolio&";
 
-    $http.get(path + 'filter[name]=' + $stateParams.slug).success(function(res) {
+    $http.get(path + 'filter[name]=' + $stateParams.slug).then(function(res) {
 
-      $scope.postContent = res[0];
-      $scope.postCategories = res[0].terms.category;
+      if (res.data.length == 0) {
+        // Determines if the page actually exists
+        $state.go('main');
+      } else {
+        $scope.postContent = res.data[0];
+        $scope.postCategories = res.data[0].terms.category;
 
-      // Set Page Title
-      SetTitle.setTitle($scope.postContent.title + ' | IMC Industrial Inc.');
+        // Set Page Title
+        SetTitle.setTitle($scope.postContent.title + ' | IMC Industrial Inc.');
 
-      $http.get(apiPath + 'media?filter[post_parent]=' + res[0].ID).success(function(res2) {
-        if ( res2.length >= 1 ) {
-          $scope.media = res2;
-        }
-      });
+        $http.get(apiPath + 'media?filter[post_parent]=' + res.data[0].ID).success(function(res2) {
+          if ( res2.length >= 1 ) {
+            $scope.media = res2;
+          }
+        });
+      }
+
+    }, function(err) {
+      console.log("ERROR: " + err);
     });
 
     $scope.latest = [];
@@ -67,6 +82,14 @@ define([], function() {
     });
    }
 
-   return ["$scope", "$http", "$stateParams", "apiPath", "SetTitle", PostContentCtrl];
+   return [
+    "$scope",
+    "$http",
+    "$state",
+    "$stateParams",
+    "apiPath",
+    "SetTitle",
+    PostContentCtrl
+  ];
 
- })
+})

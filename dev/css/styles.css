@@ -69,8 +69,11 @@ a.button-wrapper .button {
   a.button-wrapper .button:active {
     box-shadow: 2px 2px 2.5px #191919; }
 
-.back-button span {
-  padding-left: 10px; }
+.back-button {
+  display: flex;
+  float: left; }
+  .back-button span {
+    padding-left: 10px; }
 
 .disabled-btn {
   pointer-events: none; }
