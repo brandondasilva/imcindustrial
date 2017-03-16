@@ -9,7 +9,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'dev/js',
         src: ['*.js', '**/*.js'],
-        dest: 'assets/js',
+        dest: 'client/assets/js',
         ext: '.js'
       }
     },
@@ -20,7 +20,7 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'dev/sass',
           src: ['*.scss'],
-          dest: 'dev/css',
+          dest: 'dev/client/css',
           ext: '.css'
         }]
       }
@@ -32,24 +32,15 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'dev/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'assets/css',
+          dest: 'client/assets/css',
           ext: '.min.css'
         }]
-      }
-    },
-
-    wiredep: {
-      task: {
-        src: [
-          '/*.php'
-        ]
       }
     }
 
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
-  grunt.loadNpmTasks('grunt-wiredep');
 
   grunt.registerTask('default', ['uglify', 'sass', 'cssmin']);
   grunt.registerTask('grunt-sass', ['sass']);
