@@ -1,6 +1,6 @@
 require.config({
 
-  baseUrl: "wp-content/themes/imcindustrial/assets/js",
+  baseUrl: "wordpress/wp-content/themes/imcindustrial/assets/js",
 
   paths: {
     '$'                : '../bower_components/jquery/dist/jquery.min',

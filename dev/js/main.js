@@ -5,7 +5,7 @@ if (typeof jQuery === 'function') {
   define('jquery', function () { return jQuery; });
 }
 
-require(['wp-content/themes/imcindustrial/assets/js/config'], function() {
+require(['wordpress/wp-content/themes/imcindustrial/assets/js/config'], function() {
   require([
     '$',
     'underscore',

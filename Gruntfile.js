@@ -1,4 +1,10 @@
+// Gruntfile for all tasks on IMC Industrial
+
 module.exports = function(grunt) {
+  // require('load-grunt-tasks')(grunt, {
+  //
+  // });
+
   require('load-grunt-tasks')(grunt);
 
   grunt.initConfig({
@@ -9,7 +15,7 @@ module.exports = function(grunt) {
         expand: true,
         cwd: 'dev/js',
         src: ['*.js', '**/*.js'],
-        dest: 'client/assets/js',
+        dest: 'public/assets/js',
         ext: '.js'
       }
     },
@@ -32,15 +38,20 @@ module.exports = function(grunt) {
           expand: true,
           cwd: 'dev/css',
           src: ['*.css', '!*.min.css'],
-          dest: 'client/assets/css',
+          dest: 'public/assets/css',
           ext: '.min.css'
         }]
       }
     }
 
+    // watch: {
+    //
+    // }
+
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
+  // grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['uglify', 'sass', 'cssmin']);
   grunt.registerTask('grunt-sass', ['sass']);

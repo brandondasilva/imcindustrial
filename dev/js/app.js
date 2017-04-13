@@ -59,8 +59,9 @@ define([
      .factory('SetTitle', SetTitle);
 
   app.constant('_', window._); // Underscore
-  app.constant('path', 'wp-content/themes/imcindustrial/assets');
-  app.constant('apiPath', 'wp-json/');
+  app.constant('path', 'wordpress/wp-content/themes/imcindustrial/assets');
+  app.constant('apiPath', "http://wordpress.imcindustrial.ca/wp-json/")
+  // app.constant('apiPath', 'wp-json/');
 
   app.run(['$rootScope', function($rootScope, $state) {
     $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
