@@ -26,17 +26,14 @@ define([], function() {
 
     $scope.items = [
       {
-        name: "About",
+        name: "About Us",
         link: "about"
       }, {
-        name: "Portfolio",
+        name: "Projects",
         link: "portfolio"
       }, {
         name: "Careers",
         link: "careers"
-      }, {
-        name: "Contact",
-        link: "contact"
       }
     ];
 

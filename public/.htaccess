@@ -9,7 +9,11 @@ RewriteEngine On
 RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /index.php [L]
+
+# Dev environment
+RewriteRule . /imcindustrial/index.html [L]
+# Production environment
+# RewriteRule . /index.html [L]
 
 <IfModule mod_proxy_http.c>
     RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator [NC,OR]

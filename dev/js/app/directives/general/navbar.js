@@ -22,7 +22,7 @@ define([], function() {
       scope: {
         info: '='
       },
-      templateUrl: 'wordpress/wp-content/themes/imcindustrial/assets/includes/general/navbar.html'
+      templateUrl: 'assets/includes/general/navbar.html'
     }
   }
 

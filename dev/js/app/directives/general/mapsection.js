@@ -22,7 +22,7 @@
        scope: {
          info: '='
        },
-       templateUrl: 'wordpress/wp-content/themes/imcindustrial/assets/includes/general/mapsection.html'
+       templateUrl: 'assets/includes/general/mapsection.html'
      }
    }
 

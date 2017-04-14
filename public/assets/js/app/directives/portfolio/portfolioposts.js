@@ -1,1 +1,1 @@
-"use strict";define([],function(){function a(){return{restrict:"E",scope:{info:"="},templateUrl:"wordpress/wp-content/themes/imcindustrial/assets/includes/portfolio/posts.html"}}return[a]});
+"use strict";define([],function(){function a(){return{restrict:"E",scope:{info:"="},templateUrl:"assets/includes/portfolio/posts.html"}}return[a]});

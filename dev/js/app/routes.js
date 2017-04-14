@@ -12,7 +12,7 @@ define([], function() {
     vcRecaptchaServiceProvider
   ) {
 
-    var includes = 'wordpress/wp-content/themes/imcindustrial/assets/includes';
+    var includes = 'assets/includes';
 
     $urlMatcherFactoryProvider.strictMode(false);
 

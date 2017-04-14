@@ -59,7 +59,7 @@ define([
      .factory('SetTitle', SetTitle);
 
   app.constant('_', window._); // Underscore
-  app.constant('path', 'wordpress/wp-content/themes/imcindustrial/assets');
+  app.constant('path', 'assets');
   app.constant('apiPath', "http://wordpress.imcindustrial.ca/wp-json/")
   // app.constant('apiPath', 'wp-json/');
 
