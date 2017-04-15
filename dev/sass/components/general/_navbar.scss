@@ -55,7 +55,7 @@
     div, a.menu {
       display: table-cell;
       padding-right: $nav-items-padding;
-      width: 80px;
+      padding-left: $nav-items-padding;
       text-align: center;
 
       li {
