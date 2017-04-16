@@ -1,0 +1,1 @@
+"use strict";define([],function(){function a(a,b,c,d,e){var f=d+"pages/";b.get(f+c.current.name).then(function(b){a.title=b.data.title,a.featuredImage=b.data.featured_image.attachment_meta.sizes.large.url,a.content=b.data.content,e.setTitle(a.title+" | IMC Industrial Inc.")},function(a){console.log("ERROR: "+a)})}return["$scope","$http","$state","apiPath","SetTitle",a]});

@@ -1,0 +1,1 @@
+!function(a,b){"use strict";a(["app/directives/projects/projectscontent","app/controllers/projects/ProjectsContentCtrl","app/services/getPages"],function(a,c,d){var e="imcindustrial.projects";return b.module(e,["ui.router"]).directive("projectscontent",a).controller("ProjectsContentCtrl",c).factory("getPages",d),e})}(define,angular);

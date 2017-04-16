@@ -8,12 +8,13 @@ define([
   'app/directives/general/navbar',
   'app/directives/general/bottom',
   'app/directives/general/mapsection',
-  'app/controllers/general/NavCtrl',
+  'app/directives/pages/pagescontent',
   'app/controllers/general/MainCtrl',
+  'app/controllers/general/NavCtrl',
+  'app/controllers/general/MapCtrl',
+  'app/controllers/general/PagesCtrl',
   'app/services/SetTitle',
   'app/modules/HomeModule',
-  'app/modules/AboutModule',
-  'app/modules/PortfolioModule',
   'app/modules/CareersModule',
   'app/modules/ContactModule'
 ], function (
@@ -21,12 +22,13 @@ define([
   navbar,
   bottom,
   mapsection,
-  NavCtrl,
+  pagescontent,
   MainCtrl,
+  NavCtrl,
+  MapCtrl,
+  PagesCtrl,
   SetTitle,
   HomeModule,
-  AboutModule,
-  PortfolioModule,
   CareersModule,
   ContactModule
 ) {
@@ -43,8 +45,6 @@ define([
     'vcRecaptcha',
     'ngMaps',
     HomeModule,
-    AboutModule,
-    PortfolioModule,
     CareersModule,
     ContactModule
   ];
@@ -54,9 +54,12 @@ define([
   app.directive('navbar', navbar)
      .directive('bottom', bottom)
      .directive('mapsection', mapsection)
-     .controller('NavCtrl', NavCtrl)
+     .directive('pagescontent', pagescontent)
+     .factory('SetTitle', SetTitle)
      .controller('MainCtrl', MainCtrl)
-     .factory('SetTitle', SetTitle);
+     .controller('NavCtrl', NavCtrl)
+     .controller('MapCtrl', MapCtrl)
+     .controller('PagesCtrl', PagesCtrl);
 
   app.constant('_', window._); // Underscore
   app.constant('path', 'assets');

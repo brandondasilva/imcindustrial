@@ -1,0 +1,1 @@
+"use strict";define([],function(){function a(){return{restrict:"EA",scope:{info:"="},templateUrl:"assets/includes/portfolio/content.html"}}return[a]});

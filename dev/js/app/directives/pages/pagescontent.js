@@ -2,7 +2,7 @@
 /**
  * ******************************************************************************************************
  *
- *   portfolioposts
+ *   pagescontent
  *
  *   The directive for the content displayed on the portfolio page
  *
@@ -16,16 +16,16 @@
 
 define([], function() {
 
-  function portfolioposts() {
+  function pagescontent() {
     return {
       restrict: 'E',
       scope: {
         info: '='
       },
-      templateUrl: 'assets/includes/portfolio/posts.html'
+      templateUrl: 'assets/includes/pages/content.html'
     }
   }
 
-  return [portfolioposts];
+  return [pagescontent];
 
 });

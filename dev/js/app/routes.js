@@ -24,34 +24,14 @@ define([], function() {
         url: '/',
         templateUrl: includes + '/home/home.html'
       })
-      .state('about', {
+      .state('about-us', {
         url: '/about/',
-        templateUrl: includes + '/about/about.html',
+        templateUrl: includes + '/general/pages.html',
         target: "_self"
       })
-      .state('portfolio', {
-        url: '/portfolio/',
-        templateUrl: includes + '/portfolio/portfolio.html',
-        target: "_self"
-      })
-      .state('portfolio-posts', {
-        url: '/portfolio/:slug',
-        templateUrl: includes + '/posts/portfolio-posts.html',
-        target: "_self"
-      })
-      .state('portfolio-pagination', {
-        url: '/portfolio/:page',
-        templateUrl: includes + '/posts/portfolio-pagination.html',
-        target: "_self"
-      })
-      .state('portfolio-category', {
-        url: '/portfolio/c/:category',
-        templateUrl: includes + '/posts/category-pagination.html',
-        target: "_self"
-      })
-      .state('contact', {
-        url: '/contact/',
-        templateUrl: includes + '/contact/contact.html',
+      .state('projects', {
+        url: '/projects/',
+        templateUrl: includes + '/general/pages.html',
         target: "_self"
       })
       .state('careers', {
