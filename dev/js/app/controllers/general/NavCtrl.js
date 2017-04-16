@@ -16,7 +16,11 @@
 
 define([], function() {
 
-  function NavCtrl($scope, $http, path) {
+  function NavCtrl(
+    $scope,
+    $http,
+    path
+  ) {
 
     $scope.home = {
       name: "Home",
@@ -43,6 +47,11 @@ define([], function() {
     }
   }
 
-  return ["$scope", "$http", "path", NavCtrl];
+  return [
+    "$scope",
+    "$http",
+    "path",
+    NavCtrl
+  ];
 
 })

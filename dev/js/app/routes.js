@@ -25,7 +25,7 @@ define([], function() {
         templateUrl: includes + '/home/home.html'
       })
       .state('about-us', {
-        url: '/about/',
+        url: '/about-us/',
         templateUrl: includes + '/general/pages.html',
         target: "_self"
       })
