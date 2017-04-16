@@ -2,7 +2,7 @@
 /**
  * ******************************************************************************************************
  *
- *   getPages Factory
+ *   mapsection Directive
  *
  *   Returns the list of pages and their contents when called
  *

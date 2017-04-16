@@ -17,20 +17,17 @@
 
   define([
     'app/directives/contact/contactcontent',
-    'app/controllers/contact/ContactContentCtrl',
-    'app/services/getPages'
+    'app/controllers/contact/ContactContentCtrl'
   ], function(
     contactcontent,
-    ContactContentCtrl,
-    getPages
+    ContactContentCtrl
   ) {
 
     var moduleName = 'imcindustrial.contact';
 
     angular.module(moduleName, ['ui.router'])
            .directive('contactcontent', contactcontent)
-           .controller('ContactContentCtrl', ContactContentCtrl)
-           .factory('getPages', getPages);
+           .controller('ContactContentCtrl', ContactContentCtrl);
 
     return moduleName;
 

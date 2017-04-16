@@ -16,24 +16,18 @@
   "use strict";
 
   define([
-    'app/controllers/careers/CareersContentCtrl',
     'app/controllers/careers/CareersPostsCtrl',
-    'app/controllers/careers/CareerPostingCtrl',
-    'app/services/getPages'
+    'app/controllers/careers/CareerPostingCtrl'
   ], function(
-    CareersContentCtrl,
     CareersPostsCtrl,
-    CareerPostingCtrl,
-    getPages
+    CareerPostingCtrl
   ) {
 
     var moduleName = 'imcindustrial.careers';
 
     angular.module(moduleName, ['ui.router'])
-           .controller('CareersContentCtrl', CareersContentCtrl)
            .controller('CareersPostsCtrl', CareersPostsCtrl)
-           .controller('CareerPostingCtrl', CareerPostingCtrl)
-           .factory('getPages', getPages);
+           .controller('CareerPostingCtrl', CareerPostingCtrl);
 
     return moduleName;
 

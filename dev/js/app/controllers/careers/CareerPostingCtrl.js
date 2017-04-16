@@ -22,7 +22,6 @@ define([], function() {
     $state,
     $stateParams,
     Upload,
-    getPages,
     path,
     apiPath,
     SetTitle
@@ -137,7 +136,6 @@ define([], function() {
     "$state",
     "$stateParams",
     "Upload",
-    "getPages",
     "path",
     "apiPath",
     "SetTitle",

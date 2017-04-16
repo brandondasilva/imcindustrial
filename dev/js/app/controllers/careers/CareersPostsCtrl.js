@@ -16,7 +16,13 @@
 
 define([], function() {
 
-  function CareersPostsCtrl($scope, $http, apiPath, PagerService, SetTitle) {
+  function CareersPostsCtrl(
+    $scope,
+    $http,
+    apiPath,
+    PagerService,
+    SetTitle
+  ) {
 
     var vm = this;
 
@@ -51,6 +57,13 @@ define([], function() {
     };
   }
 
-  return ["$scope", "$http", "apiPath", "PagerService", "SetTitle", CareersPostsCtrl];
+  return [
+    "$scope",
+    "$http",
+    "apiPath",
+    "PagerService",
+    "SetTitle",
+    CareersPostsCtrl
+  ];
 
 });

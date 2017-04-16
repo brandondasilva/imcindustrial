@@ -16,20 +16,10 @@
 
 define([], function() {
 
-  function ContactContentCtrl($scope, $http, path, getPages, SetTitle) {
+  function ContactContentCtrl($scope, $http, path, SetTitle) {
 
     // Set Page Title
     SetTitle.setTitle('Contact | IMC Industrial Inc.');
-
-    getPages.success(function(res) {
-      for (var i = 0; i < res.length; i++) {
-        if (res[i].title === "Contact") {
-          $scope.title = res[i].title;
-          $scope.featuredImage = res[i].featured_image.attachment_meta.sizes.large.url;
-          $scope.content = res[i].content;
-        }
-      }
-    });
 
     $scope.submit = function() {
 
@@ -86,6 +76,6 @@ define([], function() {
     }
   }
 
-  return ["$scope", "$http", "path", "getPages", "SetTitle", ContactContentCtrl];
+  return ["$scope", "$http", "path", "SetTitle", ContactContentCtrl];
 
 });
