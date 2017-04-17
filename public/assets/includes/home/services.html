@@ -3,24 +3,15 @@
   <div class="container">
     <h1 class="section-header">Services</h1>
 
-    <div id="service-content" class="row">
-      <div class="col-sm-4 col-md-4" ng-repeat="service in services" ng-cloak>
+    <div id="service-content">
 
-        <h2>{{service.heading}}</h2>
+      <div class="service-image-wrapper" ng-repeat="service in services" ng-cloak>
+        <div class="service-image" style="background-image:url('{{service.image}}'); ">
 
-        <div class="service-image-wrapper">
-          <div class="service-image" style="background-image:url('{{service.image}}'); ">
-
-            <div class="service-desc">
-              <span ng-bind-html="service.desc"></span>
-
-              <a ng-href="{{service.link}}" class="button-wrapper">
-                <span class="button">Read More</span>
-              </a>
-            </div>
-
-            <div class="overlay"></div>
+          <div class="service-desc">
+            <h2>{{service.heading}}</h2>
           </div>
+
         </div>
       </div>
     </div>

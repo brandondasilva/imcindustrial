@@ -574,44 +574,38 @@ form .button-wrapper {
   text-align: center; }
   #homeservices h1, #homeservices h2 {
     color: #f0f0f0; }
-  #homeservices #service-content h2 {
-    margin-bottom: 25px;
-    margin-top: 25px; }
-  #homeservices #service-content .service-image-wrapper .service-image {
-    height: 245px;
-    width: 245px;
-    display: inline-block;
-    background-position: center;
-    background-size: cover;
-    border-radius: 50%;
-    border: 2px solid white;
-    -webkit-clip-path: circle(50% at 50% 50%);
-    clip-path: circle(50% at 50% 50%);
-    -webkit-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
-    -moz-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
-    box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
-    padding: 40px;
-    margin: auto;
-    font-weight: bold; }
-    @media (min-width: 768px) and (max-width: 991px) {
+  #homeservices #service-content {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center; }
+    #homeservices #service-content h2 {
+      margin-bottom: 0px;
+      margin-top: 0px;
+      color: #1E1E1E; }
+    #homeservices #service-content .service-image-wrapper {
+      flex-shrink: 1;
+      padding-left: 15px;
+      padding-right: 15px; }
       #homeservices #service-content .service-image-wrapper .service-image {
-        height: 215px !important;
-        width: 215px !important;
-        padding: 20px; }
+        height: 200px;
+        width: 200px;
+        display: inline-block;
+        background-position: center;
+        background-size: cover;
+        border-radius: 50%;
+        border: 2px solid white;
+        -webkit-clip-path: circle(50% at 50% 50%);
+        clip-path: circle(50% at 50% 50%);
+        -webkit-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
+        box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
+        font-weight: bold; }
         #homeservices #service-content .service-image-wrapper .service-image div.service-desc {
-          font-size: 12px; } }
-    @media (min-width: 992px) {
-      #homeservices #service-content .service-image-wrapper .service-image {
-        height: 275px !important;
-        width: 275px !important;
-        padding: 50px; } }
-    #homeservices #service-content .service-image-wrapper .service-image div.service-desc {
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%); }
-    #homeservices #service-content .service-image-wrapper .service-image .button {
-      background-color: #1E1E1E;
-      color: #f0f0f0; }
+          position: relative;
+          top: 50%;
+          transform: translateY(-50%); }
 
 #homefeatured {
   background-color: #dfdfdf;
