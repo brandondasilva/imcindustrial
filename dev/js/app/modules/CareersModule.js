@@ -17,17 +17,20 @@
 
   define([
     'app/controllers/careers/CareersPostsCtrl',
-    'app/controllers/careers/CareerPostingCtrl'
+    'app/controllers/careers/CareerPostingCtrl',
+    'app/services/PagerService'
   ], function(
     CareersPostsCtrl,
-    CareerPostingCtrl
+    CareerPostingCtrl,
+    PagerService
   ) {
 
     var moduleName = 'imcindustrial.careers';
 
     angular.module(moduleName, ['ui.router'])
            .controller('CareersPostsCtrl', CareersPostsCtrl)
-           .controller('CareerPostingCtrl', CareerPostingCtrl);
+           .controller('CareerPostingCtrl', CareerPostingCtrl)
+           .factory('PagerService', PagerService);
 
     return moduleName;
 
