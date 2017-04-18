@@ -3,7 +3,7 @@
   background-color: $home-featured-color;
   padding: $section-padding;
   padding-top: $section-padding + 20px;
-  padding-bottom: $section-padding + 20px;
+  padding-bottom: $section-padding;
 
   @media (max-width: 767px) {
     padding-left: 0px !important;
@@ -27,20 +27,18 @@
 
     .post-slick { margin-top: 30px; }
 
-    .featured-panel {
+    .featured-image {
+      border-radius: 5px;
 
-      .featured-image {
-        border-radius: 5px 0 0 5px;
-      }
+      background-position: center;
+      background-size: cover;
 
-      .featured-information {
+      -webkit-box-shadow: $box-shadow-post;
+      -moz-box-shadow: $box-shadow-post;
+      box-shadow: $box-shadow-post;
 
-        border-radius: 0 5px 5px 0;
-
-        a.post-title {
-          color: $body-text-white;
-        }
-      }
+      width: 100%;
+      height: 300px;
     }
   }
 }

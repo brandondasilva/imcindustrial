@@ -16,7 +16,6 @@ define([], function() {
 
     $urlMatcherFactoryProvider.strictMode(false);
 
-
     $locationProvider.html5Mode(true);
 
     $stateProvider

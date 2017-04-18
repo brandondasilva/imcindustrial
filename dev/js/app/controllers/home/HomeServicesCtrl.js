@@ -19,7 +19,6 @@ define([], function() {
   function HomeServicesCtrl(
     $scope,
     $http,
-    path,
     apiPath
   ) {
 
@@ -45,7 +44,6 @@ define([], function() {
   return [
     "$scope",
     "$http",
-    "path",
     "apiPath",
     HomeServicesCtrl
   ];

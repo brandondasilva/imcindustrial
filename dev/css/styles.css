@@ -657,7 +657,7 @@ form .button-wrapper {
   background-color: #dfdfdf;
   padding: 30px;
   padding-top: 50px;
-  padding-bottom: 50px; }
+  padding-bottom: 30px; }
   @media (max-width: 767px) {
     #homefeatured {
       padding-left: 0px !important;
@@ -671,12 +671,15 @@ form .button-wrapper {
     text-align: center; }
   #homefeatured .home-featured-content .post-slick {
     margin-top: 30px; }
-  #homefeatured .home-featured-content .featured-panel .featured-image {
-    border-radius: 5px 0 0 5px; }
-  #homefeatured .home-featured-content .featured-panel .featured-information {
-    border-radius: 0 5px 5px 0; }
-    #homefeatured .home-featured-content .featured-panel .featured-information a.post-title {
-      color: #f0f0f0; }
+  #homefeatured .home-featured-content .featured-image {
+    border-radius: 5px;
+    background-position: center;
+    background-size: cover;
+    -webkit-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75);
+    width: 100%;
+    height: 300px; }
 
 .careers-post {
   padding-left: 0px !important;
