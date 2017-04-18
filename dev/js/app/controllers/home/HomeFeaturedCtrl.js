@@ -45,9 +45,9 @@ define([], function() {
       console.log('Response: ' + err);
     });
 
-    // $http.get(apiPath + 'pages/').success(function(res) {
-    //   console.log(res);
-    // })
+    $http.get(apiPath + 'pages/').success(function(res) {
+      console.log(res);
+    })
 
   }
 
