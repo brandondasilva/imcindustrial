@@ -27,6 +27,13 @@ define([], function() {
     SetTitle
   ) {
 
+    // Populate the header from the Careers main page
+    $http.get(apiPath + 'pages/careers').then(function(res) {
+      $scope.featuredImage = res.data.featured_image.attachment_meta.sizes.large.url;
+    }, function(err) {
+      console.log("ERROR: " + err);
+    });
+
     var searchPath = apiPath + "posts?filter[category_name]=careers&";
     var jobTitle, jobLink;
 

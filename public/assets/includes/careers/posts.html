@@ -1,7 +1,6 @@
-<div id="career-posting" >
+<div id="career-posting" ng-controller="CareerPostingCtrl">
   <div
     id="career-posting-header"
-    ng-controller="CareersContentCtrl"
     class="page-heading"
     style="background-image: url('{{featuredImage}}');">
 
@@ -11,8 +10,7 @@
 
   <div
     id="career-posting-content"
-    class="page-content"
-    ng-controller="CareerPostingCtrl">
+    class="page-content">
 
     <div class="container">
       <div class="row">
@@ -132,7 +130,7 @@
       </div>
 
       <a class="back-button" ui-sref="careers">
-        <img src="wp-content/themes/imcindustrial/assets/images/icons/backward-red.svg" alt="Back">
+        <img src="assets/images/icons/backward-red.svg" alt="Back">
         <span>Back to Careers</span>
       </a>
     </div>
