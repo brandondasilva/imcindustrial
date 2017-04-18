@@ -8,6 +8,11 @@
 
     <div class="container">
       <div class="row page-posts">
+        <div class="col-xs-12 col-md-10 col-md-offset-1" ng-show="vm.allPosts.length === 0">
+          There currently aren't any active listings. Please check back later for more information.
+          <!-- TODO ADD GENERAL CONTACT FORM HERE - DIRECTIVE -->
+        </div>
+
         <div class="col-xs-12 col-sm-6 col-md-4 careers-post" ng-repeat="item in vm.items">
           <div class="post-panel">
             <a ng-href="careers/{{item.slug}}"><h2 ng-bind-html="item.title"></h2></a>
