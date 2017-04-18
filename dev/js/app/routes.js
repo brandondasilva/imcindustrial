@@ -41,7 +41,7 @@ define([], function() {
       })
       .state('careers-posts', {
         url: '/careers/:slug',
-        templateUrl: includes + '/posts/careers-posts.html',
+        templateUrl: includes + '/careers/posts.html',
         target: "_self"
       });
 

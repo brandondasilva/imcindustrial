@@ -16,11 +16,15 @@
 
 define([], function() {
 
-  function HomeServicesCtrl($scope, $http, path, apiPath) {
+  function HomeServicesCtrl(
+    $scope,
+    $http,
+    path,
+    apiPath
+  ) {
 
     $http.get(apiPath + 'posts/?filter[category_name]=services&?filter[posts_per_page]=-1').then(function(res) {
 
-      console.log(res.data)
       $scope.services = [];
 
       for (var i = 0; i < res.data.length; i++) {
@@ -32,30 +36,18 @@ define([], function() {
       }
 
     }, function(err) {
-
+      console.log('ERROR RETRIEVING SERVICES');
+      console.log('Response: ' + err);
     });
-
-    // $scope.services = [
-    //   {
-    //     heading: 'Rigging',
-    //     image: path + '/images/pipes.png',
-    //   }, {
-    //     heading: 'Fabrication',
-    //     image: path + '/images/welder.png',
-    //   }, {
-    //     heading: 'Millwrighting',
-    //     image: path + '/images/workers.png',
-    //   }, {
-    //     heading: 'Machining',
-    //     image: path + '/images/workers.png',
-    //   }, {
-    //     heading: 'Design',
-    //     image: path + '/images/workers.png',
-    //   }
-    // ];
 
   }
 
-  return ["$scope", "$http", "path", "apiPath", HomeServicesCtrl];
+  return [
+    "$scope",
+    "$http",
+    "path",
+    "apiPath",
+    HomeServicesCtrl
+  ];
 
 });
