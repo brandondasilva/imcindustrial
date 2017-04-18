@@ -45,6 +45,11 @@ define([], function() {
       name: "Premus Inc.",
       path: path + "/images/premus.png"
     }
+
+    $scope.icons = {
+      pin: path + '/images/icons/pin.svg',
+      phone: path + '/images/icons/phone.svg'
+    };
   }
 
   return [

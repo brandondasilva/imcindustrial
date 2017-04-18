@@ -436,6 +436,25 @@ form .button-wrapper {
         display: inline-block;
         background-color: #812822;
         margin-top: 5px; }
+      #footer #footer-content .footer-center .map-wrapper {
+        padding-left: 10px !important;
+        padding-right: 10px !important; }
+        #footer #footer-content .footer-center .map-wrapper .googleMap {
+          width: 100%;
+          height: 250px;
+          box-shadow: 3px 3px 2px 0px rgba(0, 0, 0, 0.75); }
+      @media (max-width: 767px) {
+        #footer #footer-content .footer-center .contact-buttons-footer div {
+          text-align: center !important; } }
+      #footer #footer-content .footer-center .contact-buttons-footer .button-wrapper img {
+        padding-right: 5px; }
+      #footer #footer-content .footer-center .contact-buttons-footer .button-wrapper .button.map-button {
+        width: auto !important;
+        color: #f0f0f0;
+        background-color: #812822;
+        margin-top: 5px;
+        padding-left: 10px;
+        padding-right: 10px; }
     #footer #footer-content .footer-right {
       margin-top: 20px;
       text-align: right; }

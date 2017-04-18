@@ -1,26 +1,50 @@
 <footer id="footer" ng-controller="NavCtrl">
   <div id="footer-content" class="container">
     <div class="row">
-      <div class="col-md-4 col-sm-4 footer-left">
+      <div class="col-md-3 col-sm-3 footer-left">
         <h2>IMC Industrial</h2>
 
         <h4 class="footer-titles"><a ui-sref="{{home.link}}">{{home.name}}</a></h4>
         <h4 class="footer-titles" ng-repeat="item in items"><a ui-sref="{{item.link}}">{{item.name}}</a></h4>
       </div>
 
-      <div class="col-md-4 col-sm-4 footer-center">
-        <div class="footer-center-content">
-          <h2>Contact</h2>
+      <div class="col-md-6 col-sm-6 footer-center">
+        <div class="row footer-center-content">
+          <div class="col-md-6 hidden-xs hidden-sm">
+            <div class="map-wrapper" ng-controller="MapCtrl">
+              <map class="googleMap" ng-transclude center="map.center" options="map.options">
+                <marker position="marker.position" options="marker.options"></marker>
+              </map>
+            </div>
+          </div>
 
-          <a href="https://goo.gl/Ah0hsL" target="_blank">
-            <h4>1205 Twinney Drive, Unit #10</h4>
-            <h4>Newmarket, ON</h4>
-            <h4>L3Y 9C9</h4>
-          </a>
+          <div class="col-md-6 col-xs-12">
+            <h2>Head Office</h2>
+
+            <div>
+              <p>1-190 Industrial Parkway South</p>
+              <p>Aurora, ON</p>
+              <p>L4G 3V6</p>
+            </div>
+
+            <div class="contact-buttons-footer row">
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <a href="https://goo.gl/zOZzPW" target="_blank" class="button-wrapper">
+                  <span class="button map-button"><img src="{{icons.pin}}" /> Directions</span>
+                </a>
+              </div>
+
+              <div class="col-xs-12 col-sm-12 col-md-12">
+                <a href="tel:9057130808" class="button-wrapper">
+                  <span class="button map-button"><img src="{{icons.phone}}" /> (905) 713-0808</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
-      <div class="col-md-4 col-sm-4 footer-right">
+      <div class="col-md-3 col-sm-3 footer-right">
         <a ui-sref="{{home.link}}"><img src="{{home.path}}" /></a>
 
         <p>Copyright &copy; IMC Industrial 2016</p>

@@ -45,6 +45,45 @@
         background-color: $main-color;
         margin-top: 5px;
       }
+
+      .map-wrapper {
+        padding-left: $mobile-margins !important;
+        padding-right: $mobile-margins !important;
+
+        .googleMap {
+          width: 100%;
+          height: 250px;
+          box-shadow: $box-shadow-post;
+        }
+      }
+
+      .contact-buttons-footer {
+
+        @media (max-width: 767px) {
+          div {
+            text-align: center !important;
+          }
+        }
+
+        // & div:first-child {
+        //   text-align: right;
+        // }
+
+        .button-wrapper {
+          img {
+            padding-right: 5px;
+          }
+
+          .button.map-button {
+            width: auto !important;
+            color: $body-text-white;
+            background-color: $main-color;
+            margin-top: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+        }
+      }
     }
 
     .footer-right {
