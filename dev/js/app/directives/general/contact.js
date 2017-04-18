@@ -2,7 +2,7 @@
 /**
  * ******************************************************************************************************
  *
- *   contactcontent
+ *   contact
  *
  *   The directive for the content displayed on the contact page
  *
@@ -16,16 +16,16 @@
 
 define([], function() {
 
-  function contactcontent() {
+  function contact() {
     return {
       restrict: 'E',
       scope: {
         info: '='
       },
-      templateUrl: 'assets/includes/contact/content.html'
+      templateUrl: 'assets/includes/general/contact.html'
     }
   }
 
-  return [contactcontent];
+  return [contact];
 
 });

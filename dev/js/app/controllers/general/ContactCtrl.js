@@ -2,7 +2,7 @@
 /**
  * ******************************************************************************************************
  *
- *   ContactContentCtrl
+ *   ContactCtrl
  *
  *   The controller for the contact page content pulled from WP
  *
@@ -16,10 +16,7 @@
 
 define([], function() {
 
-  function ContactContentCtrl($scope, $http, path, SetTitle) {
-
-    // Set Page Title
-    SetTitle.setTitle('Contact | IMC Industrial Inc.');
+  function ContactCtrl($scope, $http, path) {
 
     $scope.submit = function() {
 
@@ -76,6 +73,6 @@ define([], function() {
     }
   }
 
-  return ["$scope", "$http", "path", "SetTitle", ContactContentCtrl];
+  return ["$scope", "$http", "path", ContactCtrl];
 
 });

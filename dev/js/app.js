@@ -8,29 +8,31 @@ define([
   'app/directives/general/navbar',
   'app/directives/general/bottom',
   'app/directives/general/mapsection',
+  'app/directives/general/contact',
   'app/directives/pages/pagescontent',
   'app/controllers/general/MainCtrl',
   'app/controllers/general/NavCtrl',
   'app/controllers/general/MapCtrl',
+  'app/controllers/general/ContactCtrl',
   'app/controllers/general/PagesCtrl',
   'app/services/SetTitle',
   'app/modules/HomeModule',
-  'app/modules/CareersModule',
-  'app/modules/ContactModule'
+  'app/modules/CareersModule'
 ], function (
   routes,
   navbar,
   bottom,
   mapsection,
+  contact,
   pagescontent,
   MainCtrl,
   NavCtrl,
   MapCtrl,
+  ContactCtrl,
   PagesCtrl,
   SetTitle,
   HomeModule,
-  CareersModule,
-  ContactModule
+  CareersModule
 ) {
 
   var appName = 'imcindustrial';
@@ -45,8 +47,7 @@ define([
     'vcRecaptcha',
     'ngMaps',
     HomeModule,
-    CareersModule,
-    ContactModule
+    CareersModule
   ];
 
   var app = angular.module(appName, depends).config(routes);
@@ -54,11 +55,13 @@ define([
   app.directive('navbar', navbar)
      .directive('bottom', bottom)
      .directive('mapsection', mapsection)
+     .directive('contact', contact)
      .directive('pagescontent', pagescontent)
      .factory('SetTitle', SetTitle)
      .controller('MainCtrl', MainCtrl)
      .controller('NavCtrl', NavCtrl)
      .controller('MapCtrl', MapCtrl)
+     .controller('ContactCtrl', ContactCtrl)
      .controller('PagesCtrl', PagesCtrl);
 
   app.constant('_', window._); // Underscore

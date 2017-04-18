@@ -1,0 +1,14 @@
+#contact-form {
+
+  padding-bottom: $section-padding;
+
+  h1 {
+    text-align: center;
+  }
+
+  .captcha {
+    iframe {
+      margin-top: 10px;
+    }
+  }
+}
