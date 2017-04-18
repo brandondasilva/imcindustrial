@@ -101,7 +101,8 @@ a.button-wrapper .button {
 
 .page-content {
   padding-top: 30px;
-  padding-bottom: 30px; }
+  padding-bottom: 30px;
+  text-align: justify; }
 
 .post-title {
   color: #1E1E1E; }
@@ -572,6 +573,9 @@ form .button-wrapper {
   padding-bottom: 70px;
   padding-top: 50px;
   text-align: center; }
+  @media (max-width: 589px) {
+    #homeservices {
+      padding-bottom: 45px; } }
   #homeservices h1, #homeservices h2 {
     color: #f0f0f0; }
   #homeservices #service-content {
@@ -580,14 +584,26 @@ form .button-wrapper {
     flex-direction: row;
     align-items: center;
     justify-content: center; }
+    @media (max-width: 919px) {
+      #homeservices #service-content {
+        flex-wrap: wrap; } }
+    @media (max-width: 569px) {
+      #homeservices #service-content {
+        flex-direction: column-reverse; } }
     #homeservices #service-content h2 {
       margin-bottom: 0px;
       margin-top: 0px;
-      color: #1E1E1E; }
+      padding-top: 10px;
+      padding-bottom: 12px;
+      color: #1E1E1E;
+      background: rgba(255, 255, 255, 0.65); }
     #homeservices #service-content .service-image-wrapper {
       flex-shrink: 1;
       padding-left: 15px;
       padding-right: 15px; }
+      @media (max-width: 589px) {
+        #homeservices #service-content .service-image-wrapper {
+          padding-bottom: 25px; } }
       #homeservices #service-content .service-image-wrapper .service-image {
         height: 200px;
         width: 200px;
@@ -602,6 +618,36 @@ form .button-wrapper {
         -moz-box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
         box-shadow: 2px 2px 3px 0 rgba(0, 0, 0, 0.75);
         font-weight: bold; }
+        @media (min-width: 1050px) and (max-width: 1185px) {
+          #homeservices #service-content .service-image-wrapper .service-image {
+            height: 175px;
+            width: 175px; }
+            #homeservices #service-content .service-image-wrapper .service-image h2 {
+              font-size: 28px; } }
+        @media (min-width: 920px) and (max-width: 1050px) {
+          #homeservices #service-content .service-image-wrapper .service-image {
+            height: 150px;
+            width: 150px; }
+            #homeservices #service-content .service-image-wrapper .service-image h2 {
+              font-size: 24px; } }
+        @media (max-width: 719px) {
+          #homeservices #service-content .service-image-wrapper .service-image {
+            height: 175px;
+            width: 175px; }
+            #homeservices #service-content .service-image-wrapper .service-image h2 {
+              font-size: 28px; } }
+        @media (min-width: 570px) and (max-width: 644px) {
+          #homeservices #service-content .service-image-wrapper .service-image {
+            height: 150px;
+            width: 150px; }
+            #homeservices #service-content .service-image-wrapper .service-image h2 {
+              font-size: 24px; } }
+        @media (max-width: 569px) {
+          #homeservices #service-content .service-image-wrapper .service-image {
+            height: 225px;
+            width: 225px; }
+            #homeservices #service-content .service-image-wrapper .service-image h2 {
+              font-size: 30px; } }
         #homeservices #service-content .service-image-wrapper .service-image div.service-desc {
           position: relative;
           top: 50%;

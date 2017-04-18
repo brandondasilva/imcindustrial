@@ -3,15 +3,15 @@
 
   padding-bottom: 70px;
 
+  @media (max-width: 589px) { padding-bottom: 45px; }
+
   // Local variables
   $services-box-shadow: 2px 2px 3px 0 rgba(0,0,0,0.75);
 
   padding-top: $section-padding + 20px;
   text-align: center;
 
-  h1, h2 {
-    color: $body-text-white;
-  }
+  h1, h2 { color: $body-text-white; }
 
   #service-content {
     padding-top: $section-padding;
@@ -21,10 +21,17 @@
     align-items: center;
     justify-content: center;
 
+    @media (max-width: 919px) { flex-wrap: wrap; }
+
+    @media (max-width: 569px) { flex-direction: column-reverse; }
+
     h2 {
       margin-bottom: 0px;
       margin-top: 0px;
+      padding-top: 10px;
+      padding-bottom: 12px;
       color: $main-black;
+      background: rgba(255, 255, 255, 0.65);
     }
 
     .service-image-wrapper {
@@ -33,23 +40,44 @@
       padding-left: 15px;
       padding-right: 15px;
 
+      @media (max-width: 589px) { padding-bottom: 25px; }
+
       .service-image {
 
-        // @media (min-width: 768px) and (max-width: 991px) {
-        //   // height: 215px !important;
-        //   // width: 215px !important;
-        //   padding: 20px;
-        //
-        //   div.service-desc {
-        //     font-size: 12px;
-        //   }
-        // }
-        //
-        // @media (min-width: 992px) {
-        //   // height: 275px !important;
-        //   // width: 275px !important;
-        //   padding: 50px;
-        // }
+        @media (min-width: 1050px) and (max-width: 1185px) {
+          height: 175px;
+          width: 175px;
+
+          h2 { font-size: 28px; }
+        }
+
+        @media (min-width: 920px) and (max-width: 1050px) {
+          height: 150px;
+          width: 150px;
+
+          h2 { font-size: 24px; }
+        }
+
+        @media (max-width: 719px) {
+          height: 175px;
+          width: 175px;
+
+          h2 { font-size: 28px; }
+        }
+
+        @media (min-width: 570px) and (max-width: 644px) {
+          height: 150px;
+          width: 150px;
+
+          h2 { font-size: 24px; }
+        }
+
+        @media (max-width: 569px) {
+          height: 225px;
+          width: 225px;
+
+          h2 { font-size: 30px; }
+        }
 
         height: 200px;
         width: 200px;
@@ -69,8 +97,6 @@
         -moz-box-shadow: $services-box-shadow;
         box-shadow: $services-box-shadow;
 
-        // padding: 40px;
-        // margin: auto;
         font-weight: bold;
 
         div.service-desc {
