@@ -48,6 +48,7 @@ define([], function() {
 
         // Set Page Title
         SetTitle.setTitle($scope.postContent.title + ' | IMC Industrial Inc.');
+        SetTitle.setSEO(res.data[0].seo);
       }
 
     }, function(err) {

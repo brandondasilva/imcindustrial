@@ -42,17 +42,17 @@
       'wpseo_metadesc' => get_metadata('post', $data['ID'], '_yoast_wpseo_metadesc', true),
       'wpseo_linkdex' => get_metadata('post', $data['ID'], '_yoast_wpseo_linkdex', true),
       'wpseo_metakeywords' => get_metadata('post', $data['ID'], '_yoast_wpseo_metakeywords', true),
-      'wpseo_meta-robots-noindex' => get_metadata('post', $data['ID'], '_yoast_wpseo_meta-robots-noindex', true),
-      'wpseo_meta-robots-nofollow' => get_metadata('post', $data['ID'], '_yoast_wpseo_meta-robots-nofollow', true),
-      'wpseo_meta-robots-adv' => get_metadata('post', $data['ID'], '_yoast_wpseo_meta-robots-adv', true),
+      'wpseo_meta_robots_noindex' => get_metadata('post', $data['ID'], '_yoast_wpseo_meta-robots-noindex', true),
+      'wpseo_meta_robots_nofollow' => get_metadata('post', $data['ID'], '_yoast_wpseo_meta-robots-nofollow', true),
+      'wpseo_meta_robots_adv' => get_metadata('post', $data['ID'], '_yoast_wpseo_meta-robots-adv', true),
       'wpseo_canonical' => get_metadata('post', $data['ID'], '_yoast_wpseo_canonical', true),
       'wpseo_redirect' => get_metadata('post', $data['ID'], '_yoast_wpseo_redirect', true),
-      'wpseo_opengraph-title' => get_metadata('post', $data['ID'], '_yoast_wpseo_opengraph-title', true),
-      'wpseo_opengraph-description' => get_metadata('post', $data['ID'], '_yoast_wpseo_opengraph-description', true),
-      'wpseo_opengraph-image' => get_metadata('post', $data['ID'], '_yoast_wpseo_opengraph-image', true),
-      'wpseo_twitter-title' => get_metadata('post', $data['ID'], '_yoast_wpseo_twitter-title', true),
-      'wpseo_twitter-description' => get_metadata('post', $data['ID'], '_yoast_wpseo_twitter-description', true),
-      'wpseo_twitter-image' => get_metadata('post', $data['ID'], '_yoast_wpseo_twitter-image', true)
+      'wpseo_opengraph_title' => get_metadata('post', $data['ID'], '_yoast_wpseo_opengraph-title', true),
+      'wpseo_opengraph_description' => get_metadata('post', $data['ID'], '_yoast_wpseo_opengraph-description', true),
+      'wpseo_opengraph_image' => get_metadata('post', $data['ID'], '_yoast_wpseo_opengraph-image', true),
+      'wpseo_twitter_title' => get_metadata('post', $data['ID'], '_yoast_wpseo_twitter-title', true),
+      'wpseo_twitter_description' => get_metadata('post', $data['ID'], '_yoast_wpseo_twitter-description', true),
+      'wpseo_twitter_image' => get_metadata('post', $data['ID'], '_yoast_wpseo_twitter-image', true)
 
     );
     $data['seo'] = (array) $yoastMeta;

@@ -31,8 +31,9 @@ define([], function() {
       $scope.featuredImage = res.data.featured_image.attachment_meta.sizes.large.url;
       $scope.content = res.data.content;
 
-      // Setting Page Title
+      // Setting Page Title and Meta Description
       SetTitle.setTitle($scope.title + ' | IMC Industrial Inc.');
+      SetTitle.setSEO(res.data.seo);
     }, function(err) {
       console.log("ERROR: " + err)
     })

@@ -45,10 +45,6 @@ define([], function() {
       console.log('Response: ' + err);
     });
 
-    $http.get(apiPath + 'pages/').success(function(res) {
-      console.log(res);
-    })
-
   }
 
   return ["$scope", "$http", "apiPath", HomeFeaturedCtrl];

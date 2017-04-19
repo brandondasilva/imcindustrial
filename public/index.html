@@ -28,8 +28,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
+
+    <!-- NECESSARY SEO TAGS -->
+    <meta content="{{SetTitle.seo().wpseo_metadesc}}" name="description" />
+    <meta content="{{SetTitle.seo().wpseo_opengraph_title}}" property="og:title" />
+    <meta content="{{SetTitle.seo().wpseo_opengraph_description}}" property="og:description" />
+    <meta content="{{SetTitle.seo().wpseo_opengraph_image}}" property="og:image" />
+    <meta content="website" property="og:type" />
+    <meta content="summary" name="twitter:card" />
+    <meta content="{{SetTitle.seo().wpseo_twitter_title}}" name="twitter:title" />
+    <meta content="{{SetTitle.seo().wpseo_twitter_description}}" name="twitter:description" />
+    <meta content="{{SetTitle.seo().wpseo_twitter_image}}" name="twitter:image" />
 
     <!-- Stylesheets CSS -->
     <link href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
