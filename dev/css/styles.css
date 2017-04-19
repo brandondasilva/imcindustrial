@@ -569,17 +569,21 @@ form .button-wrapper {
     #header #header-image #header-text {
       padding-top: 250px;
       text-align: center; }
-      @media (max-width: 767px) {
+      @media (min-width: 350px) and (max-width: 767px) {
         #header #header-image #header-text {
-          padding-top: 175px; }
-          #header #header-image #header-text h1 {
-            font-size: 32px !important;
-            margin-top: 30px;
-            margin-bottom: 0; }
-          #header #header-image #header-text p {
-            font-size: 16px;
-            padding-left: 20%;
-            padding-right: 20%; } }
+          padding-top: 175px; } }
+      @media (max-width: 767px) {
+        #header #header-image #header-text h1 {
+          font-size: 32px !important;
+          margin-top: 30px;
+          margin-bottom: 0; }
+        #header #header-image #header-text p {
+          font-size: 16px;
+          padding-left: 20%;
+          padding-right: 20%; } }
+      @media (max-width: 349px) {
+        #header #header-image #header-text {
+          padding-top: 200px; } }
       #header #header-image #header-text h1 {
         margin-top: 30px;
         margin-bottom: 0;
@@ -590,6 +594,7 @@ form .button-wrapper {
           #header #header-image #header-text h1 a:hover {
             text-decoration: none; }
       #header #header-image #header-text p {
+        font-weight: normal;
         padding-top: 20px;
         color: black; }
 

@@ -36,9 +36,11 @@
 
     #header-text {
 
-      @media (max-width: 767px) {
+      @media (min-width: 350px) and (max-width: 767px) {
         padding-top: 175px;
+      }
 
+      @media (max-width: 767px) {
         h1 {
           font-size: 32px !important;
           margin-top: 30px;
@@ -51,6 +53,11 @@
           padding-right: 20%;
         }
       }
+
+      @media (max-width: 349px) {
+        padding-top: 200px;
+      }
+
       padding-top: 250px;
       text-align: center;
 
@@ -68,6 +75,7 @@
       }
 
       p {
+        font-weight: normal;
         padding-top: 20px;
         color: black;
       }
