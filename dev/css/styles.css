@@ -8,15 +8,15 @@ h1, h2, h3 {
   text-shadow: 1px 1px 2px rgba(150, 150, 150, 0.5); }
 
 a {
-  color: #812822; }
+  color: #E53935; }
   a:hover, a:active, a:focus {
-    color: #812822;
+    color: #E53935;
     text-decoration: none; }
   a:hover {
-    color: #812822;
+    color: #E53935;
     text-shadow: 1px 1px 2px #969696; }
   a:active {
-    color: #812822;
+    color: #E53935;
     text-shadow: 1px 1px 2.05px rgba(75, 75, 75, 0.9); }
 
 input, textarea {
@@ -130,7 +130,7 @@ a.button-wrapper .button {
     background-size: cover; }
   .featured-panel .featured-information {
     color: #dfdfdf;
-    background-color: #812822; }
+    background-color: #E53935; }
     .featured-panel .featured-information p.featured-date {
       font-size: 12px;
       padding-bottom: 12px; }
@@ -174,7 +174,7 @@ a.button-wrapper .button {
       background-size: cover; }
     .portfolio-post .post-panel .post-information {
       padding: 20px;
-      background-color: #812822;
+      background-color: #E53935;
       border-radius: 0 0 5px 5px; }
       .portfolio-post .post-panel .post-information p.post-date {
         font-size: 11px;
@@ -272,11 +272,11 @@ a.button-wrapper .button {
   .pagination-wrapper .pagination {
     box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.75); }
     .pagination-wrapper .pagination .active a {
-      background-color: #812822;
+      background-color: #E53935;
       color: #fff;
       border: none; }
     .pagination-wrapper .pagination li a {
-      color: #812822; }
+      color: #E53935; }
 
 .captcha div:first-child {
   margin: auto;
@@ -292,6 +292,7 @@ a.button-wrapper .button {
   z-index: -1; }
 
 .help-block.ng-inactive, .help-block p {
+  color: #E53935;
   margin: 0px !important; }
 
 form .input {
@@ -309,7 +310,7 @@ form .statusMessage, form .loader {
   form .statusMessage span, form .loader span {
     padding-left: 8px; }
 form .ng-touched.ng-invalid-required, form .ng-touched.ng-invalid-email {
-  border: #a94442 1px solid;
+  border: #E53935 1px solid;
   box-shadow: inset 0 0 3px 1px rgba(169, 68, 66, 0.5); }
 form .button-wrapper {
   padding-top: 10px;
@@ -318,7 +319,7 @@ form .button-wrapper {
   form .button-wrapper .button.email-button {
     width: auto !important;
     color: #f0f0f0;
-    background-color: #812822;
+    background-color: #E53935;
     padding-left: 10px;
     padding-right: 10px; }
   form .button-wrapper.disabled-btn span {
@@ -329,7 +330,7 @@ form .button-wrapper {
   padding-top: 10px;
   border: 4px solid #f3f3f3;
   /* Light grey */
-  border-top: 4px solid #812822;
+  border-top: 4px solid #E53935;
   /* Blue */
   border-radius: 50%;
   width: 24px;
@@ -343,7 +344,7 @@ form .button-wrapper {
   100% {
     transform: rotate(360deg); } }
 #loading-bar .bar {
-  background: #812822; }
+  background: #E53935; }
 
 /*
  *******
@@ -357,7 +358,7 @@ form .button-wrapper {
     background-color: rgba(255, 255, 255, 0.85); }
   #navbar a {
     text-transform: uppercase;
-    color: #812822;
+    color: #E53935;
     font-weight: bold; }
   #navbar .nav-left {
     display: table-cell;
@@ -397,7 +398,7 @@ form .button-wrapper {
       background-position-x: 100%;
       background-position-y: 50%; }
   #navbar #mobileNav {
-    border-top: 1px #812822 solid;
+    border-top: 1px #E53935 solid;
     text-align: right; }
     #navbar #mobileNav div {
       padding-top: 12px; }
@@ -434,7 +435,7 @@ form .button-wrapper {
       #footer #footer-content .footer-center .footer-button {
         width: 120px;
         display: inline-block;
-        background-color: #812822;
+        background-color: #E53935;
         margin-top: 5px; }
       #footer #footer-content .footer-center .map-wrapper {
         padding-left: 10px !important;
@@ -451,7 +452,7 @@ form .button-wrapper {
       #footer #footer-content .footer-center .contact-buttons-footer .button-wrapper .button.map-button {
         width: auto !important;
         color: #f0f0f0;
-        background-color: #812822;
+        background-color: #E53935;
         margin-top: 5px;
         padding-left: 10px;
         padding-right: 10px; }
@@ -492,7 +493,7 @@ form .button-wrapper {
         padding-left: 2px; }
 
 #map {
-  background-color: #812822;
+  background-color: #E53935;
   padding: 30px; }
   @media (max-width: 767px) {
     #map {
@@ -599,7 +600,7 @@ form .button-wrapper {
         color: black; }
 
 #homeservices {
-  background-color: #812822;
+  background-color: #E53935;
   padding-bottom: 70px;
   padding-top: 50px;
   text-align: center; }
@@ -711,6 +712,9 @@ form .button-wrapper {
     width: 100%;
     height: 300px; }
 
+#careers-all-posts {
+  padding-top: 0px; }
+
 .careers-post {
   padding-left: 0px !important;
   padding-right: 0px !important;
@@ -724,7 +728,7 @@ form .button-wrapper {
     margin-left: 10px;
     margin-right: 10px;
     padding: 20px;
-    background-color: #812822; }
+    background-color: #E53935; }
     .careers-post .post-panel p.post-date {
       font-size: 11px;
       color: #dfdfdf;

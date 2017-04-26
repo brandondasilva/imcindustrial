@@ -18,7 +18,7 @@ define([], function() {
 
   function MapCtrl($scope, path) {
 
-    var position = [44.0019301,-79.4582416];
+    var position = [43.9928955,-79.4575229];
 
     $scope.map = {
       center: position,
