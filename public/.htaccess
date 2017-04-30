@@ -4,6 +4,20 @@
     RequestHeader set X-Prerender-Token "mEoAghHL15HiqCCOrVGV"
 </IfModule>
 
+# Prerender access
+<IfModule mod_proxy_http.c>
+    RewriteCond %{REQUEST_URI} ^.*/$
+    RewriteCond %{REQUEST_URI} !^/$
+    RewriteRule ^(.*)/$ $1 [R,QSA,L]
+
+    RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator [NC,OR]
+    RewriteCond %{QUERY_STRING} _escaped_fragment_
+
+    # Only proxy the request to Prerender if it's a request for HTML
+    RewriteRule ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent|\.ttf|\.woff))(.*) http://service.prerender.io/http://%{HTTP_HOST}/$2 [P,L]
+    # RewriteRule ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent))(index\.html)?(.*) http://service.prerender.io/http://imcindustrial.ca/$2 [P,L]
+</IfModule>
+
 <IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
@@ -17,13 +31,6 @@ RewriteRule . /index.html [L]
 
 </IfModule>
 
-# Prerender access
-<IfModule mod_proxy_http.c>
-    RewriteCond %{HTTP_USER_AGENT} baiduspider|facebookexternalhit|twitterbot|rogerbot|linkedinbot|embedly|quora\ link\ preview|showyoubot|outbrain|pinterest|slackbot|vkShare|W3C_Validator [NC,OR]
-    RewriteCond %{QUERY_STRING} _escaped_fragment_
 
-    # Only proxy the request to Prerender if it's a request for HTML
-    RewriteRule ^(?!.*?(\.js|\.css|\.xml|\.less|\.png|\.jpg|\.jpeg|\.gif|\.pdf|\.doc|\.txt|\.ico|\.rss|\.zip|\.mp3|\.rar|\.exe|\.wmv|\.doc|\.avi|\.ppt|\.mpg|\.mpeg|\.tif|\.wav|\.mov|\.psd|\.ai|\.xls|\.mp4|\.m4a|\.swf|\.dat|\.dmg|\.iso|\.flv|\.m4v|\.torrent))(index\.php)?(.*) http://service.prerender.io/http://wordpress.imcindustrial.ca/$2 [P,L]
-</IfModule>
 
 # END WordPress
